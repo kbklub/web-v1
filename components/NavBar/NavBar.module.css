@@ -1,0 +1,147 @@
+.navLayout {
+  position: relative;
+  background-color: hsla(0, 0%, 95%, 0.2);
+  width: 100%;
+  padding: 16px 0;
+  border-bottom: 1px solid hsla(0, 0%, 80%, 0.2);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 88%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.imageLink {
+  width: 30%;
+  max-width: 45px;
+}
+.imageLink > p {
+  display: none;
+}
+
+.hamburgerBtn {
+  padding: 0;
+  background-color: transparent;
+  width: 40%;
+  max-width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.hamburgerBtn svg {
+  width: 32px;
+  height: 32px;
+}
+.hamburgerBtn:hover, .hamburgerBtn:focus {
+  opacity: 80%;
+  transform: scale(.98);
+}
+
+.mobileNavLayout {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 101%;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  background-color: var(--color-white);
+  padding: 32px 32px;
+}
+
+.mobileNavContainer {
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-bottom: 2em;
+}
+.mobileNavContainer > li {
+  border-bottom: 1px solid hsla(0, 0%, 92%, 0.32);
+  padding: 16px 0;
+  font-weight: 500;
+}.mobileNavContainer > li:last-of-type {
+  border-bottom: none;
+}
+
+.mobileNavContainer a {
+  display: block;
+  text-decoration: none;
+}
+.mobileNavContainer a:hover, .mobileNavContainera:focus {
+  text-decoration: underline;
+}
+
+.mobileNavContainer button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobileNavContainer button > svg {
+  width: 25px;
+  height: 25px;
+  transition: transform .2s ease-out;
+}
+
+.mobileNavContainer li > div {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid hsla(0, 0%, 92%, 0.32);
+}
+
+.navSubList {
+  list-style: none;
+  padding-left: 16px;
+}
+.navSubList > li {
+  border-bottom: 1px solid hsla(0, 0%, 92%, 0.32);
+  padding: 8px 0;
+  color: hsla(0, 0%, 12%, 0.72);
+} .navSubList > li:last-of-type {
+  border-bottom: none;
+}
+
+.partnerBtn {
+  display: inline-block;
+  width: 90%;
+  max-width: 225px;
+  margin: 0 auto;
+  text-decoration: none;
+}
+.partnerBtn > button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  border: none;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  column-gap: 8px;
+}
+.partnerBtn > button > svg {
+  transform: translate(1px);
+}
+.partnerBtn:hover, .partnerBtn:focus {
+  opacity: 80%;
+  transform: scale(.98);
+}
+
+.dropButton > svg {
+  transform: rotate(180deg);
+}
+
+.hiddenDropDown {
+  display: none;
+}

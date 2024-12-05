@@ -1,3 +1,4 @@
+import NavBar from "@/components/NavBar";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -15,6 +16,7 @@ export default function Home() {
         <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
+      <NavBar />
       <main>
         <h1>This should be Yeseva</h1>
         <p>This should be Lato</p>
