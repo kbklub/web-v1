@@ -15,11 +15,11 @@ const bottomCarouselImage = [carouselImage4, carouselImage6, carouselImage7];
 
 const SupportInitiative = () => {
   return (
-    <section>
+    <section className={styles.supportLayout}>
       <div className={styles.carouselContainer}>
-        <div aria-hidden="true" className={styles.carouselImage}><Image src={carouselImage1} alt=""/></div>
-        <div aria-hidden="true" className={styles.carouselImage}><Image src={carouselImage2} alt=""/></div>
-        <div aria-hidden="true" className={styles.carouselImage}><Image src={carouselImage3} alt=""/></div>
+        {topCarouselImages.map((image, index) => (
+          <div aria-hidden="true" className={styles.carouselImage} key={index}><Image src={image} alt=""/></div>
+        ))}
       </div>
       <div className={styles.supportDetails}>
         <h2>Support Our Initiatives</h2>
@@ -31,9 +31,9 @@ const SupportInitiative = () => {
         <Link href="/support-us"><button>Partner with us</button></Link>
       </div>
       <div className={styles.carouselContainer}>
-        <div aria-hidden="true" className={styles.carouselImage}><Image src={carouselImage4} alt=""/></div>
-        <div aria-hidden="true" className={styles.carouselImage}><Image src={carouselImage6} alt=""/></div>
-        <div aria-hidden="true" className={styles.carouselImage}><Image src={carouselImage7} alt=""/></div>
+        {bottomCarouselImage.map((image, index) => (
+          <div aria-hidden="true" className={styles.carouselImage} key={index}><Image src={image} alt=""/></div>
+        ))}
       </div>
     </section>
   );
