@@ -1,0 +1,50 @@
+.supportLayout {
+  margin-bottom: 48px;
+}
+
+.carouselContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.carouselImage {
+  width: 35%;
+  height: 100px;
+}
+
+.supportDetails {
+  padding: 2em 0;
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.supportDetails h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+.supportDetails p {
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.supportDetails a {
+  display: block;
+  width: 65%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.supportDetails button {
+  width: 100%;
+  background-color: var(--color-primary);
+  border: none;
+  color: var(--color-secondary);
+  padding: 12px 0;
+  font-weight: 500;
+}
+.supportDetails a:hover, .supportDetails a:focus {
+  opacity: 80%;
+  transform: scale(.98);
+}

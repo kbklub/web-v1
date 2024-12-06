@@ -1,3 +1,4 @@
+import BottomLayout from "@/layout/BottomLayout";
 import "@/styles/globals.css";
 import { Yeseva_One, Lato } from "next/font/google";
 
@@ -25,6 +26,7 @@ export default function App({ Component, pageProps }) {
         }
       `}</style>
       <Component {...pageProps} />
+      <BottomLayout />
     </>
   );
 }
