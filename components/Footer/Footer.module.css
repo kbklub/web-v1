@@ -43,6 +43,7 @@
   align-items: flex-start;
   column-gap: min(5em, 20%);
   max-width: 475px;
+  padding-bottom: 32px;
 }
 .footerNavColumns > h3 {
   font-weight: 700;
