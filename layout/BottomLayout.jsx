@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import NewsLetterSignup from "@/components/NewsletterSignup";
 import SupportInitiative from "@/components/SupportInitiative";
 
@@ -6,6 +7,7 @@ const BottomLayout = () => {
     <>
       <SupportInitiative />
       <NewsLetterSignup />
+      <Footer />
     </>
   );
 }
