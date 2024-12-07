@@ -1,0 +1,273 @@
+.headerLayout {
+  background-color: hsla(0, 0%, 0%, 0.4);
+  background-image: url("../assets/images/homeHeaderPictureMobile.png");
+  background-image: radial-gradient(50% 50% at 50% 50%,
+   rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.65) 100%), url("../assets/images/homeHeaderPictureMobile.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.headerContainer {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 110px 0;
+  text-align: center;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+.headerContainer > h1 {
+  color: var(--color-primary);
+  margin-bottom: .25em;
+}
+.headerContainer > p {
+  margin-bottom: 1rem;
+}
+
+.headerBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.headerBtnContainer > a {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+  text-decoration: none;
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+  padding: 16px 0;
+  font-weight: 500;
+}
+.headerBtnContainer > a:last-of-type {
+  width: 42%;
+  background-color: var(--color-primary);
+}
+.headerBtnContainer > a svg {
+  transform: translateY(1px);
+}
+.headerBtnContainer > a:hover, .headerBtnContainer > a:focus {
+  transform: scale(.98);
+}
+
+.eventsLayout {
+  background-color: hsla(0, 0%, 98%, 1);
+  padding: 48px 0;
+}
+.eventsContainer {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.eventsContainer > h2 {
+  margin-bottom: 1.5rem;
+}
+
+.eventCard {
+  background-color: var(--color-white);
+  color: var(--color-text-primary);
+  padding: 24px 0;
+  margin-bottom: 24px;
+  box-shadow: 4px 4px 48px hsla(0, 0%, 0%, 0.1);
+}
+.eventCardContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+.eventCardImage {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 12px;
+}
+.eventCardImage img {
+  border-radius: 8px;
+}
+
+.eventCardDetails {
+  line-height: 1.4;
+}
+.eventCardDetails > h3 {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.eventCardDetails > p {
+  font-size: .9rem;
+  margin-bottom: 12px;
+}
+
+.eventCardBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.eventCardBtnContainer > a {
+  text-decoration: none;
+  padding: 12px 0;
+  border: 1px solid var(--color-secondary);
+  width: 38%;
+  background-color: transparent;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+  font-size: .9rem;
+}
+.eventCardBtnContainer > a:last-of-type {
+  width: 59%;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+.eventCardBtnContainer > a:hover, .eventCardBtnContainer > a:focus {
+  text-decoration: underline;
+}
+.eventCardBtnContainer > a svg {
+  transform: translateY(1px);
+}
+
+.eventsContainer > a {
+  display: block;
+  width: 90%;
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 12px 0;
+  border-radius: 24px;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+.eventsContainer > a:hover, .eventsContainer > a:focus {
+  opacity: 80%;
+  transform: scale(.98);
+}
+
+.updatesLayout {
+  background-color: hsla(0, 0%, 8%, 1);
+  color: var(--color-white);
+  background-repeat: repeat;
+  background-size: 370px;
+  padding: 48px 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.updatesCarouselBg {
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+}
+.updatesCarouselBg:nth-of-type(1) {
+  right: 0;
+  top: 0;
+  transform: rotate(180deg);
+}
+.updatesCarouselBg:nth-of-type(2) {
+  left: 0;
+  bottom: 0;
+}
+
+.updatesContainer {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.updatesHeading {
+  margin-bottom: 24px;
+}
+.updatesCarouselControlContainer {
+  display: none;
+}
+
+.updatesCarouselContainer {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 24px;
+  overflow-x: scroll;
+}
+
+.updateCard {
+  min-width: 150px;
+}
+.updateCardImage {
+  height: 120px;
+  margin-bottom: 8px;
+}
+.updateCard > h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.updateCard > p {
+  font-size: .9rem;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+.updateCard > a {
+  color: var(--color-link-primary);
+}
+
+.armsLayout {
+  padding: 48px 0;
+  background-color: var(--color-white);
+}
+.armsContainer {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  color: var(--color-text-primary);
+}
+.armsContainer > h2 {
+  margin-bottom: 24px;
+}
+
+.armCard {
+  background-color: hsla(240, 56%, 98%, 1);
+  padding: 24px 16px;
+  border: 1px solid hsla(240, 51%, 18%, 0.08);
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+.armCard:last-of-type {
+  margin-bottom: 0;
+}
+
+.armCardImage {
+  height: 200px;
+  margin-bottom: 12px;
+}
+.armCardImage > img {
+  border-radius: 4px;
+}
+
+.armCardDetails > h3 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.armCardDetails > p {
+  font-size: .9rem;
+  margin-bottom: 12px;
+}
+.armCardDetails > a {
+  display: flex;
+  width: 90%;
+  max-width: 265px;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+  padding: 12px 0;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  text-decoration: none;
+}
+.armCardDetails > a:hover, .armCardDetails > a:focus {
+  text-decoration: underline;
+}

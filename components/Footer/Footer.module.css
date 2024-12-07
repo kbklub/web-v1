@@ -25,7 +25,6 @@
   max-width: 64px;
 }
 .footerIntroLink h2 {
-  font-weight: 400;
   font-size: 3rem;
   text-transform: uppercase;
   color: var(--color-secondary);

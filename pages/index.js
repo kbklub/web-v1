@@ -7,6 +7,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import stackImage from "../assets/images/stackReformImage.png";
 import kbinetImage from "../assets/images/kbinetArticleImage.png";
 import copaImage from "../assets/images/copaDisplayImage.jpeg";
+import updatesCarouselBg from "../assets/images/updateBackgroundGraphic.png";
 
 
 export default function Home() {
@@ -22,16 +23,12 @@ export default function Home() {
             transformative social initiatives to make a lasting difference
           </p>
           <div className={styles.headerBtnContainer}>
-            <Link href="/about-us">
-              <button>
-                Read more about us
-                <FaArrowRight />
-              </button>
+            <Link href="/about">
+              Read more about us
+              <FaArrowRight />
             </Link>
             <Link href="/support-us">
-              <button>
-                Partner with us
-              </button>
+              Partner with us
             </Link>
           </div>
         </div>
@@ -40,38 +37,44 @@ export default function Home() {
         <div className={styles.eventsContainer}>
           <h2>Upcoming Events</h2>
           <div className={styles.eventCard}>
-            <div className={styles.eventCardImage}>
-              <Image src={stackImage} alt="A graphic poster describing the Stack Reform conference 2024"/>
-            </div>
-            <div className={styles.eventCardDetails}>
-              <h3>Stack Reform Conference 2024</h3>
-              <p>
-                Over the years, the STACK REFORM conference has evolved into a diverse range of
-                events. From exciting speech competitions to intercollegiate elevator pitch
-                contests, it has not relented in nurturing the minds of our inquisitive attendees.
-              </p>
-              <div className={styles.eventCardBtnContainer}>
-                <a href="https://stack.kbklub.org/">
-                  <button>Read More</button>
-                </a>
-                <a href="https://stack.kbklub.org/register">
-                  <button>
+            <div className={styles.eventCardContainer}>
+              <div className={styles.eventCardImage}>
+                <Image src={stackImage} alt="A graphic poster describing the Stack Reform conference 2024" />
+              </div>
+              <div className={styles.eventCardDetails}>
+                <h3>Stack Reform Conference 2024</h3>
+                <p>
+                  Over the years, the STACK REFORM conference has evolved into a diverse range of
+                  events. From exciting speech competitions to intercollegiate elevator pitch
+                  contests, it has not relented in nurturing the minds of our inquisitive attendees.
+                </p>
+                <div className={styles.eventCardBtnContainer}>
+                  <a href="https://stack.kbklub.org/">
+                    Read More
+                  </a>
+                  <a href="https://stack.kbklub.org/register">
                     Click here to Register
                     <FaArrowRight />
-                  </button>
-                </a>
+                  </a>
+                </div>
               </div>
-            </div>  
+            </div>
           </div>
           <Link href="/events">
-            <button>View all Events</button>
+            View all Events
           </Link>
         </div>
       </section>
       <section className={styles.updatesLayout}>
+        <div aria-hidden="true" className={styles.updatesCarouselBg}>
+          <Image src={updatesCarouselBg} alt="" />
+        </div>
+        <div aria-hidden="true" className={styles.updatesCarouselBg}>
+          <Image src={updatesCarouselBg} alt="" />
+        </div>
         <div className={styles.updatesContainer}>
           <div className={styles.updatesHeading}>
-            <h2></h2>
+            <h2>Latest Updates from the KB KLUB</h2>
             <div className={styles.updatesCarouselControlContainer}>
               ajjsjs
             </div>
@@ -79,7 +82,7 @@ export default function Home() {
           <div className={styles.updatesCarouselContainer}>
             <div className={styles.updateCard}>
               <div aria-hidden="true" className={styles.updateCardImage}>
-                <Image src={kbinetImage} alt=""/>
+                <Image src={kbinetImage} alt="" />
               </div>
               <h3>THE KBINET RELEASE</h3>
               <p>
@@ -87,7 +90,7 @@ export default function Home() {
                 first quarter of the year. This issue of the KBINET features articles on
                 the launch of the KB Multipurpose Kourt.
               </p>
-              <a href="https://twitter.com/KBKLUB/status/1781678522039153130">
+              <a href="https://twitter.com/KBKLUB/status/1781678522039153130/">
                 Read more
               </a>
             </div>
@@ -142,7 +145,7 @@ export default function Home() {
 
           <article className={styles.armCard}>
             <div aria-hidden="true" className={styles.armCardImage}>
-              <Image src={copaImage} alt=""/>
+              <Image src={copaImage} alt="" />
             </div>
 
             <div className={styles.armCardDetails}>
@@ -159,16 +162,14 @@ export default function Home() {
                 and lots more.
               </p>
               <Link href="/arms/philanthropy">
-                <button>
-                  See more about COPA
-                  <FaArrowRight />
-                </button>
+                See more about COPA
+                <FaArrowRight />
               </Link>
             </div>
           </article>
           <article className={styles.armCard}>
             <div aria-hidden="true" className={styles.armCardImage}>
-              <Image src={copaImage} alt=""/>
+              <Image src={copaImage} alt="" />
             </div>
 
             <div className={styles.armCardDetails}>
@@ -185,16 +186,14 @@ export default function Home() {
                 and lots more.
               </p>
               <Link href="/arms/philanthropy">
-                <button>
-                  See more about COPA
-                  <FaArrowRight />
-                </button>
+                See more about COPA
+                <FaArrowRight />
               </Link>
             </div>
           </article>
           <article className={styles.armCard}>
             <div aria-hidden="true" className={styles.armCardImage}>
-              <Image src={copaImage} alt=""/>
+              <Image src={copaImage} alt="" />
             </div>
 
             <div className={styles.armCardDetails}>
@@ -211,16 +210,14 @@ export default function Home() {
                 and lots more.
               </p>
               <Link href="/arms/philanthropy">
-                <button>
-                  See more about COPA
-                  <FaArrowRight />
-                </button>
+                See more about COPA
+                <FaArrowRight />
               </Link>
             </div>
           </article>
           <article className={styles.armCard}>
             <div aria-hidden="true" className={styles.armCardImage}>
-              <Image src={copaImage} alt=""/>
+              <Image src={copaImage} alt="" />
             </div>
 
             <div className={styles.armCardDetails}>
@@ -237,10 +234,8 @@ export default function Home() {
                 and lots more.
               </p>
               <Link href="/arms/philanthropy">
-                <button>
-                  See more about COPA
-                  <FaArrowRight />
-                </button>
+                See more about COPA
+                <FaArrowRight />
               </Link>
             </div>
           </article>
