@@ -43,7 +43,7 @@ const SEO = ({ pageDetails }) => {
         <meta name="twitter:image:type" content="image/jpeg" />
         <meta name="twitter:image:alt" content="The KB Klub" />
         <meta name="twitter:image:width" content="680" />
-        <meta name="twitter:image:height" content="674" />  
+        <meta name="twitter:image:height" content="674" />
         <meta name="twitter:site" content="@KBKLUB" />  
       </Head>
     </>
