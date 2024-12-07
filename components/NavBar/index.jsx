@@ -80,7 +80,7 @@ const NavBar = () => {
                 </button>
                 <div className={!dropArms ? styles.hiddenDropDown : ""}>
                   <ul className={styles.navSubList}>
-                    <li><Link href="/arms/philantrophy">Philanthropy</Link></li>
+                    <li><Link href="/arms/philanthropy">Philanthropy</Link></li>
                     <li><Link href="/arms/academic-excellence">Academic Excellence</Link></li>
                     <li><Link href="/arms/social-empowerment">Social Empowerment</Link></li>
                   </ul>

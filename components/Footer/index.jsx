@@ -34,7 +34,7 @@ const Footer = () => {
           <div className={styles.footerNavColumns}>
             <h3>Arms</h3>
             <ul className={styles.footerLinks}>
-              <li><Link href="/arms/philantrophy">Philanthropy</Link></li>
+              <li><Link href="/arms/philanthropy">Philanthropy</Link></li>
               <li><Link href="/arms/academic-excellence">Academic Excellence</Link></li>
               <li><Link href="/arms/social-empowerment">Social Empowerment</Link></li>
               <li><Link href="/editorial">Editorial</Link></li>
