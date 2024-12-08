@@ -1,5 +1,7 @@
+import BottomLayout from "@/layout/BottomLayout";
 import "@/styles/globals.css";
 import { Yeseva_One, Lato } from "next/font/google";
+import Head from "next/head";
 
 const yeseva_one = Yeseva_One({
   subsets: ["latin"],
@@ -24,7 +26,17 @@ export default function App({ Component, pageProps }) {
           font-family: ${yeseva_one.style.fontFamily};
         }
       `}</style>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content='Sodiq "Ade" Sanusi'/>
+        <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+      </Head>
       <Component {...pageProps} />
+      <BottomLayout />
     </>
   );
 }

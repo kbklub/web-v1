@@ -41,3 +41,12 @@ p, h1, h2, h3, h4, h5, h6 {
   --color-white: hsla(0, 0%, 100%, 1);
   --color-background-grey: hsla(0, 0%, 8%, 1);
 }
+button {
+  cursor: pointer;
+}
+a {
+  color: inherit;
+}
+h1, h2 {
+  font-weight: 400;
+}
