@@ -10,7 +10,7 @@
 
 .headerContainer {
   width: 90%;
-  max-width: 900px;
+  max-width: 750px;
   margin: 0 auto;
   padding: 110px 0;
   text-align: center;
@@ -62,7 +62,7 @@
 }
 .eventsContainer {
   width: 90%;
-  max-width: 900px;
+  max-width: 750px;
   margin: 0 auto;
 }
 .eventsContainer > h2 {
@@ -155,11 +155,11 @@
   background-size: 370px;
   padding: 48px 0;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .updatesCarouselBg {
-  width: 100%;
+  width: clamp(200px, 50%, 350px);
   position: absolute;
   pointer-events: none;
 }
@@ -220,7 +220,7 @@
 }
 .armsContainer {
   width: 90%;
-  max-width: 900px;
+  max-width: 750px;
   margin: 0 auto;
   color: var(--color-text-primary);
 }
