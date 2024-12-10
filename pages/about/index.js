@@ -2,10 +2,15 @@ import NavBar from "@/components/NavBar";
 import SEO from "@/components/SEO";
 import styles from "@/styles/AboutKlub.module.css";
 
+const pageSeo = {
+  title: "About • Kb Klub",
+  description: "The exclusive and foremost socio-philanthropic group for male medical students at the University of Lagos' College of Medicine is called the KB Klub. Seven medical students founded the KB KLUB in 1969 led by Professor Oladapo Ashiru, OFR who served as the first Keebite and President of the KB Klub. The KB Klub has a rich history of empowering future medical leaders."
+}
+
 const AboutUs = () => {
   return (
     <>
-      <SEO />
+      <SEO pageDetails={pageSeo}/>
       <NavBar />
       <header className={styles.headerLayout}>
         <main className={styles.headerContainer}>

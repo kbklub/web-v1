@@ -12,11 +12,14 @@ import cosaImage from "../assets/images/cosaDisplayImage.jpeg";
 import editorialImage from "../assets/images/editorialDisplayImage.png";
 import updatesCarouselBg from "../assets/images/updateBackgroundGraphic.png";
 
+const pageSeo = {
+  description: "The KB Klub is an exclusive socio-philanthropic club of male medical students in the College of Medicine, University of Lagos which carries out philanthropic, academic and social empowerment projects. Contribute to our impactful initiatives and make a difference."
+}
 
 export default function Home() {
   return (
     <>
-      <SEO />
+      <SEO pageDetails={pageSeo}/>
       <header className={styles.headerLayout}>
         <NavBar />
         <div className={styles.headerContainer}>

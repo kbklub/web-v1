@@ -23,13 +23,18 @@ const mockData = {
   ]
 }
 
+const pageSeo = {
+  title: "Events • Kb Klub",
+  description: "Learn about the transformative events hosted by KB Klub. Explore the STACK Reform Conference, Even Heroes Need Saving, Your Power to Gift Life, and many more initiatives dedicated to advancing our core values and improving society."
+}
+
 const Events = () => {
 
   const [eventsType, setEventsType] = useState("upcoming");
 
   return (
     <>
-      <SEO />
+      <SEO pageDetails={pageSeo}/>
       <header className={styles.headerLayout}>
         <NavBar />
         <div className={styles.headerContainer}>
