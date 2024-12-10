@@ -1,5 +1,6 @@
 import NavBar from "@/components/NavBar";
 import SEO from "@/components/SEO";
+import { FaSearch } from "react-icons/fa";
 
 const pageSeo = {
   title: "Executives and Kbites • Kb Klub",
@@ -11,9 +12,30 @@ const Kbites = () => {
     <>
       <SEO pageDetails={pageSeo}/>
       <NavBar />
-      <main style={{ padding: "40vh 0" }}>
-        <h1>This is the Kbites Section</h1>
-      </main>
+      {/* <main>
+        <div>
+          <h1>Meet the Executives and the Kbites</h1>
+          <form>
+            <div><FaSearch /></div>
+            <input type="text" placeholder="Enter a name to search"/>
+            <button type="submit">Search</button>
+          </form>
+        </div>
+        <div>
+          <div>
+            <h2>The Executives</h2>
+            <div>
+
+            </div>
+          </div>
+          <div>
+            <h2>The Kbites</h2>
+            <div>
+              
+            </div>
+          </div>
+        </div>
+      </main> */}
     </>
   );
 }

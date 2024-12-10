@@ -1,5 +1,6 @@
 import NavBar from "@/components/NavBar";
 import SEO from "@/components/SEO";
+import styles from "@/styles/Arms.module.css";
 
 const pageSeo = {
   title: "COSA • Kb Klub",
@@ -9,10 +10,24 @@ const pageSeo = {
 const COSA = () => {
   return (
     <>
-      <SEO pageDetails={pageSeo}/>
+      <SEO pageDetails={pageSeo} />
       <NavBar />
-      <main style={{ padding: "40vh 0" }}>
-        <h1>This is the COSA Arm section</h1>
+      <main className={styles.armLayout}>
+        <div className={styles.armContainer}>
+          <h1>Committee On Social Activities (COSA)</h1>
+          <p>
+            Social Empowerment is one of the tripods which the Klub stands on. Since her
+            inception, the KB Klub has achieved social empowerment amongst her members and
+            the society at large. 
+            <br />
+            <br />
+            One of the ways projects the KB Klub has empowered the society was through the
+            KB Kup: King of the Kourt Tournament which was birthed in 2020 to bring
+            individuals from all over to participate in an elite sports tournament in various
+            sports. The end goal of this tournament was to put smiles on faces, which the
+            KB Klub has done for over 50 years.
+          </p>
+        </div>
       </main>
     </>
   );
