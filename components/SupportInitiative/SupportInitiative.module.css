@@ -34,14 +34,12 @@
   width: 65%;
   max-width: 300px;
   margin: 0 auto;
-}
-.supportDetails button {
-  width: 100%;
   background-color: var(--color-primary);
   border: none;
   color: var(--color-secondary);
   padding: 12px 0;
   font-weight: 500;
+  text-decoration: none;
 }
 .supportDetails a:hover, .supportDetails a:focus {
   opacity: 80%;
