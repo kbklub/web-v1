@@ -1,11 +1,16 @@
+import ArmEvents from "@/components/ArmEvents";
 import NavBar from "@/components/NavBar";
 import SEO from "@/components/SEO";
+import events from "@/data/events";
 import styles from "@/styles/Arms.module.css";
+import { sortAndFilterEvents } from "@/utils/sortEvents";
 
 const pageSeo = {
-  title: "COSA • Kb Klub",
+  title: "COSA • KB Klub",
   description: "KB KLUB has been empowering individuals and communities for over 55 years. Learn about the events of our Committee on Social Activities, including the exciting KB Kup: King of the Kourt Tournament. Join us in our mission to inspire and uplift through sports and community engagement."
 }
+
+let cosaEvents = sortAndFilterEvents(events, "cosa");
 
 const COSA = () => {
   return (
@@ -29,6 +34,7 @@ const COSA = () => {
           </p>
         </div>
       </main>
+      <ArmEvents events={cosaEvents}/>
     </>
   );
 }

@@ -1,11 +1,16 @@
+import ArmEvents from "@/components/ArmEvents";
 import NavBar from "@/components/NavBar";
 import SEO from "@/components/SEO";
+import events from "@/data/events";
 import styles from "@/styles/Arms.module.css";
+import { sortAndFilterEvents } from "@/utils/sortEvents";
 
 const pageSeo = {
-  title: "COPA • Kb Klub",
+  title: "COPA • KB Klub",
   description: "Discover the impactful work of the Committee on Philanthropic Activities at KB KLUB. For over 55 years, we've been organizing vital medical interventions and donations to improve lives. From cancer screenings to mental health awareness and blood donation drives, we're committed to making a positive impact."
 }
+
+let copaEvents = sortAndFilterEvents(events, "copa");
 
 const COPA = () => {
   return (
@@ -56,6 +61,7 @@ const COPA = () => {
           </div>
         </div>
       </main>
+      <ArmEvents events={copaEvents}/>
     </>
   );
 }

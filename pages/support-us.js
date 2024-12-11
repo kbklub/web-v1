@@ -2,7 +2,7 @@ import NavBar from "@/components/NavBar";
 import SEO from "@/components/SEO";
 
 const pageSeo = {
-  title: "Support Us • Kb Klub",
+  title: "Support Us • KB Klub",
   description: "Join us in making a difference! Donate to KB KLUB today to support our philanthropic, academic, and social initiatives. Your contribution will help us continue to empower communities and create a positive impact. Partner with us on our projects to leave a lasting legacy."
 }
 

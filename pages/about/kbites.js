@@ -3,7 +3,7 @@ import SEO from "@/components/SEO";
 import { FaSearch } from "react-icons/fa";
 
 const pageSeo = {
-  title: "Executives and Kbites • Kb Klub",
+  title: "Executives and Kbites • KB Klub",
   description: "The KB Klub is led by a dynamic team of dedicated medical students who are committed to making a positive impact on the world. Meet the seven Executives of the Klub and the roles in which they serve to advance our efforts in philanthropy, academics and social empowerment."
 }
 

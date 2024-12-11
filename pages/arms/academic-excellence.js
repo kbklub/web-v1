@@ -1,11 +1,16 @@
+import ArmEvents from "@/components/ArmEvents";
 import NavBar from "@/components/NavBar";
 import SEO from "@/components/SEO";
+import events from "@/data/events";
 import styles from "@/styles/Arms.module.css";
+import { filterEventsByArm, sortAndFilterEvents } from "@/utils/sortEvents";
 
 const pageSeo = {
-  title: "COAA • Kb Klub",
+  title: "COAA • KB Klub",
   description: "Discover how the Committee of Academic Activities (COAA) of KB KLUB is driving academic excellence and innovation in Nigeria. Learn about the impactful STACK Reform Conference and the transformative KB KLUB Fellowship Program, designed to equip students with the skills and connections to succeed in healthcare and technology."
 }
+
+let coaaEvents = sortAndFilterEvents(events, "coaa");
 
 const COAA = () => {
   return (
@@ -62,6 +67,7 @@ const COAA = () => {
           </div>
         </div>
       </main>
+      <ArmEvents events={coaaEvents}/>
     </>
   );
 }

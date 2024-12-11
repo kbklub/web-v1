@@ -1,32 +1,18 @@
 import NavBar from "@/components/NavBar";
 import SEO from "@/components/SEO";
-import stackImage from "../assets/images/stackReformImage.png";
 import Image from "next/image";
 import styles from "@/styles/Events.module.css";
 import { FaArrowRight } from "react-icons/fa6";
 import { useState } from "react";
-
-const mockData = {
-  upcoming: [
-  ],
-  past: [
-    {
-      name: "Stack Reform 2024",
-      description: "Over the years, the STACK REFORM conference has evolved into a diverse range of events. From exciting speech competitions to intercollegiate elevator pitch contests, it has not relented in nurturing the minds of our inquisitive attendees.",
-      link: "https://stack.kbklub.org/",
-    },
-    {
-      name: "Stack Reform 2024",
-      description: "Over the years, the STACK REFORM conference has evolved into a diverse range of events. From exciting speech competitions to intercollegiate elevator pitch contests, it has not relented in nurturing the minds of our inquisitive attendees.",
-      link: "https://stack.kbklub.org/",
-    },
-  ]
-}
+import events from "@/data/events";
+import { sortEventsInObject } from "@/utils/sortEvents";
 
 const pageSeo = {
-  title: "Events • Kb Klub",
+  title: "Events • KB Klub",
   description: "Learn about the transformative events hosted by KB Klub. Explore the STACK Reform Conference, Even Heroes Need Saving, Your Power to Gift Life, and many more initiatives dedicated to advancing our core values and improving society."
 }
+
+const refinedEvents = sortEventsInObject(events);
 
 const Events = () => {
 
@@ -63,14 +49,16 @@ const Events = () => {
       <main className={styles.eventsLayout}>
         <div className={styles.eventsContainer}>
           <h2>{eventsType} Events</h2>
-          {!mockData[eventsType].length ? (
-            <p className={styles.noEventTag}>No Upcoming Events for Now. Check back soon for updates!</p>
+          {!events[eventsType].length ? (
+            <p className={styles.noEventTag}>
+              No <span style={{textTransform: "capitalize"}}>{eventsType}</span> Events for Now. Check back soon for updates!
+            </p>
           ) : ""}
-          {mockData[eventsType].map((ev, index) => (
+          {refinedEvents[eventsType].map((ev, index) => (
             <div className={styles.eventCard} key={index}>
               <div className={styles.eventCardContainer}>
                 <div className={styles.eventCardImage}>
-                  <Image src={stackImage} alt="A graphic poster describing the Stack Reform conference 2024" />
+                  <Image src={ev.image} alt="A graphic poster describing the Stack Reform conference 2024" />
                 </div>
                 <div className={styles.eventCardDetails}>
                   <h3>{ev.name}</h3>
