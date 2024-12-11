@@ -4,19 +4,25 @@ import styles from "@/styles/Homepage.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
-import stackImage from "../assets/images/stackReformImage.png";
 import kbinetImage from "../assets/images/kbinetArticleImage.png";
 import copaImage from "../assets/images/copaDisplayImage.jpeg";
 import coaaImage from "../assets/images/coaaDisplayImage.jpeg";
 import cosaImage from "../assets/images/cosaDisplayImage.jpeg";
 import editorialImage from "../assets/images/editorialDisplayImage.png";
 import updatesCarouselBg from "../assets/images/updateBackgroundGraphic.png";
+import { sortEventsInObject } from "@/utils/sortEvents";
+import events from "@/data/events";
 
+const pageSeo = {
+  description: "The KB Klub is an exclusive socio-philanthropic club of male medical students in the College of Medicine, University of Lagos which carries out philanthropic, academic and social empowerment projects. Contribute to our impactful initiatives and make a difference."
+}
+
+const upcomingEvents = sortEventsInObject(events).upcoming;
 
 export default function Home() {
   return (
     <>
-      <SEO />
+      <SEO pageDetails={pageSeo}/>
       <header className={styles.headerLayout}>
         <NavBar />
         <div className={styles.headerContainer}>
@@ -39,30 +45,35 @@ export default function Home() {
       <section className={styles.eventsLayout}>
         <div className={styles.eventsContainer}>
           <h2>Upcoming Events</h2>
-          <div className={styles.eventCard}>
-            <div className={styles.eventCardContainer}>
-              <div className={styles.eventCardImage}>
-                <Image src={stackImage} alt="A graphic poster describing the Stack Reform conference 2024" />
-              </div>
-              <div className={styles.eventCardDetails}>
-                <h3>Stack Reform Conference 2024</h3>
-                <p>
-                  Over the years, the STACK REFORM conference has evolved into a diverse range of
-                  events. From exciting speech competitions to intercollegiate elevator pitch
-                  contests, it has not relented in nurturing the minds of our inquisitive attendees.
-                </p>
-                <div className={styles.eventCardBtnContainer}>
-                  <a href="https://stack.kbklub.org/">
-                    Read More
-                  </a>
-                  <a href="https://stack.kbklub.org/register">
-                    Click here to Register
-                    <FaArrowRight />
-                  </a>
+          {!upcomingEvents.length ? (<p className={styles.noEventText}>
+            No Upcoming Events for Now. Check back soon for updates!
+          </p>) : ""}
+          {upcomingEvents.length ? (
+            <>
+              {upcomingEvents.map((ev, index) => (
+                <div className={styles.eventCard} key={index}>
+                  <div className={styles.eventCardContainer}>
+                    <div className={styles.eventCardImage}>
+                      <Image src={ev.image} alt="A graphic poster describing the event" />
+                    </div>
+                    <div className={styles.eventCardDetails}>
+                      <h3>{ev.name}</h3>
+                      <p>{ev.description}</p>
+                      <div className={styles.eventCardBtnContainer}>
+                        <a href={ev.link}>
+                          Read More
+                        </a>
+                        <a href={ev.registrationLink}>
+                          Click here to Register
+                          <FaArrowRight />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          </div>
+              ))}
+            </>
+          ) : ""}
           <Link href="/events">
             View all Events
           </Link>

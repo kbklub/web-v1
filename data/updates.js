@@ -1,4 +1,9 @@
-// import kbinetImage from 
+// updateSchema = {
+//   name: "",
+//   description: "",
+//   link: "",
+//   image: 
+// }
 
 const updatesData = [
   {

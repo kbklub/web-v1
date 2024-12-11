@@ -28,7 +28,7 @@ const SupportInitiative = () => {
           thrive with the generous support and partnership from individuals, companies,
           and organizations. Join hands with us to make a difference.
         </p>
-        <Link href="/support-us"><button>Partner with us</button></Link>
+        <Link href="/support-us">Partner with us</Link>
       </div>
       <div className={styles.carouselContainer}>
         {bottomCarouselImage.map((image, index) => (

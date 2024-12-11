@@ -148,6 +148,13 @@
   transform: scale(.98);
 }
 
+.noEventText {
+  text-align: center;
+  font-weight: 500;
+  color: hsla(0, 0%, 48%, 1);
+  padding: 1.5rem 0 2rem;
+}
+
 .updatesLayout {
   background-color: hsla(0, 0%, 8%, 1);
   color: var(--color-white);

@@ -1,0 +1,107 @@
+.headerLayout {
+  background-color: hsla(0, 0%, 98%, 1);
+}
+
+.headerContainer {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 80px 0 210px;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+
+.headerContainer > h1 {
+  margin-bottom: 1em;
+  line-height: 1.2;
+}
+
+.headerDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.headerDetails {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.videoLayout {
+  padding: 0;
+  line-height: 0;
+}
+.videoContainer {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  transform: translateY(max(-40%, -150px));
+  border-radius: 20px;
+  box-shadow: 0 4px 40px hsla(0, 0%, 0%, 0.4);
+}
+.videoContainer > iframe {
+  border-radius: 20px;
+}
+
+
+.alumniLayout {
+  padding: 0 0 32px;
+  overflow-x: hidden;
+}
+
+.alumniContainer {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.alumniContainer > h2 {
+  margin-bottom: 16px;
+}
+
+.testimonialContainer {
+  display: flex;
+  align-items: flex-start;
+  width: auto;
+  column-gap: 12px;
+  margin-bottom: 24px;
+}
+
+.testimonialCard {
+  min-width: 200px;
+  padding: 21px 16px;
+  background-color: hsla(240, 50%, 98%, 1);
+  color: var(--color-text-primary);
+  border-radius: 4px;
+}
+.testimonialCard > p {
+  font-size: .9rem;
+  margin-bottom: 1em;
+  max-width: 350px;
+}
+.testimonialCard > p:last-of-type {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.testimonialControlContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.testimonialControlButton {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid hsla(240, 51%, 18%, 0.4);
+  border-radius: 50%;
+}
+
+
+.testimonialControlButton:first-of-type {
+  transform: scale(1.2);
+  background-color: hsla(240, 51%, 18%, 1);
+}
