@@ -1,0 +1,119 @@
+.headerLayout {
+  background-color: var(--color-secondary);
+  background-image: url("../assets/images/eventsHeaderBackgroundImage.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+
+.headerContainer {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: center;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+.headerContainer > h1 {
+  margin-bottom: 4px;
+}
+.headerDetails {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  line-height: 1.5;
+}
+
+.supportLayout {
+  background-color: hsla(0, 0%, 98%, 1);
+  padding: 32px 0;
+}
+.supportContainer {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.accountContainer {
+  padding: 32px 0;
+  background-color: var(--color-primary);
+  color: var(--color-text-primary);
+  border-radius: 16px;
+  box-shadow: 0px 4px 80px hsla(0, 0%, 0%, 0.1);
+  margin-bottom: 32px;
+}
+.accountContainer > h3 {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.accountDetails {
+  width: 88%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: .5rem;
+}
+
+.supportFormLayout {
+  background-color: hsla(240, 51%, 99%, 1);
+  padding: 32px 0;
+  border: 1px solid hsla(240, 51%, 18%, 0.1);
+  border-radius: 16px;
+  box-shadow: 0px 4px 40px hsla(0, 0%, 0%, 0.1);
+}
+
+.supportFormContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.supportInput, .supportTextArea {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  margin-bottom: 16px;
+  color: var(--color-text-primary);
+}
+
+.supportInput > input, .supportTextArea > textarea {
+  padding: 16px min(5%, 24px);
+  border: 1px solid hsla(240, 51%, 18%, 0.16);
+  border-radius: 16px;
+  color: var(--color-text-primary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.supportInput > input::placeholder, .supportTextArea > textarea::placeholder {
+  font-size: .9rem;
+  color: hsla(240, 51%, 18%, 0.32);
+}
+
+.supportTextArea > textarea {
+  width: 100%;
+  min-height: 140px;
+  resize: vertical;
+  white-space: initial;
+}
+
+.supportFormContainer > button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2px;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 16px 0;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: 16px;
+  border: none;
+}
+.supportFormContainer > button:hover, .supportFormContainer > button:focus {
+  opacity: 90%;
+  transform: scale(.98);
+}
