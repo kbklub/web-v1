@@ -1,0 +1,152 @@
+.headerLayout {
+  background-color: var(--color-secondary-background);
+  background-image: url("../assets/images/eventsHeaderBackgroundImage.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+
+.headerContainer {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 80px 0 110px;
+  text-align: center;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+.headerContainer > h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+.headerDetails {
+  margin-bottom: 1.5rem;
+  line-height: 1.36;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.headerBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: hsla(240, 51%, 98%, 1);
+  border: 2px solid hsla(240, 51%, 18%, 0.16);
+  border-radius: 32px;
+}
+
+.headerBtnContainer button {
+  width: 50%;
+  padding: 16px 0;
+  border: none;
+  background-color: transparent;
+  color: hsla(240, 51%, 18%, 0.48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+}
+.headerBtnContainer > button.active {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.eventsLayout {
+  background-color: var(--color-white);
+}
+
+.eventsContainer {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: hsla(240, 60%, 99%, 1);
+  box-shadow: 0 4px 40px hsla(0, 0%, 0%, 0.1);
+  border-radius: 24px;
+  padding: 32px 24px;
+  transform: translateY(max(-25%, -55px));
+}
+.eventsContainer > h2 {
+  margin-bottom: 24px;
+  text-transform: capitalize;
+}
+.noEventTag {
+  padding: 24px 0 64px;
+  color: hsla(0, 0%, 48%, 1);
+  text-align: center;
+}
+
+
+.eventCard {
+  background-color: var(--color-white);
+  color: var(--color-text-primary);
+  padding: 32px 0;
+  margin-bottom: 16px;
+  box-shadow: 0px 4px 48px hsla(0, 0%, 0%, 0.1);
+  border: 1px solid hsla(0, 0%, 92%, 1);
+  border-radius: 8px;
+}
+.eventCard:last-of-type {
+  margin-bottom: 0;
+}
+.eventCardContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+.eventCardImage {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 12px;
+}
+.eventCardImage img {
+  border-radius: 4px;
+}
+
+.eventCardDetails {
+  line-height: 1.4;
+}
+.eventCardDetails > h3 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 1rem;
+}
+.eventCardDetails > p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: .9rem;
+  margin-bottom: 12px;
+}
+
+.eventCardBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.eventCardBtnContainer > a {
+  text-decoration: none;
+  padding: 12px 0;
+  border: 1px solid var(--color-secondary);
+  width: 50%;
+  max-width: 150px;
+  background-color: transparent;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+  font-size: .9rem;
+}
+.eventCardBtnContainer > a:hover, .eventCardBtnContainer > a:focus {
+  text-decoration: underline;
+}
+.eventCardBtnContainer > a svg {
+  transform: translateY(1px);
+}

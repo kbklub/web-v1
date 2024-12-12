@@ -36,6 +36,7 @@ p, h1, h2, h3, h4, h5, h6 {
 :root {
   --color-primary: hsla(58, 100%, 64%, 1);
   --color-secondary: hsla(240, 51%, 18%, 1);
+  --color-secondary-background: hsla(240, 51%, 10%, 1);
   --color-text-primary: hsla(0, 0%, 16%, 1);
   --color-link-primary: hsla(58, 98%, 49%, 1);
   --color-white: hsla(0, 0%, 100%, 1);

@@ -5,14 +5,14 @@ import styles from "@/styles/Events.module.css";
 import { FaArrowRight } from "react-icons/fa6";
 import { useState } from "react";
 import events from "@/data/events";
-import { sortEventsInObject } from "@/utils/sortEvents";
+import { sortObjectArraysByDate } from "@/utils/sortEvents";
 
 const pageSeo = {
   title: "Events • KB Klub",
   description: "Learn about the transformative events hosted by KB Klub. Explore the STACK Reform Conference, Even Heroes Need Saving, Your Power to Gift Life, and many more initiatives dedicated to advancing our core values and improving society."
 }
 
-const refinedEvents = sortEventsInObject(events);
+const refinedEvents = sortObjectArraysByDate(events);
 
 const Events = () => {
 

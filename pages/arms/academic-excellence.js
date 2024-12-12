@@ -3,7 +3,7 @@ import NavBar from "@/components/NavBar";
 import SEO from "@/components/SEO";
 import events from "@/data/events";
 import styles from "@/styles/Arms.module.css";
-import { filterEventsByArm, sortAndFilterEvents } from "@/utils/sortEvents";
+import { sortAndFilterEvents } from "@/utils/sortEvents";
 
 const pageSeo = {
   title: "COAA • KB Klub",
