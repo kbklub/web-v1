@@ -10,14 +10,14 @@ import coaaImage from "../assets/images/coaaDisplayImage.jpeg";
 import cosaImage from "../assets/images/cosaDisplayImage.jpeg";
 import editorialImage from "../assets/images/editorialDisplayImage.png";
 import updatesCarouselBg from "../assets/images/updateBackgroundGraphic.png";
-import { sortEventsInObject } from "@/utils/sortEvents";
+import { sortObjectArraysByDate } from "@/utils/sortEvents";
 import events from "@/data/events";
 
 const pageSeo = {
   description: "The KB Klub is an exclusive socio-philanthropic club of male medical students in the College of Medicine, University of Lagos which carries out philanthropic, academic and social empowerment projects. Contribute to our impactful initiatives and make a difference."
 }
 
-const upcomingEvents = sortEventsInObject(events).upcoming;
+const upcomingEvents = sortObjectArraysByDate(events).upcoming;
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
 .headerLayout {
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary-background);
   background-image: url("../assets/images/eventsHeaderBackgroundImage.png");
   background-repeat: no-repeat;
   background-position: bottom center;
