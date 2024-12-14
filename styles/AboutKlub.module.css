@@ -1,5 +1,9 @@
 .headerLayout {
   background-color: hsla(0, 0%, 98%, 1);
+  background-image: url("../assets/images/kbKlubBackgroundGraphicMobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .headerContainer {
@@ -61,10 +65,11 @@
 
 .testimonialContainer {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   width: auto;
   column-gap: 12px;
   margin-bottom: 24px;
+  overflow-x: auto;
 }
 
 .testimonialCard {
@@ -73,6 +78,9 @@
   background-color: hsla(240, 50%, 98%, 1);
   color: var(--color-text-primary);
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .testimonialCard > p {
   font-size: .9rem;
@@ -85,7 +93,7 @@
 }
 
 .testimonialControlContainer {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   column-gap: 5px;

@@ -83,24 +83,24 @@ const AboutUs = () => {
             </div>
             <div className={styles.testimonialCard}>
               <p>
-                I can confidently say I am a better man and a unique addition to the
-                society because of the KB Klub.
+                Over the years, I have learnt the true meaning of discipline, brotherhood,
+                sacrifice, generosity, love and hard work.
               </p>
-              <p>Saliu Sodiq, BDS</p>
+              <p>Alli Toluwani, MLS</p>
             </div>
             <div className={styles.testimonialCard}>
               <p>
-                Joining the KB Klub has been a massive blessing to me because I&apos;ve
-                been exposed to an unimaginable extent of brotherly love.
+                The principles, lessons, network, innovation, social privileges and
+                philanthropy have given me much more values than is required of a regular
+                medical student.
               </p>
-              <p>Adebanjo Toluwalase, MBBS</p>
+              <p>Aluko Busayo, MBBS</p>
             </div>
             <div className={styles.testimonialCard}>
               <p>
-                I can confidently say I am a better man and a unique addition to the
-                society because of the KB Klub.
+                Without the KB Klub, I wouldn&apos;t be the gentleman I am today.
               </p>
-              <p>Saliu Sodiq, BDS</p>
+              <p>Salau Opeyemi, MBBS</p>
             </div>
           </div>
           <div className={styles.testimonialControlContainer}>
