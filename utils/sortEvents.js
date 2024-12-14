@@ -66,8 +66,38 @@ export const sortAndFilterEvents = (eventsObject, arm) => {
   return sortObjectArraysByDate(filteredEvents);
 };
 
+/**
+ * Splits an array into subarrays of a specified maximum length
+ * @param {Array} inputArray - The input array to be chunked
+ * @param {number} chunkSize - The maximum size of each subarray
+ * @returns {Array<Array>} An array of subarrays
+ */
+export const chunkArray = (inputArray, chunkSize) => {
+  // Validate inputs
+  if (!Array.isArray(inputArray)) {
+    throw new Error('Input must be an array');
+  }
+  
+  if (!Number.isInteger(chunkSize) || chunkSize <= 0) {
+    throw new Error('Chunk size must be a positive integer');
+  }
+
+  // Use Array.from to create chunks
+  const chunkedArray = Array.from(
+    { length: Math.ceil(inputArray.length / chunkSize) },
+    (_, index) => {
+      const start = index * chunkSize;
+      return inputArray.slice(start, start + chunkSize);
+    }
+  );
+
+  return chunkedArray;
+};
+
+
 // Example usage:
 // const copaEvents = filterEventsByArm(events, 'copa');
 // const sortedAndFilteredEvents = sortAndFilterEvents(events, 'coaa');
 // const sortedEvents = sortObjectArraysByDate(events);
 // const sortedEditorialPieces = sortObjectArraysByDate(editorialPieces);
+// const result = chunkArray(inputArray, 5);
