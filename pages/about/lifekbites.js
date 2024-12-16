@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import styles from "@/styles/AboutLifeKbites.module.css";
 import { useState } from "react";
 import { lifeKbites } from "@/data/kbites";
-import { chunkArray } from "@/utils/sortEvents";
+import { chunkArray, searchAlumni } from "@/utils/sortEvents";
 
 const pageSeo = {
   title: "Life Kbites • KB Klub",
@@ -16,15 +16,23 @@ const separatedData = chunkArray(lifeKbites, 44);
 const LifeKbites = () => {
 
   const [searchName, setSearchName] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = e => {
-    e.preventDefault();
-    console.log(searchName);
+    let input = e.target.value
+    setSearchName(input);
+
+    if (input.trim()) {
+      const results = searchAlumni(lifeKbites, input);
+      setSearchResults(results);
+    } else {
+      setSearchResults([]);
+    }
   }
 
   return (
     <>
-      <SEO pageDetails={pageSeo}/>
+      <SEO pageDetails={pageSeo} />
       <NavBar />
       <main className={styles.kbitesLayout}>
         <div className={styles.kbitesContainer}>
@@ -48,15 +56,34 @@ const LifeKbites = () => {
               <FaSearch />
               <input
                 type="search" placeholder="Enter a name to search"
-                value={searchName} onChange={e => setSearchName(e.target.value)}
+                value={searchName} onChange={e => handleSearch(e)}
               />
-              <button type="submit">
+              <button type="submit" disabled>
                 Search
               </button>
             </form>
           </section>
 
           <section className={styles.generalLayout}>
+            {searchName.trim() ? (
+              <div className={styles.lifeKbitesLayout} style={{paddingBottom: "2em"}}>
+                {!searchResults.length ?
+                  (<h2>No results found for &quot;{searchName}&quot;</h2>) :
+                  (<h2>Showing all results for &quot;{searchName}&quot;</h2>)
+                }
+                {searchResults.length ? (
+                  <div className={styles.kbiteGrid}>
+                    {chunkArray(searchResults, 44).map((arr, index) => (
+                      <div className={styles.kbiteGridColumn} key={index}>
+                        {arr.map((name, index) => (
+                          <p key={index}>{name}</p>
+                        ))}
+                      </div>
+                    ))}
+                  </div>) : ""
+                }
+              </div>) : ""
+            }
             <div className={styles.lifeKbitesLayout}>
               <h2>The Life Kbites</h2>
               {separatedData.length ? (

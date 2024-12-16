@@ -58,7 +58,7 @@ const SupportUs = () => {
               <div className={styles.supportInput}>
                 <label htmlFor="supportName">Name:</label>
                 <input
-                  type="text" id="supportName" 
+                  type="text" id="supportName" required
                   placeholder="Name of Organization, Company, Brand etc"
                   value={supportName} onChange={(e) => setSupportName(e.target.value)}
                 />
@@ -74,7 +74,7 @@ const SupportUs = () => {
               <div className={styles.supportTextArea}>
                 <label htmlFor="supportMessage">Message/Description:</label>
                 <textarea
-                  id="supportMessage"
+                  id="supportMessage" required
                   placeholder="E.g We will like to partner with the Klub on abcd event and we will like to receive the proposal for the event."
                   value={supportMessage} onChange={(e) => setSupportMessage(e.target.value)}
                 >

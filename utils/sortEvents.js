@@ -94,6 +94,26 @@ export const chunkArray = (inputArray, chunkSize) => {
   return chunkedArray;
 };
 
+/**
+ * Search utility for an array of alumni names
+ * @param {string[]} alumniArray - Array of alumni names
+ * @param {string} searchTerm - The term to search for
+ * @returns {string[]} Array of matched alumni names
+ */
+export const searchAlumni = (alumniArray, searchTerm) => {
+  // Validate inputs
+  if (!Array.isArray(alumniArray) || typeof searchTerm !== 'string' || searchTerm.trim() === '') {
+    return [];
+  }
+
+  // Normalize search term (lowercase, trim)
+  const normalizedSearchTerm = searchTerm.toLowerCase().trim();
+
+  // Filter alumni names that match the search term
+  return alumniArray.filter(name => 
+    name.toLowerCase().includes(normalizedSearchTerm)
+  );
+};
 
 // Example usage:
 // const copaEvents = filterEventsByArm(events, 'copa');
@@ -101,3 +121,6 @@ export const chunkArray = (inputArray, chunkSize) => {
 // const sortedEvents = sortObjectArraysByDate(events);
 // const sortedEditorialPieces = sortObjectArraysByDate(editorialPieces);
 // const result = chunkArray(inputArray, 5);
+// const alumni = ['John Doe', 'Jane Smith', 'Mike Johnson'];
+// const results = searchAlumni(alumni, 'john');
+// results would be ['John Doe']
