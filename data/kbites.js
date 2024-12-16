@@ -334,3 +334,5 @@ export const lifeKbites = [
   "YUSUF MUNIRUDEEN",
 ].sort();
 
+export let allKbites = kbExecutives.map(exec => exec.name);
+allKbites = [...allKbites, ...kbites];

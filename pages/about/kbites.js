@@ -4,7 +4,8 @@ import styles from "@/styles/AboutKbites.module.css";
 import Image from "next/image";
 import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
-import { kbExecutives, kbites } from "@/data/kbites";
+import { allKbites, kbExecutives, kbites } from "@/data/kbites";
+import { searchAlumni } from "@/utils/sortEvents";
 
 const pageSeo = {
   title: "Executives and Kbites • KB Klub",
@@ -14,10 +15,18 @@ const pageSeo = {
 const Kbites = () => {
 
   const [searchName, setSearchName] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
   const handleSearch = e => {
-    e.preventDefault();
-    console.log(searchName);
+    let input = e.target.value
+    setSearchName(input);
+
+    if (input.trim()) {
+      const results = searchAlumni(allKbites, input);
+      setSearchResults(results);
+    } else {
+      setSearchResults([]);
+    }
   }
 
   return (
@@ -32,15 +41,29 @@ const Kbites = () => {
               <FaSearch />
               <input
                 type="search" placeholder="Enter a name to search"
-                value={searchName} onChange={e => setSearchName(e.target.value)}
+                value={searchName} onChange={e => handleSearch(e)}
               />
-              <button type="submit">
+              <button type="submit" disabled>
                 Search
               </button>
             </form>
           </section>
 
           <section className={styles.generalLayout}>
+            {searchName.trim() ? (
+              <div className={styles.membersLayout}>
+                {!searchResults.length ?
+                  (<h2>No results found for &quot;{searchName}&quot;</h2>) :
+                  (<h2>Showing all results for &quot;{searchName}&quot;</h2>)
+                }
+                {searchResults.length ? (
+                  <div className={styles.membersContainer}>
+                    {searchResults.map((result, index) => (
+                      <p key={index}>{result}</p>
+                    ))}
+                  </div>
+                ) : ""}
+              </div>) : ""}
             <div className={styles.executiveLayout}>
               <h2>The Executives</h2>
               {kbExecutives.length ? (
