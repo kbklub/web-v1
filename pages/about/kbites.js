@@ -48,22 +48,22 @@ const Kbites = () => {
               </button>
             </form>
           </section>
-
+          {searchName.trim() ? (
+            <div className={`${styles.membersLayout} ${styles.searchedMembers}`}>
+              {!searchResults.length ?
+                (<h2>No results found for &quot;{searchName}&quot;</h2>) :
+                (<h2>Showing all results for &quot;{searchName}&quot;</h2>)
+              }
+              {searchResults.length ? (
+                <div className={styles.membersContainer}>
+                  {searchResults.map((result, index) => (
+                    <p key={index}>{result}</p>
+                  ))}
+                </div>
+              ) : ""}
+            </div>) : ""
+          }
           <section className={styles.generalLayout}>
-            {searchName.trim() ? (
-              <div className={styles.membersLayout}>
-                {!searchResults.length ?
-                  (<h2>No results found for &quot;{searchName}&quot;</h2>) :
-                  (<h2>Showing all results for &quot;{searchName}&quot;</h2>)
-                }
-                {searchResults.length ? (
-                  <div className={styles.membersContainer}>
-                    {searchResults.map((result, index) => (
-                      <p key={index}>{result}</p>
-                    ))}
-                  </div>
-                ) : ""}
-              </div>) : ""}
             <div className={styles.executiveLayout}>
               <h2>The Executives</h2>
               {kbExecutives.length ? (

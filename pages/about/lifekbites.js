@@ -63,27 +63,26 @@ const LifeKbites = () => {
               </button>
             </form>
           </section>
-
+          {searchName.trim() ? (
+            <div className={styles.lifeKbitesLayout} style={{ paddingBottom: "2em" }}>
+              {!searchResults.length ?
+                (<h2>No results found for &quot;{searchName}&quot;</h2>) :
+                (<h2>Showing all results for &quot;{searchName}&quot;</h2>)
+              }
+              {searchResults.length ? (
+                <div className={styles.kbiteGrid}>
+                  {chunkArray(searchResults, 44).map((arr, index) => (
+                    <div className={styles.kbiteGridColumn} key={index}>
+                      {arr.map((name, index) => (
+                        <p key={index}>{name}</p>
+                      ))}
+                    </div>
+                  ))}
+                </div>) : ""
+              }
+            </div>) : ""
+          }
           <section className={styles.generalLayout}>
-            {searchName.trim() ? (
-              <div className={styles.lifeKbitesLayout} style={{paddingBottom: "2em"}}>
-                {!searchResults.length ?
-                  (<h2>No results found for &quot;{searchName}&quot;</h2>) :
-                  (<h2>Showing all results for &quot;{searchName}&quot;</h2>)
-                }
-                {searchResults.length ? (
-                  <div className={styles.kbiteGrid}>
-                    {chunkArray(searchResults, 44).map((arr, index) => (
-                      <div className={styles.kbiteGridColumn} key={index}>
-                        {arr.map((name, index) => (
-                          <p key={index}>{name}</p>
-                        ))}
-                      </div>
-                    ))}
-                  </div>) : ""
-                }
-              </div>) : ""
-            }
             <div className={styles.lifeKbitesLayout}>
               <h2>The Life Kbites</h2>
               {separatedData.length ? (

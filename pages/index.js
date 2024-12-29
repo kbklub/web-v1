@@ -165,7 +165,7 @@ export default function Home() {
             <div className={styles.armCardDetails}>
               <h3>Committee on Philanthropic Activities (COPA)</h3>
               <p>
-                The Committee On Philanthropic Activities is that arm tasked with organizing
+                The Committee On Philanthropic Activities is the arm tasked with organizing
                 the philanthropic events of the KLUB. For 54 years, the KB KLUB has prided
                 herself in being a part of groundbreaking efforts towards putting smiles on
                 thousands of faces. Examples of such events include: Medical outreaches

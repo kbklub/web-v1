@@ -113,6 +113,7 @@
 
 .executiveCardImage>img {
   border-radius: 4px;
+  object-position: top center;
 }
 
 .executiveCard>p:first-of-type {
@@ -139,4 +140,8 @@
 
 .membersContainer>p {
   font-size: 1.1rem;
+}
+
+.searchedMembers {
+  margin-bottom: 2em;
 }

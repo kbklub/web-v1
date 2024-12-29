@@ -72,7 +72,6 @@ const Events = () => {
               </div>
             </div>
           ))}
-
         </div>
       </main>
     </>
