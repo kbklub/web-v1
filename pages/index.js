@@ -12,6 +12,7 @@ import editorialImage from "../assets/images/editorialDisplayImage.png";
 import updatesCarouselBg from "../assets/images/updateBackgroundGraphic.png";
 import { sortObjectArraysByDate } from "@/utils/sortEvents";
 import events from "@/data/events";
+import updatesData from "@/data/updates";
 
 const pageSeo = {
   description: "The KB Klub is an exclusive socio-philanthropic club of male medical students in the College of Medicine, University of Lagos which carries out philanthropic, academic and social empowerment projects. Contribute to our impactful initiatives and make a difference."
@@ -22,7 +23,7 @@ const upcomingEvents = sortObjectArraysByDate(events).upcoming;
 export default function Home() {
   return (
     <>
-      <SEO pageDetails={pageSeo}/>
+      <SEO pageDetails={pageSeo} />
       <header className={styles.headerLayout}>
         <NavBar />
         <div className={styles.headerContainer}>
@@ -79,80 +80,38 @@ export default function Home() {
           </Link>
         </div>
       </section>
-      <section className={styles.updatesLayout}>
-        <div aria-hidden="true" className={styles.updatesCarouselBg}>
-          <Image src={updatesCarouselBg} alt="" />
-        </div>
-        <div aria-hidden="true" className={styles.updatesCarouselBg}>
-          <Image src={updatesCarouselBg} alt="" />
-        </div>
-        <div className={styles.updatesContainer}>
-          <div className={styles.updatesHeading}>
-            <h2>Latest Updates from the KB KLUB</h2>
-            <div className={styles.updatesCarouselControlContainer}>
-              ajjsjs
+      {updatesData ?
+        (<section className={styles.updatesLayout}>
+          <div aria-hidden="true" className={styles.updatesCarouselBg}>
+            <Image src={updatesCarouselBg} alt="" />
+          </div>
+          <div aria-hidden="true" className={styles.updatesCarouselBg}>
+            <Image src={updatesCarouselBg} alt="" />
+          </div>
+          <div className={styles.updatesContainer}>
+            <div className={styles.updatesHeading}>
+              <h2>Latest Updates from the KB KLUB</h2>
+              <div className={styles.updatesCarouselControlContainer}>
+                ajjsjs
+              </div>
+            </div>
+            <div className={styles.updatesCarouselContainer}>
+              {updatesData.map((update, index) => (
+                <div className={styles.updateCard} key={index}>
+                  <div aria-hidden="true" className={styles.updateCardImage}>
+                    <Image src={update.image} alt="" />
+                  </div>
+                  <h3>{update.title}</h3>
+                  <p>{update.description}</p>
+                  <a href={update.link}>
+                    Read more
+                  </a>
+                </div>
+              ))}
             </div>
           </div>
-          <div className={styles.updatesCarouselContainer}>
-            <div className={styles.updateCard}>
-              <div aria-hidden="true" className={styles.updateCardImage}>
-                <Image src={kbinetImage} alt="" />
-              </div>
-              <h3>THE KBINET RELEASE</h3>
-              <p>
-                The KB KLUB is pleased to announce the release of our newsletter for the
-                first quarter of the year. This issue of the KBINET features articles on
-                the launch of the KB Multipurpose Kourt.
-              </p>
-              <a href="https://twitter.com/KBKLUB/status/1781678522039153130/">
-                Read more
-              </a>
-            </div>
-            <div className={styles.updateCard}>
-              <div aria-hidden="true" className={styles.updateCardImage}>
-                <Image src={kbinetImage} alt=""/>
-              </div>
-              <h3>THE KBINET RELEASE</h3>
-              <p>
-                The KB KLUB is pleased to announce the release of our newsletter for the
-                first quarter of the year. This issue of the KBINET features articles on
-                the launch of the KB Multipurpose Kourt.
-              </p>
-              <a href="https://twitter.com/KBKLUB/status/1781678522039153130">
-                Read more
-              </a>
-            </div>
-            <div className={styles.updateCard}>
-              <div aria-hidden="true" className={styles.updateCardImage}>
-                <Image src={kbinetImage} alt=""/>
-              </div>
-              <h3>THE KBINET RELEASE</h3>
-              <p>
-                The KB KLUB is pleased to announce the release of our newsletter for the
-                first quarter of the year. This issue of the KBINET features articles on
-                the launch of the KB Multipurpose Kourt.
-              </p>
-              <a href="https://twitter.com/KBKLUB/status/1781678522039153130">
-                Read more
-              </a>
-            </div>
-            <div className={styles.updateCard}>
-              <div aria-hidden="true" className={styles.updateCardImage}>
-                <Image src={kbinetImage} alt=""/>
-              </div>
-              <h3>THE KBINET RELEASE</h3>
-              <p>
-                The KB KLUB is pleased to announce the release of our newsletter for the
-                first quarter of the year. This issue of the KBINET features articles on
-                the launch of the KB Multipurpose Kourt.
-              </p>
-              <a href="https://twitter.com/KBKLUB/status/1781678522039153130">
-                Read more
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>) : ""
+      }
       <main className={styles.armsLayout}>
         <div className={styles.armsContainer}>
           <h2>Arms of the Klub</h2>
@@ -193,7 +152,7 @@ export default function Home() {
                 dedicated to nurturing academic excellence and intellectual growth among
                 its members and the community around us. Key COAA Initiatives include KB
                 KLUB Stack Reform Conference and KB KLUB Fellowship Program. Through these
-                initiatives, we foster innovation, collaboration, and skill development 
+                initiatives, we foster innovation, collaboration, and skill development
                 for a brighter future.
               </p>
               <Link href="/arms/academic-excellence">

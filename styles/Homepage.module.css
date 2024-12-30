@@ -213,6 +213,12 @@
   margin-bottom: 2px;
 }
 .updateCard > p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7;
+  line-clamp: 7;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: .9rem;
   font-weight: 300;
   margin-bottom: 8px;
