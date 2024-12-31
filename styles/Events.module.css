@@ -66,10 +66,71 @@
   padding: 32px 24px;
   transform: translateY(max(-25%, -55px));
 }
-.eventsContainer > h2 {
+.eventsContainerHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 24px;
+}
+.eventsContainerTitle {
   text-transform: capitalize;
 }
+.eventsFilterBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+  background-color: transparent;
+  width: 70%;
+  max-width: max-content;
+  padding: 8px 16px;
+  border: 2px solid hsla(240, 51%, 18%, 0.16);
+  color: hsla(240, 51%, 18%, 0.48);
+  border-radius: 32px;
+  font-size: .8rem;
+}
+.eventsFilterBtn > p {
+  font-weight: 600;
+}
+.filterContainer {
+  position: absolute;
+  top: 150%;
+  right: 0;
+  background-color: hsla(240, 45%, 98%, 1);
+  border: 2px solid hsla(240, 51%, 18%, 0.16);
+  border-radius: 8px;
+  padding: 32px 0;
+  width: 200%;
+  max-width: 230px;
+}
+.filterContainer > ul {
+  padding: 0;
+  list-style: none;
+  width: 90%;
+  max-width: 220px;
+  margin: 0 auto;
+}
+.filterOption {
+  margin-bottom: 16px;
+  color: hsla(240, 51%, 18%, 0.48);
+}
+.filterOption:last-of-type {
+  margin-bottom: 0;
+}
+.filterOption > button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  color: hsla(240, 51%, 18%, 0.48);
+  font-weight: 400;
+  font-size: .8rem;
+}
+
 .noEventTag {
   padding: 24px 0 64px;
   color: hsla(0, 0%, 48%, 1);

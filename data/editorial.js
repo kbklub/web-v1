@@ -6,9 +6,9 @@ import mediphil2021 from "./images/editorial/mediphil2021.png";
 import mediphil2018 from "./images/editorial/mediphil2018.jpg";
 import mediphil2015 from "./images/editorial/mediphil2015.jpg";
 import kbinetQ22023 from "./images/editorial/kbinetQ22023.jpg";
-import kbinetQ32023 from "./images/editorial/kbinetQ32023.webp";
+import kbinetQ32023 from "./images/editorial/kbinetQ32023.jpg";
 import kbinetQ42022 from "./images/editorial/kbinetQ42022.jpg";
-import kbinetQ42024 from "./images/editorial/kbinetQ42024.jpg";
+import kbinetQ12024 from "./images/editorial/kbinetQ42024.png";
 
 // blogSchema = {
 //   name: "Name of the blog piece",
@@ -24,9 +24,9 @@ let editorialPieces = {
   newsletters: [
     {
       name: "KBINET 2024 #1",
-      description: "The official newsletter of the KB KLUB for the first quarter of 2024.",
+      description: "KB Klub's Newsletter for the first quarter of 2024, it featured the KB Multipurpose Kourt Launch, Valentine's Day outreach, and the collaboration with PANI.",
       link: "https://www.scribd.com/document/724810500/KBINET-Q1-2024",
-      image: kbinetQ42024,
+      image: kbinetQ12024,
       date: "20-04-2024",
     },
     {
@@ -54,14 +54,14 @@ let editorialPieces = {
   mediphil: [
     {
       name: "MediPhil 2023 (AVANCE)",
-      description: "MediPhil' 23, themed \"AVANCE- Breaking Barriers\", features barrier-breakers: philanthropist Hon. Kunle Soname (Patron, KB KLUB, Chairman Bet9ja, BLFA group, Valuejet, Remo Stars fc) and medical leader Dr. Filani Oyebanji (Ekiti Health Commissioner) on the cover. Inside, find exclusive interviews with Prof. W.L Adeyemo (Chief Medical Director, LUTH), and feature pieces from Prof. F.T Ogunsola (Vice Chancellor, UNILAG), and Prof. Abosede Afolabi (HOD Obstetrics & Gynecology, LUTH)",
+      description: "The 2023 edition of KB KLUB's Annual Magazine publication was themed Avance: Breaking Barriers. It featured Hon. Kunle Soname, CEO Bet9ja & Value Jet and Dr. Oyebanji Filani as the faces of the PHILanthropy and MEDIcine sides respectitvely.",
       link: "https://drive.google.com/file/d/1QjrqYP3Zq4sl49uUdvHQpci8h2e_4GzK/view?usp=sharing",
       image: mediphil2023,
       date: "17-07-2023",
     },
     {
       name: "MediPhil 2022 (Enchórios)",
-      description: "The annual magazine of the KB Klub. Featuring exclusive interviews with leading personalities from all walks of life. Catch a glimpse of our special interview with Professor Oluwatoyin Ogundipe, former Vice-Chancellor of the University of Lagos, and more.",
+      description: "The 2022 edition of KB KLUB's Annual Magazine publication was themed Enchórios. It featured Professor Abiodun Akinwutan, Dean, School of Health Professionals and Dr. Ifeanyi O. Oshiga, Principal Dentist, Beechcroft Dental Clinic as the faces of the PHILanthropy and MEDIcine sides respectitvely.",
       link: "https://www.scribd.com/document/655331281/MEDIPHIL-2022-ENCHORIOS",
       image: mediphil2022,
       date: "31-12-2022",
