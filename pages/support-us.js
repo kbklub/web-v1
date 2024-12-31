@@ -15,10 +15,6 @@ const SupportUs = () => {
   const [supportEmail, setSupportEmail] = useState("");
   const [supportMessage, setSupportMessage] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  }
-
   return (
     <>
       <SEO pageDetails={pageSeo}/>
@@ -53,12 +49,15 @@ const SupportUs = () => {
             </div>
           </div>
 
-          <form className={styles.supportFormLayout} onSubmit={e => handleSubmit(e)}>
+          <form 
+            className={styles.supportFormLayout}
+            method="POST" action="https://formsubmit.co/2e4936a9576cc1f6b8f408e29ab94702"
+          >
             <div className={styles.supportFormContainer}>
               <div className={styles.supportInput}>
                 <label htmlFor="supportName">Name:</label>
                 <input
-                  type="text" id="supportName" required
+                  type="text" id="supportName" name="name" required
                   placeholder="Name of Organization, Company, Brand etc"
                   value={supportName} onChange={(e) => setSupportName(e.target.value)}
                 />
@@ -66,7 +65,7 @@ const SupportUs = () => {
               <div className={styles.supportInput}>
                 <label htmlFor="supportEmail">Email Address:</label>
                 <input
-                  type="email" id="supportEmail" required
+                  type="email" id="supportEmail" name="email" required
                   placeholder="Email address of Organization, Company, Brand etc"
                   value={supportEmail} onChange={(e) => setSupportEmail(e.target.value)}
                 />
@@ -74,11 +73,19 @@ const SupportUs = () => {
               <div className={styles.supportTextArea}>
                 <label htmlFor="supportMessage">Message/Description:</label>
                 <textarea
-                  id="supportMessage" required
+                  id="supportMessage" name="message" required
                   placeholder="E.g We will like to partner with the Klub on abcd event and we will like to receive the proposal for the event."
                   value={supportMessage} onChange={(e) => setSupportMessage(e.target.value)}
                 >
                 </textarea>
+              </div>
+              <div aria-hidden="true">
+                <input type="hidden" name="_subject" value="Message from Contact Form on KB Website" />
+                <input type="hidden" name="_autoresponse"
+                  value="Your message has been delivered to the KB Klub team. We will get back to you as soon as possible. Thank you for reaching out to us." 
+                />
+                <input type="hidden" name="_next" value="https://kbklub.org/" />
+                <input type="hidden" name="_template" value="box" />
               </div>
               <button type="submit">
                 Submit
