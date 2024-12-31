@@ -4,10 +4,28 @@ import styles from "./NewsletterSignup.module.css";
 const NewsLetterSignup = () => {
 
   const [email, setEmail] = useState("");
+  const [status, setStatus] = useState("idle"); // idle, loading, success, error
 
-  const handleSubmit = (ev) => {
+  const handleSubmit = async (ev) => {
     ev.preventDefault();
-    console.log("email submitted")
+    setStatus("loading");
+    
+    try {
+      const response = await fetch(process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Submission Failed");
+      }
+
+      setStatus("success");
+      setEmail("");
+    } catch (error) {
+      setStatus("error");
+      console.error(error);
+    }
   }
 
 
@@ -28,9 +46,21 @@ const NewsLetterSignup = () => {
             id="mailList" placeholder="Enter your email address"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            />
-          <button type="submit">Subscribe</button>
+            disabled={status === "loading"}
+          />
+          <button 
+            type="submit"
+            disabled={status === "loading"}
+          >
+            {status === "loading" ? "Subscribing..." : "Subscribe"}
+          </button>
         </form>
+        {status === "success" ? (
+          <p className={styles.successMessage}>Thank you for subscribing!</p>
+        ) : ""}
+        {status === "error" ? (
+          <p className={styles.errorMessage}>Failed to subscribe. Please try again.</p>
+        ) : ""}
       </div>
     </section>
   );
