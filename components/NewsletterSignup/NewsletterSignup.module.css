@@ -23,7 +23,7 @@
   line-height: 1.155;
 }
 
-.newsletterContainer p {
+.newsletterContainer > p:first-of-type {
   color: hsla(0, 0%, 100%, 0.8);
   margin-bottom: 24px;
 }
@@ -68,4 +68,13 @@
 }
 .newsletterForm button:hover, .newsletterForm button:focus {
   transform: scale(.99);
+}
+
+.errorMessage {
+  color: hsla(0, 100%, 64%, 1);
+  padding-top: .5em;
+}
+.successMessage {
+  color: var(--color-primary);
+  padding-top: .5em;
 }
