@@ -50,6 +50,11 @@
   font-size: .9rem;
 }
 
+.searchContainer>input[type="search"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .searchContainer>svg {
   color: hsla(240, 51%, 18%, 0.48);
   transform: translateY(1px);
