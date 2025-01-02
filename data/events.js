@@ -19,15 +19,6 @@ import stack24Image from "./images/events/stackReform24Image.jpg";
 
 let events = {
   upcoming: [
-    // {
-    //   name: "Stack Reform Conference 2024",
-    //   description: "Over the years, the STACK REFORM conference has evolved into a diverse range of events. From exciting speech competitions to intercollegiate elevator pitch contests, it has not relented in nurturing the minds of our inquisitive attendees.",
-    //   link: "https://stack.kbklub.org/",
-    //   arm: "coaa",
-    //   image: stack24Image,
-    //   date: "30-11-2024",
-    //   registrationLink: "https://stack.kbklub.org/register"
-    // },
   ],
   past: [
     {

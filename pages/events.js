@@ -3,7 +3,7 @@ import SEO from "@/components/SEO";
 import Image from "next/image";
 import styles from "@/styles/Events.module.css";
 import { FaCheck, FaChevronDown } from "react-icons/fa6";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import events from "@/data/events";
 import { sortAndFilterEvents, sortObjectArraysByDate } from "@/utils/sortEvents";
 
@@ -13,11 +13,35 @@ const pageSeo = {
 }
 
 const Events = () => {
-
   const [refinedEvents, setRefinedEvents] = useState(sortObjectArraysByDate(events));
   const [eventsType, setEventsType] = useState("upcoming");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [filterOption, setFilterOption] = useState("all");
+
+  const filterButtonRef = useRef(null);
+  const filterModalRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        isFilterOpen &&
+        filterModalRef.current &&
+        filterButtonRef.current &&
+        !filterModalRef.current.contains(event.target) &&
+        !filterButtonRef.current.contains(event.target)
+      ) {
+        setIsFilterOpen(false);
+      }
+    };
+
+    if (isFilterOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isFilterOpen]);
 
   useEffect(() => {
     if (filterOption == "all") {
@@ -41,7 +65,7 @@ const Events = () => {
           <h1>Events</h1>
           <p>
             Check out our past events and get a glimpse of what&apos;s coming up next.
-            Our events focus  on philanthropy, social empowerment, leadership development,
+            Our events focus on philanthropy, social empowerment, leadership development,
             and academic excellence.
           </p>
           <div className={styles.headerBtnContainer}>
@@ -66,50 +90,56 @@ const Events = () => {
             <h2 className={styles.eventsContainerTitle}>{eventsType} Events</h2>
             {eventsType == "past" ? (
               <button
+                ref={filterButtonRef}
                 className={styles.eventsFilterBtn}
                 onClick={() => setIsFilterOpen(!isFilterOpen)}
               >
                 <p><span style={{textTransform: "capitalize"}}>{filterOption}</span> Events</p>
                 <FaChevronDown />
               </button>
-            ) : ""
-            }
-            {isFilterOpen ? (<div className={styles.filterContainer}>
-              <ul>
-                <li className={styles.filterOption}>
-                  <button
-                    onClick={() => setFilterOption("all")}
-                  >
-                    All Events
-                    {filterOption == "all" ? <FaCheck /> : ""}
-                  </button>
-                </li>
-                <li className={styles.filterOption}>
-                  <button
-                    onClick={() => setFilterOption("academic")}
-                  >
-                    Academic Events
-                    {filterOption == "academic" ? <FaCheck /> : ""}
-                  </button>
-                </li>
-                <li className={styles.filterOption}>
-                  <button
-                    onClick={() => setFilterOption("philanthropic")}
-                  >
-                    Philanthropic Events
-                    {filterOption == "philanthropic" ? <FaCheck /> : ""}
-                  </button>
-                </li>
-                <li className={styles.filterOption}>
-                  <button
-                    onClick={() => setFilterOption("social")}
-                  >
-                    Social Events
-                    {filterOption == "social" ? <FaCheck /> : ""}
-                  </button>
-                </li>
-              </ul>
-            </div>) : ""}
+            ) : ""}
+            {isFilterOpen && eventsType == "past" ? (
+              <div ref={filterModalRef} className={styles.filterContainer}>
+                <ul>
+                  <li className={styles.filterOption}>
+                    <button onClick={() => {
+                      setFilterOption("all");
+                      setIsFilterOpen(false);
+                    }}>
+                      All Events
+                      {filterOption == "all" ? <FaCheck /> : ""}
+                    </button>
+                  </li>
+                  <li className={styles.filterOption}>
+                    <button onClick={() => {
+                      setFilterOption("academic");
+                      setIsFilterOpen(false);
+                    }}>
+                      Academic Events
+                      {filterOption == "academic" ? <FaCheck /> : ""}
+                    </button>
+                  </li>
+                  <li className={styles.filterOption}>
+                    <button onClick={() => {
+                      setFilterOption("philanthropic");
+                      setIsFilterOpen(false);
+                    }}>
+                      Philanthropic Events
+                      {filterOption == "philanthropic" ? <FaCheck /> : ""}
+                    </button>
+                  </li>
+                  <li className={styles.filterOption}>
+                    <button onClick={() => {
+                      setFilterOption("social");
+                      setIsFilterOpen(false);
+                    }}>
+                      Social Events
+                      {filterOption == "social" ? <FaCheck /> : ""}
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            ) : ""}
           </div>
           {!events[eventsType].length ? (
             <p className={styles.noEventTag}>
