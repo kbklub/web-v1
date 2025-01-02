@@ -36,7 +36,7 @@ const ArmEvents = ({events}) => {
           </p>) : ""}
           {events.past.length ? (<>
             <div className={styles.eventsGrid}>
-              {events.past.map((ev, index) => (
+              {events.past.slice(0, 3).map((ev, index) => (
                 <div className={styles.eventCard} key={index}>
                   <div aria-hidden="true" className={styles.eventCardImage}>
                     <Image src={ev.image} alt="" />

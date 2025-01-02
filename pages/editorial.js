@@ -71,7 +71,7 @@ const Editorial = () => {
             <div className={styles.eventCard} key={index}>
               <div className={styles.eventCardContainer}>
                 <div className={styles.eventCardImage}>
-                  <Image src={ev.image} alt="A graphic poster describing the Stack Reform conference 2024" />
+                  <Image src={ev.image} alt={`A ${editorialType} poster for ${ev.name}`} />
                 </div>
                 <div className={styles.eventCardDetails}>
                   <h3>{ev.name}</h3>
