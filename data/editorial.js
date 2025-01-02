@@ -1,6 +1,7 @@
 //* Import needed image first
 import { sortObjectArraysByDate } from "@/utils/sortEvents";
-import mediphil2023 from "./images/editorial/mediphil2023.png";
+import joinSubstack from "./images/editorial/blogSubstack.jpg";
+import mediphil2023 from "./images/editorial/mediphil2023.jpg";
 import mediphil2022 from "./images/editorial/mediphil2022.jpg";
 import mediphil2021 from "./images/editorial/mediphil2021.png";
 import mediphil2018 from "./images/editorial/mediphil2018.jpg";
@@ -20,6 +21,13 @@ import kbinetQ12024 from "./images/editorial/kbinetQ42024.png";
 
 let editorialPieces = {
   blog: [
+    {
+      name: "Access our blog on Substack",
+      description: "Be the first to know about our activities through our blog on Substack!",
+      link: "https://kbklub.substack.com/",
+      image: joinSubstack,
+      date: "18-11-2024",
+    },
   ],
   newsletters: [
     {
