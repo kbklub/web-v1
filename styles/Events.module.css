@@ -201,3 +201,76 @@
 .eventCardBtnContainer > a svg {
   transform: translateY(1px);
 }
+
+.paginationContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  padding: 16px 0;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.paginationContainer p {
+  font-size: .9rem;
+  color: hsla(0, 0%, 30%, 0.8);
+}
+
+.paginationControls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paginationButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginationButton:not(:disabled):hover {
+  text-decoration: underline;
+}
+
+.pageNumbersContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  width: 40%;
+  max-width: 200px;
+  overflow-x: hidden;
+}
+
+.pageNumber {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-secondary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.pageNumber:hover {
+  opacity: .65;
+}
+
+.activePage {
+  text-decoration: none;
+  opacity: .5;
+  cursor: not-allowed;
+  font-weight: bold;
+}
