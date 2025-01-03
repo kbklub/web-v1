@@ -20,7 +20,7 @@
   width: 30%;
   max-width: 45px;
 }
-.imageLink > p {
+.imageLink > h1 {
   display: none;
 }
 
@@ -151,7 +151,107 @@
 .dropButton > svg {
   transform: rotate(180deg);
 }
+.dropLargeButton > svg {
+  transform: rotate(180deg);
+}
 
 .hiddenDropDown {
   display: none;
+}
+.largeNavListContainer {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .hamburgerBtn {
+    display: none;
+  }
+  .navLayout {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .navContainer {
+    max-width: 1200px;
+  }
+  .imageLink {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    max-width: max-content;
+    text-decoration: none;
+  }
+  .navHomeIcon {
+    max-width: 48px;
+  }
+  .imageLink > h1 {
+    display: initial;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  .largeNavListContainer {
+    display: block;
+    color: var(--color-white);
+    width: 60%;
+    max-width: 640px;
+    margin-left: auto;
+  }
+  .largeNavList {
+    padding: 0%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .largeNavList a {
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .largeNavList a:hover, .largeNavList a:focus {
+    color: var(--color-primary);
+  }
+  .largeNavList > li:last-of-type a {
+    padding: 12px 16px;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+  }
+  .largeNavList > li:last-of-type a:hover,
+  .largeNavList > li:last-of-type a:focus {
+    opacity: .8;
+  }
+  .hiddenLargeDropDown {
+    display: none;
+  }
+  .largeNavList > li:first-of-type,
+  .largeNavList > li:nth-of-type(4) {
+    position: relative;
+  }
+  .largeNavList button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    color: inherit;
+  }
+  .largeNavList button:hover, .largeNavList button:focus {
+    color: var(--color-primary);
+  }
+  .largeNavList li > div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200%;
+  }
+  .largeNavSubList {
+    width: max-content;
+    padding: 1.5rem 1rem;
+    background-color: hsla(0, 0%, 98%, 1);
+    color: hsl(0, 0%, 44%);
+    list-style: none;
+  }
+  .largeNavSubList a:hover,
+  .largeNavSubList a:focus {
+    color: hsl(240, 64%, 4%);
+  }
+
 }

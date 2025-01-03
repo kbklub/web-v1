@@ -4,7 +4,6 @@ import styles from "@/styles/Homepage.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
-import kbinetImage from "../assets/images/kbinetArticleImage.png";
 import copaImage from "../assets/images/copaDisplayImage.jpeg";
 import coaaImage from "../assets/images/coaaDisplayImage.jpeg";
 import cosaImage from "../assets/images/cosaDisplayImage.jpeg";
