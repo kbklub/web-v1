@@ -70,7 +70,13 @@ export default function Home() {
       </header>
       <section className={styles.eventsLayout}>
         <div className={styles.eventsContainer}>
-          <h2>Upcoming Events</h2>
+          <div className={styles.eventsContainerHeader}>
+            <h2>Upcoming Events</h2>
+            <Link href="/events" className={styles.eventLinkLarge}>
+              View all Events
+              <FaArrowRight />
+            </Link>
+          </div>
           {!upcomingEvents.length ? (<p className={styles.noEventText}>
             No Upcoming Events for Now. Check back soon for updates!
           </p>) : ""}
@@ -100,7 +106,7 @@ export default function Home() {
               ))}
             </>
           ) : ""}
-          <Link href="/events">
+          <Link href="/events"  className={styles.eventLinkMobile}>
             View all Events
           </Link>
         </div>

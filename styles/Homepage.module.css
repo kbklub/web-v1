@@ -74,7 +74,7 @@
   margin: 0 auto;
 }
 
-.eventsContainer>h2 {
+.eventsContainerHeader {
   margin-bottom: 1.5rem;
 }
 
@@ -150,7 +150,7 @@
   transform: translateY(1px);
 }
 
-.eventsContainer>a {
+.eventLinkMobile {
   display: block;
   width: 90%;
   max-width: 200px;
@@ -163,10 +163,13 @@
   color: var(--color-secondary);
 }
 
-.eventsContainer>a:hover,
-.eventsContainer>a:focus {
+.eventLinkMobile:hover,
+.eventLinkMobile:focus {
   opacity: 80%;
   transform: scale(.98);
+}
+.eventLinkLarge {
+  display: none;
 }
 
 .noEventText {
@@ -179,8 +182,6 @@
 .updatesLayout {
   background-color: hsla(0, 0%, 8%, 1);
   color: var(--color-white);
-  background-repeat: repeat;
-  background-size: 370px;
   padding: 48px 0;
   position: relative;
   overflow: hidden;
@@ -204,6 +205,8 @@
 }
 
 .updatesContainer {
+  position: relative;
+  z-index: 2;
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
@@ -356,5 +359,182 @@
   }
   .headerBtnContainer > a {
     font-size: 1.1rem;
+  }
+
+  .eventsLayout {
+    padding: 80px 0;
+  }
+  .eventsContainer {
+    max-width: 1200px;
+  }
+  .eventsContainerHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .eventsContainerHeader>h2 {
+    font-size: 2.5rem;
+  }
+  .eventLinkMobile {
+    display: none;
+  }
+  .eventLinkLarge {
+    display: flex;
+    font-size: 1.2rem;
+    align-items: center;
+    column-gap: 8px;
+    text-decoration: none;
+    color: var(--color-secondary);
+  }
+  .eventLinkLarge:hover,
+  .eventLinkLarge:focus {
+    text-decoration: underline;
+  }
+  .eventLinkLarge > svg {
+    transform: translateY(1px);
+  }
+  .noEventText {
+    max-width: 260px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    padding: 2rem 0 2.5rem;
+  }
+
+  .eventCard {
+    width: 95%;
+    margin-right: auto;
+    padding: 32px 0;
+  }
+  .eventCard:last-of-type {
+    margin-bottom: 0;
+  }
+  .eventCardContainer {
+    display: flex;
+    align-items: center;
+    column-gap: 32px;
+  }
+  .eventCardImage {
+    width: 25%;
+    height: 220px;
+    margin-bottom: 0;
+  }
+  .eventCardDetails {
+    width: 70%;
+  }
+  .eventCardDetails>h3 {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .eventCardDetails>p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .eventCardBtnContainer {
+    max-width: 400px;
+  }
+  .eventCardBtnContainer>a {
+    font-size: 1rem;
+  }
+
+  .updatesLayout {
+    padding: 80px 0;
+  }
+  .updatesContainer {
+    max-width: 1200px;
+  }
+  .updatesHeading {
+    margin-bottom: 40px;
+  }
+  .updatesHeading>h2 {
+    font-size: 2.5rem;
+  }
+  .updatesCarouselContainer {
+    overflow-x: auto;
+    column-gap: normal;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  .updateCard {
+    width: 23%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+  }
+  .updateCardImage {
+    height: 300px;
+    margin-bottom: 16px;
+  }
+  .updateCard>h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+  .updateCard>p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .updateCard>a {
+    margin-top: auto;
+  }
+  .updatesCarouselBg {
+    width: clamp(450px, 50%, 650px);
+  }
+
+  .armsLayout {
+    padding: 80px 0;
+  }
+  .armsContainer {
+    max-width: 1200px;
+  }
+  .armsContainer>h2 {
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+  }
+  .armCard {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+  }
+  .armCardImage {
+    margin-bottom: 0;
+    width: auto;
+    height: 500px;
+    margin-right: -50%;
+    z-index: 2;
+  }
+  .armCardImage>img {
+    border-radius: 8px;
+  }
+  .armCardDetails {
+    max-width: 600px;
+    padding: 40px 32px;
+    background-color: hsla(240, 51%, 98%, 0.99);
+    box-shadow: 4px 4px 40px 0 hsla(0, 0%, 0%, 0.1);
+    border-radius: 8px;
+    margin-left: auto;
+    z-index: 3;
+  }
+  .armCardDetails>h3 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  .armCardDetails>p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .armCard:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+  .armCard:nth-of-type(2n) .armCardImage {
+    margin-left: -50%;
+    margin-right: 0;
+  }
+  .armCard:nth-of-type(2n) .armCardDetails {
+    margin-left: 0;
+    margin-right: auto;
   }
 }
