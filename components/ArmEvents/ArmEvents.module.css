@@ -26,11 +26,14 @@
 }
 
 .eventCard {
+  display: flex;
+  flex-direction: column;
   color: var(--color-text-primary);
 }
 
 .eventCardImage {
   margin-bottom: 8px;
+  height: 300px;
 } .eventCardImage, .eventCardImage > img {
   border-radius: 8px;
 }
@@ -50,6 +53,7 @@
   border: 1px solid var(--color-secondary);
   color: var(--color-secondary);
   text-align: center;
+  margin-top: auto;
 }
 .eventCard > a:hover, .eventCard > a:focus {
   text-decoration: underline;

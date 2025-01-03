@@ -4,7 +4,6 @@ import styles from "@/styles/Homepage.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
-import kbinetImage from "../assets/images/kbinetArticleImage.png";
 import copaImage from "../assets/images/copaDisplayImage.jpeg";
 import coaaImage from "../assets/images/coaaDisplayImage.jpeg";
 import cosaImage from "../assets/images/cosaDisplayImage.jpeg";
@@ -13,21 +12,47 @@ import updatesCarouselBg from "../assets/images/updateBackgroundGraphic.png";
 import { sortObjectArraysByDate } from "@/utils/sortEvents";
 import events from "@/data/events";
 import updatesData from "@/data/updates";
+import { useEffect, useState } from "react";
 
 const pageSeo = {
   description: "The KB Klub is an exclusive socio-philanthropic club of male medical students in the College of Medicine, University of Lagos which carries out philanthropic, academic and social empowerment projects. Contribute to our impactful initiatives and make a difference."
 }
 
 const upcomingEvents = sortObjectArraysByDate(events).upcoming;
+const headlines = [
+  "Transforming Lives through Service",
+  "A Brotherhood, United for Impact",
+  "55 Years of Excellence and Impact"
+]
 
 export default function Home() {
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const rotationInterval = setInterval(() => {
+      setIsVisible(false);
+
+      setTimeout(() => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % headlines.length);
+        setIsVisible(true);
+      }, 500);
+
+    }, 5000);
+
+    return () => clearInterval(rotationInterval);
+  }, [])
+
   return (
     <>
       <SEO pageDetails={pageSeo} />
       <header className={styles.headerLayout}>
         <NavBar />
         <div className={styles.headerContainer}>
-          <h1>Transforming Lives through Service</h1>
+          <h1 className={`${styles.rotatingHeader} ${isVisible ? styles.fadeIn : styles.fadeOut}`}>
+            {headlines[currentIndex]}
+          </h1>
           <p>
             At KB Klub, we champion academic excellence, embrace philanthropy, and lead
             transformative social initiatives to make a lasting difference
@@ -45,7 +70,13 @@ export default function Home() {
       </header>
       <section className={styles.eventsLayout}>
         <div className={styles.eventsContainer}>
-          <h2>Upcoming Events</h2>
+          <div className={styles.eventsContainerHeader}>
+            <h2>Upcoming Events</h2>
+            <Link href="/events" className={styles.eventLinkLarge}>
+              View all Events
+              <FaArrowRight />
+            </Link>
+          </div>
           {!upcomingEvents.length ? (<p className={styles.noEventText}>
             No Upcoming Events for Now. Check back soon for updates!
           </p>) : ""}
@@ -75,7 +106,7 @@ export default function Home() {
               ))}
             </>
           ) : ""}
-          <Link href="/events">
+          <Link href="/events"  className={styles.eventLinkMobile}>
             View all Events
           </Link>
         </div>
