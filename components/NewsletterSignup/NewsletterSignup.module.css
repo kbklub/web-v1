@@ -78,3 +78,25 @@
   color: var(--color-primary);
   padding-top: .5em;
 }
+
+@media (min-width: 900px) {
+  .newsletterLayout {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 80px;
+    border-radius: 32px;
+  }
+  .newsletterContainer {
+    max-width: 900px;
+  }
+  .newsletterContainer > h2 {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+  }
+  .newsletterContainer > p:first-of-type {
+    max-width: 630px;
+    margin: 0 auto 32px;
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+}
