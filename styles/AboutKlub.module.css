@@ -15,7 +15,7 @@
   color: var(--color-text-primary);
 }
 
-.headerContainer > h1 {
+.headerContainer>h1 {
   margin-bottom: 1em;
   line-height: 1.2;
 }
@@ -36,6 +36,7 @@
   padding: 0;
   line-height: 0;
 }
+
 .videoContainer {
   width: 90%;
   max-width: 750px;
@@ -44,7 +45,8 @@
   border-radius: 20px;
   box-shadow: 0 4px 40px hsla(0, 0%, 0%, 0.4);
 }
-.videoContainer > iframe {
+
+.videoContainer>iframe {
   border-radius: 20px;
 }
 
@@ -59,7 +61,8 @@
   max-width: 750px;
   margin: 0 auto;
 }
-.alumniContainer > h2 {
+
+.alumniContainer>h2 {
   margin-bottom: 16px;
 }
 
@@ -82,12 +85,14 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.testimonialCard > p {
+
+.testimonialCard>p {
   font-size: .9rem;
   margin-bottom: 1em;
   max-width: 350px;
 }
-.testimonialCard > p:last-of-type {
+
+.testimonialCard>p:last-of-type {
   margin-bottom: 0;
   font-weight: 700;
 }
@@ -106,10 +111,90 @@
   background-color: transparent;
   border: 1px solid hsla(240, 51%, 18%, 0.4);
   border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-
-.testimonialControlButton:first-of-type {
+.testimonialControlButton.active {
   transform: scale(1.2);
   background-color: hsla(240, 51%, 18%, 1);
+}
+
+@media (min-width: 900px) {
+  .headerLayout {
+    background-image: url("../assets//images/kbKlubBackgroundGraphicLarge.png");
+  }
+
+  .headerContainer {
+    padding: 120px 0 300px;
+    max-width: 1200px;
+  }
+
+  .headerContainer>h1 {
+    font-size: 4rem;
+    max-width: 900px;
+    margin: 0 auto 80px;
+  }
+
+  .headerDetailsContainer {
+    flex-direction: row;
+    text-align: start;
+    justify-content: space-between;
+    font-size: 1.1rem;
+  }
+
+  .headerDetailsContainer>div {
+    width: 48%;
+  }
+
+  .videoContainer {
+    max-width: 900px;
+  }
+
+  .videoContainer>iframe {
+    height: 500px;
+  }
+
+  .alumniLayout {
+    padding: 0 0 48px;
+  }
+
+  .alumniContainer {
+    max-width: 1200px;
+  }
+
+  .alumniContainer>h2 {
+    font-size: 2.5rem;
+    margin-bottom: 36px;
+  }
+
+  .testimonialContainer {
+    column-gap: 32px;
+    margin-bottom: 48px;
+    overflow-x: hidden;
+  }
+
+  .testimonialCard {
+    min-width: 300px;
+    padding: 24.5px 20px;
+  }
+
+  .testimonialCard>p {
+    font-size: 1rem;
+  }
+
+  .testimonialContainer {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .testimonialContainer::-webkit-scrollbar {
+    display: none;
+  }
+  .testimonialControlContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+  }
 }
