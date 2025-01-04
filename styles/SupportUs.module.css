@@ -105,7 +105,7 @@
   justify-content: center;
   column-gap: 2px;
   width: 100%;
-  max-width: 440px;
+  max-width: 400px;
   margin: 0 auto;
   padding: 16px 0;
   background-color: var(--color-secondary);
@@ -116,4 +116,74 @@
 .supportFormContainer > button:hover, .supportFormContainer > button:focus {
   opacity: 90%;
   transform: scale(.98);
+}
+
+@media (min-width: 900px) {
+  .bgWrapper {
+    background-color: var(--color-secondary-background);
+    background-image: url("../assets/images/eventsHeaderBackgroundImage.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-blend-mode: soft-light;
+  }
+  .headerLayout {
+    background: transparent;
+    background-blend-mode: normal;
+    margin-bottom: 56px;
+  }
+  .headerContainer {
+    max-width: 1200px;
+    padding: 140px 0 0;
+  }
+  .headerContainer>h1 {
+    font-size: 4rem;
+    margin-bottom: 8px;
+  }
+  .headerDetails {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .headerDetails>p {
+    font-size: 1.1rem;
+  }
+  
+  .supportLayout {
+    background: transparent;
+    padding: 0 0 120px;
+  }
+  .supportContainer {
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .accountContainer {
+    width: 45%;
+    margin-bottom: 0;
+    border-radius: 32px;
+    padding: 48px 0;
+  }
+  .accountContainer>h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+  }
+  .accountDetails>p {
+    font-size: 1.2rem;
+  }
+  .supportFormLayout {
+    width: 53%;
+    padding: 48px 0;
+    border-radius: 32px;
+  }
+  .supportInput, .supportTextArea {
+    margin-bottom: 32px;
+  }
+  .supportInput>label {
+    font-size: 1.1rem;
+  }
+  .supportFormContainer>button {
+    border-radius: 32px;
+    font-size: 1.1rem;
+  }
 }

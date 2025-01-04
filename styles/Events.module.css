@@ -21,6 +21,7 @@
   margin-bottom: .1em;
 }
 .headerContainer > p {
+  color: hsla(0, 0%, 98%, 1);
   margin-bottom: 1.5rem;
 }
 
@@ -82,7 +83,7 @@
   align-items: center;
   justify-content: center;
   column-gap: 8px;
-  background-color: transparent;
+  background-color: hsla(240, 51%, 98%, 1);
   width: 70%;
   max-width: max-content;
   padding: 8px 16px;
@@ -273,4 +274,100 @@
   opacity: .5;
   cursor: not-allowed;
   font-weight: bold;
+}
+
+@media (min-width: 900px) {
+  .headerContainer {
+    max-width: 1200px;
+    padding: 150px 0 230px;
+  }
+  .headerContainer>h1 {
+    margin-bottom: 8px;
+    font-size: 4rem;
+  }
+  .headerContainer>p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 32px;
+  }
+
+  .eventsContainer {
+    max-width: 1000px;
+    padding: 80px;
+    transform: translateY(max(-60%, -170px));
+  }
+  .eventsContainerHeader {
+    margin-bottom: 32px;
+  }
+  .eventsContainerTitle {
+    font-size: 2.5rem;
+  }
+  .noEventTag {
+    padding: 48px 0 40px;
+    font-size: 1.2rem;
+  }
+  .eventCard {
+    margin-bottom: 32px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 4px 4px 48px 0 hsla(0, 0%, 0%, 0.1);
+  }
+  .eventCardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .eventCardImage {
+    width: 27%;
+    height: 220px;
+    margin-bottom: 0;
+  }
+  .eventCardImage>img {
+    border-radius: 8px;
+  }
+  .eventCardDetails {
+    width: 70%;
+  }
+  .eventCardDetails>h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .eventCardDetails>p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .eventCardBtnContainer>a {
+    font-size: 1rem;
+  }
+
+  .paginationContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 0;
+    padding: 32px 0 0;
+    align-items: normal;
+    max-width: none;
+  }
+  .paginationContainer>p {
+    font-size: 1rem;
+    font-weight: 700;
+    width: max-content;
+  }
+  .paginationControls {
+    width: 70%;
+    max-width: 270px;
+  }
+  .eventsFilterBtn {
+    padding: 12px 28px;
+    font-size: .9rem;
+  }
+  .filterContainer {
+    top: 120%;
+    max-width: 280px;
+  }
+  .filterOption>button {
+    font-size: .9rem;
+    font-weight: 600;
+  }
 }

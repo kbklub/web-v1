@@ -17,7 +17,7 @@ const Editorial = () => {
 
   return (
     <>
-      <SEO pageDetails={pageSeo}/>
+      <SEO pageDetails={pageSeo} />
       <header className={styles.headerLayout}>
         <NavBar />
         <div className={styles.headerContainer}>
@@ -29,7 +29,7 @@ const Editorial = () => {
               klub&apos;s flagship annual magazine, <b>MEDIPHIL</b>. MediPhil showcases
               thought-provoking articles, insightful reports, and engaging interviews with
               prominent figures in medicine and philanthropy - a fitting combination reflected
-              in the magazine&apos;s very name. 
+              in the magazine&apos;s very name.
             </p>
             <p>
               Beyond Mediphil, the Board keeps the public informed by publishing quarterly
@@ -38,7 +38,7 @@ const Editorial = () => {
             </p>
           </div>
           <div className={styles.headerBtnContainer}>
-            <button 
+            <button
               className={editorialType == "blog" ? styles.active : ""}
               onClick={() => setEditorialType("blog")}
             >
@@ -64,28 +64,28 @@ const Editorial = () => {
           <h2>{editorialType}</h2>
           {!editorialPieces[editorialType].length ? (
             <p className={styles.noEventTag}>
-              No <span style={{textTransform: "capitalize"}}>{editorialType}</span> piece for Now. Check back soon for updates!
+              No <span style={{ textTransform: "capitalize" }}>{editorialType}</span> piece for Now. Check back soon for updates!
             </p>
           ) : ""}
-          {editorialPieces[editorialType].map((ev, index) => (
-            <div className={styles.eventCard} key={index}>
-              <div className={styles.eventCardContainer}>
-                <div className={styles.eventCardImage}>
-                  <Image src={ev.image} alt={`A ${editorialType} poster for ${ev.name}`} />
-                </div>
-                <div className={styles.eventCardDetails}>
-                  <h3>{ev.name}</h3>
-                  <p>{ev.description}</p>
-                  <div className={styles.eventCardBtnContainer}>
-                    <a href={ev.link}>
-                      Read More
-                    </a>
+          {editorialPieces[editorialType].length ? (
+            <div className={styles.eventsGrid}>
+              {editorialPieces[editorialType].map((ev, index) => (
+                <div className={styles.eventCard} key={index}>
+                  <div className={styles.eventCardContainer}>
+                    <div className={styles.eventCardImage}>
+                      <Image src={ev.image} alt={`A ${editorialType} poster for ${ev.name}`} />
+                    </div>
+                    <h3>{ev.name}</h3>
+                    <p>{ev.description}</p>
+                    <div className={styles.eventCardBtnContainer}>
+                      <a href={ev.link}>
+                        Read More
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
-
+              ))}
+            </div>) : ""}
         </div>
       </main>
     </>
