@@ -254,4 +254,21 @@
     color: hsl(240, 64%, 4%);
   }
 
+  .whiteNav.navLayout {
+    background-color: var(--color-white);
+  }
+  .whiteNav .imageLink>h1 {
+    color: var(--color-text-primary);
+  }
+  .whiteNav .largeNavListContainer {
+    color: hsla(0, 0%, 64%, 1);
+  }
+  .whiteNav .largeNavList a:hover,
+  .whiteNav .largeNavList a:focus {
+    color: var(--color-secondary);
+  }
+  .whiteNav .largeNavList button:hover,
+  .whiteNav .largeNavList button:focus {
+    color: var(--color-secondary);
+  }
 }

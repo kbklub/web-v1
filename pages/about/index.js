@@ -11,7 +11,7 @@ const AboutUs = () => {
   return (
     <>
       <SEO pageDetails={pageSeo}/>
-      <NavBar />
+      <NavBar white/>
       <header className={styles.headerLayout}>
         <main className={styles.headerContainer}>
           <h1>KB KLUB; The Exclusive and Philanthropic Medical Students Club</h1>

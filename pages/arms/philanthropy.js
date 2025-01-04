@@ -16,7 +16,7 @@ const COPA = () => {
   return (
     <>
       <SEO pageDetails={pageSeo} />
-      <NavBar />
+      <NavBar white/>
       <main className={styles.armLayout}>
         <div className={styles.armContainer}>
           <h1>Committee On Philanthropic Activities (COPA)</h1>
