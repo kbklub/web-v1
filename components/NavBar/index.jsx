@@ -6,7 +6,7 @@ import { HiArrowSmallRight, HiBars3, HiMiniChevronDown, HiMiniXMark } from "reac
 import { useEffect, useState } from "react";
 
 
-const NavBar = () => {
+const NavBar = ({white}) => {
 
   const [isMobileMenu, setMobileMenu] = useState(false);
   const [dropAbout, setDropAbout] = useState(false);
@@ -27,7 +27,7 @@ const NavBar = () => {
   }, [isMobileMenu])
 
   return (
-    <nav className={styles.navLayout}>
+    <nav className={`${styles.navLayout} ${white ? styles.whiteNav : ""}`}>
       <div className={styles.navContainer}>
         <Link href="/" aria-label="Back to the homepage" className={styles.imageLink}>
           <div className={styles.navHomeIcon}><Image src={kbLogo} alt="A logo image of the KB Klub" /></div>

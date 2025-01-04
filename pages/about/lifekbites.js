@@ -33,7 +33,7 @@ const LifeKbites = () => {
   return (
     <>
       <SEO pageDetails={pageSeo} />
-      <NavBar />
+      <NavBar white/>
       <main className={styles.kbitesLayout}>
         <div className={styles.kbitesContainer}>
           <section className={styles.kbitesHeader}>
