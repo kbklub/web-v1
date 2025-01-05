@@ -1,5 +1,6 @@
 import ArmEvents from "@/components/ArmEvents";
 import NavBar from "@/components/NavBar";
+import PreloadBackground from "@/components/PreloadBackground";
 import SEO from "@/components/SEO";
 import events from "@/data/events";
 import styles from "@/styles/Arms.module.css";
@@ -16,6 +17,7 @@ const COPA = () => {
   return (
     <>
       <SEO pageDetails={pageSeo} />
+      <PreloadBackground imagePath="/images/armsBackgroundGraphicMobile.webp"/>
       <NavBar white/>
       <main className={styles.armLayout}>
         <div className={styles.armContainer}>

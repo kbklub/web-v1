@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import PreloadBackground from "@/components/PreloadBackground";
 import SEO from "@/components/SEO";
 import styles from "@/styles/AboutKlub.module.css";
 import { useRef, useState } from "react";
@@ -62,6 +63,8 @@ const AboutUs = () => {
   return (
     <>
       <SEO pageDetails={pageSeo}/>
+      <PreloadBackground imagePath="/images/kbKlubBackgroundGraphicMobile.webp"/>
+      <PreloadBackground imagePath="/images/kbKlubBackgroundGraphicLarge.webp"/>
       <NavBar white/>
       <header className={styles.headerLayout}>
         <main className={styles.headerContainer}>

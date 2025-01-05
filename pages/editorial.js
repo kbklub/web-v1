@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import PreloadBackground from "@/components/PreloadBackground";
 import SEO from "@/components/SEO";
 import editorialPieces from "@/data/editorial";
 import events from "@/data/events";
@@ -18,6 +19,7 @@ const Editorial = () => {
   return (
     <>
       <SEO pageDetails={pageSeo} />
+      <PreloadBackground imagePath="/images/eventsHeaderBackgroundImage.webp"/>
       <header className={styles.headerLayout}>
         <NavBar />
         <div className={styles.headerContainer}>

@@ -13,6 +13,7 @@ import { sortObjectArraysByDate } from "@/utils/sortEvents";
 import events from "@/data/events";
 import updatesData from "@/data/updates";
 import { useEffect, useState } from "react";
+import PreloadBackground from "@/components/PreloadBackground";
 
 const pageSeo = {
   description: "The KB Klub is an exclusive socio-philanthropic club of male medical students in the College of Medicine, University of Lagos which carries out philanthropic, academic and social empowerment projects. Contribute to our impactful initiatives and make a difference."
@@ -47,6 +48,8 @@ export default function Home() {
   return (
     <>
       <SEO pageDetails={pageSeo} />
+      <PreloadBackground imagePath="/images/homeHeaderPictureLarge.webp"/>
+      <PreloadBackground imagePath="/images/homeHeaderPictureMobile.webp"/>
       <header className={styles.headerLayout}>
         <NavBar />
         <div className={styles.headerContainer}>
