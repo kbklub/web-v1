@@ -6,6 +6,7 @@ import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import { allKbites, kbExecutives, kbites } from "@/data/kbites";
 import { searchAlumni } from "@/utils/sortEvents";
+import PreloadBackground from "@/components/PreloadBackground";
 
 const pageSeo = {
   title: "Executives and Kbites • KB Klub",
@@ -32,6 +33,8 @@ const Kbites = () => {
   return (
     <>
       <SEO pageDetails={pageSeo} />
+      <PreloadBackground imagePath="/images/kbiteBackgroundGraphicMobile.webp" width="(max-width: 899px)"/>
+      <PreloadBackground imagePath="/images/kbiteBackgroundGraphicLarge.webp" width="(min-width: 900px)"/>
       <NavBar white/>
       <main className={styles.kbitesLayout}>
         <div className={styles.kbitesContainer}>

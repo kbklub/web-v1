@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import PreloadBackground from "@/components/PreloadBackground";
 import SEO from "@/components/SEO";
 import styles from "@/styles/SupportUs.module.css";
 import { useState } from "react";
@@ -18,6 +19,7 @@ const SupportUs = () => {
   return (
     <>
       <SEO pageDetails={pageSeo}/>
+      <PreloadBackground imagePath="/images/eventsHeaderBackgroundImage.webp"/>
       <div className={styles.bgWrapper}>
         <header className={styles.headerLayout}>
           <NavBar />
@@ -42,7 +44,7 @@ const SupportUs = () => {
         <main className={styles.supportLayout}>
           <div className={styles.supportContainer}>
             <div className={styles.accountContainer}>
-              <h3>Our Account Details:</h3>
+              <h2>Our Account Details:</h2>
               <div className={styles.accountDetails}>
                 <p><b>Account Name:</b> KB Klub</p>
                 <p><b>Account Number:</b> 0014324124</p>

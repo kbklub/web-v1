@@ -1,4 +1,5 @@
 import NavBar from "@/components/NavBar";
+import PreloadBackground from "@/components/PreloadBackground";
 import SEO from "@/components/SEO";
 import editorialPieces from "@/data/editorial";
 import events from "@/data/events";
@@ -18,6 +19,7 @@ const Editorial = () => {
   return (
     <>
       <SEO pageDetails={pageSeo} />
+      <PreloadBackground imagePath="/images/eventsHeaderBackgroundImage.webp"/>
       <header className={styles.headerLayout}>
         <NavBar />
         <div className={styles.headerContainer}>
@@ -78,7 +80,7 @@ const Editorial = () => {
                     <h3>{ev.name}</h3>
                     <p>{ev.description}</p>
                     <div className={styles.eventCardBtnContainer}>
-                      <a href={ev.link}>
+                      <a href={ev.link} aria-label={`Read more about ${ev.name}`}>
                         Read More
                       </a>
                     </div>

@@ -5,6 +5,7 @@ import styles from "@/styles/AboutLifeKbites.module.css";
 import { useState, useRef, useEffect } from "react";
 import { lifeKbites } from "@/data/kbites";
 import { chunkArray, searchAlumni } from "@/utils/sortEvents";
+import PreloadBackground from "@/components/PreloadBackground";
 
 const pageSeo = {
   title: "Life Kbites • KB Klub",
@@ -138,6 +139,8 @@ const LifeKbites = () => {
   return (
     <>
       <SEO pageDetails={pageSeo} />
+      <PreloadBackground imagePath="/images/kbiteBackgroundGraphicMobile.webp" width="(max-width: 899px)"/>
+      <PreloadBackground imagePath="/images/kbiteBackgroundGraphicLarge.webp" width="(min-width: 900px)"/>
       <NavBar white/>
       <main className={styles.kbitesLayout}>
         <div className={styles.kbitesContainer}>

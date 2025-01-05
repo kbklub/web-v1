@@ -13,6 +13,7 @@ import { sortObjectArraysByDate } from "@/utils/sortEvents";
 import events from "@/data/events";
 import updatesData from "@/data/updates";
 import { useEffect, useState } from "react";
+import PreloadBackground from "@/components/PreloadBackground";
 
 const pageSeo = {
   description: "The KB Klub is an exclusive socio-philanthropic club of male medical students in the College of Medicine, University of Lagos which carries out philanthropic, academic and social empowerment projects. Contribute to our impactful initiatives and make a difference."
@@ -47,6 +48,8 @@ export default function Home() {
   return (
     <>
       <SEO pageDetails={pageSeo} />
+      <PreloadBackground imagePath="/images/homeHeaderPictureLarge.webp" width="(min-width: 900px)"/>
+      <PreloadBackground imagePath="/images/homeHeaderPictureMobile.webp" width="(max-width: 899px)"/>
       <header className={styles.headerLayout}>
         <NavBar />
         <div className={styles.headerContainer}>
@@ -92,7 +95,7 @@ export default function Home() {
                       <h3>{ev.name}</h3>
                       <p>{ev.description}</p>
                       <div className={styles.eventCardBtnContainer}>
-                        <a href={ev.link}>
+                        <a href={ev.link} aria-label={`Read more about ${ev.name}`}>
                           Read More
                         </a>
                         <a href={ev.registrationLink}>
@@ -123,7 +126,6 @@ export default function Home() {
             <div className={styles.updatesHeading}>
               <h2>Latest Updates from the KB KLUB</h2>
               <div className={styles.updatesCarouselControlContainer}>
-                ajjsjs
               </div>
             </div>
             <div className={styles.updatesCarouselContainer}>
@@ -134,7 +136,7 @@ export default function Home() {
                   </div>
                   <h3>{update.title}</h3>
                   <p>{update.description}</p>
-                  <a href={update.link}>
+                  <a href={update.link} aria-label={`Read more about ${update.title}`}>
                     Read more
                   </a>
                 </div>

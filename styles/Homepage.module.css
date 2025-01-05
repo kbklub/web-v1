@@ -1,8 +1,8 @@
 .headerLayout {
   background-color: hsla(0, 0%, 0%, 0.4);
-  background-image: url("../assets/images/homeHeaderPictureMobile.png");
+  background-image: url("/images/homeHeaderPictureMobile.webp");
   background-image: radial-gradient(50% 50% at 50% 50%,
-      rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.65) 100%), url("../assets/images/homeHeaderPictureMobile.png");
+      rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.65) 100%), url("/images/homeHeaderPictureMobile.webp");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
@@ -337,9 +337,9 @@
 @media (min-width: 900px) {
   .headerLayout {
     background-color: var(--color-white);
-    background-image: url("../assets/images/homeHeaderPictureLarge.png");
+    background-image: url("/images/homeHeaderPictureLarge.webp");
     background-image: radial-gradient(50% 50% at 50% 50%,
-        rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.65) 100%), url("../assets/images/homeHeaderPictureLarge.png");
+        rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.65) 100%), url("/images/homeHeaderPictureLarge.webp");
     background-position: center;
   }
   .headerContainer {
