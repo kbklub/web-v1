@@ -1,6 +1,6 @@
 .headerLayout {
   background-color: var(--color-secondary-background);
-  background-image: url("../assets/images/eventsHeaderBackgroundImage.png");
+  background-image: url("../assets/images/eventsHeaderBackgroundImage.webp");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
