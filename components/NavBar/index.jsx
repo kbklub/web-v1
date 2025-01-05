@@ -80,7 +80,10 @@ const NavBar = ({white}) => {
           </ul>
         </div>
 
-        <button className={styles.hamburgerBtn} onClick={() => setMobileMenu(!isMobileMenu)}>
+        <button 
+          className={styles.hamburgerBtn} onClick={() => setMobileMenu(!isMobileMenu)}
+          aria-label={`Click to ${!isMobileMenu ? "open" : "close"} the mobile menu`}
+        >
           {!isMobileMenu ? <HiBars3 /> : ""}
           {isMobileMenu ? <HiMiniXMark /> : ""}
         </button>

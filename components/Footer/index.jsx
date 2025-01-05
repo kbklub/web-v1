@@ -44,9 +44,15 @@ const Footer = () => {
         <div className={styles.footerSocials}>
           <a href="mailto:kbclubcmul@gmail.com">kbclubcmul@gmail.com</a>
           <div className={styles.footerMediaLinks}>
-            <a href="https://twitter.com/KBKLUB"><FaTwitter /></a>
-            <a href="https://www.linkedin.com/company/kb-klub/"><FaLinkedin /></a>
-            <a href="https://www.instagram.com/kbklub/"><FaInstagram /></a>
+            <a href="https://twitter.com/KBKLUB" aria-label="Click to visit the Kb Klub's Twitter page">
+              <FaTwitter />
+            </a>
+            <a href="https://www.linkedin.com/company/kb-klub/" aria-label="Click to visit the Kb Klub's LinkedIn page">
+              <FaLinkedin />
+            </a>
+            <a href="https://www.instagram.com/kbklub/" aria-label="Click to visit the Kb Klub's Instagram page">
+              <FaInstagram />
+            </a>
           </div>
         </div>
       </div>
