@@ -42,7 +42,7 @@ const SupportUs = () => {
         <main className={styles.supportLayout}>
           <div className={styles.supportContainer}>
             <div className={styles.accountContainer}>
-              <h3>Our Account Details:</h3>
+              <h2>Our Account Details:</h2>
               <div className={styles.accountDetails}>
                 <p><b>Account Name:</b> KB Klub</p>
                 <p><b>Account Number:</b> 0014324124</p>
