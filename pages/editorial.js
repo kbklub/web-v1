@@ -78,7 +78,7 @@ const Editorial = () => {
                     <h3>{ev.name}</h3>
                     <p>{ev.description}</p>
                     <div className={styles.eventCardBtnContainer}>
-                      <a href={ev.link}>
+                      <a href={ev.link} aria-label={`Read more about ${ev.name}`}>
                         Read More
                       </a>
                     </div>

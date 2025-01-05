@@ -92,7 +92,7 @@ export default function Home() {
                       <h3>{ev.name}</h3>
                       <p>{ev.description}</p>
                       <div className={styles.eventCardBtnContainer}>
-                        <a href={ev.link}>
+                        <a href={ev.link} aria-label={`Read more about ${ev.name}`}>
                           Read More
                         </a>
                         <a href={ev.registrationLink}>
@@ -123,7 +123,6 @@ export default function Home() {
             <div className={styles.updatesHeading}>
               <h2>Latest Updates from the KB KLUB</h2>
               <div className={styles.updatesCarouselControlContainer}>
-                ajjsjs
               </div>
             </div>
             <div className={styles.updatesCarouselContainer}>
@@ -134,7 +133,7 @@ export default function Home() {
                   </div>
                   <h3>{update.title}</h3>
                   <p>{update.description}</p>
-                  <a href={update.link}>
+                  <a href={update.link} aria-label={`Read more about ${update.title}`}>
                     Read more
                   </a>
                 </div>

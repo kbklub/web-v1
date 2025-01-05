@@ -22,7 +22,9 @@ const ArmEvents = ({events}) => {
                   </div>
                   <h3>{ev.name}</h3>
                   <p>{ev.description}</p>
-                  <a href={ev.link}>Read more</a>
+                  <a href={ev.link} aria-label={`Read more about ${ev.name}`}>
+                    Read more
+                  </a>
                 </div>
               ))}
             </div>) : ""}
@@ -43,7 +45,9 @@ const ArmEvents = ({events}) => {
                   </div>
                   <h3>{ev.name}</h3>
                   <p>{ev.description}</p>
-                  <a href={ev.link}>Read more</a>
+                  <a href={ev.link} aria-label={`Read more about ${ev.name}`}>
+                    Read more
+                  </a>
                 </div>
               ))}
             </div>
