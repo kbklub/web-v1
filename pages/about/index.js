@@ -63,8 +63,8 @@ const AboutUs = () => {
   return (
     <>
       <SEO pageDetails={pageSeo}/>
-      <PreloadBackground imagePath="/images/kbKlubBackgroundGraphicMobile.webp"/>
-      <PreloadBackground imagePath="/images/kbKlubBackgroundGraphicLarge.webp"/>
+      <PreloadBackground imagePath="/images/kbKlubBackgroundGraphicMobile.webp" width="(max-width: 899px)"/>
+      <PreloadBackground imagePath="/images/kbKlubBackgroundGraphicLarge.webp" width="(min-width: 900px)"/>
       <NavBar white/>
       <header className={styles.headerLayout}>
         <main className={styles.headerContainer}>

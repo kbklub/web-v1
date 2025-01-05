@@ -139,8 +139,8 @@ const LifeKbites = () => {
   return (
     <>
       <SEO pageDetails={pageSeo} />
-      <PreloadBackground imagePath="/images/kbiteBackgroundGraphicMobile.webp"/>
-      <PreloadBackground imagePath="/images/kbiteBackgroundGraphicLarge.webp"/>
+      <PreloadBackground imagePath="/images/kbiteBackgroundGraphicMobile.webp" width="(max-width: 899px)"/>
+      <PreloadBackground imagePath="/images/kbiteBackgroundGraphicLarge.webp" width="(min-width: 900px)"/>
       <NavBar white/>
       <main className={styles.kbitesLayout}>
         <div className={styles.kbitesContainer}>

@@ -48,8 +48,8 @@ export default function Home() {
   return (
     <>
       <SEO pageDetails={pageSeo} />
-      <PreloadBackground imagePath="/images/homeHeaderPictureLarge.webp"/>
-      <PreloadBackground imagePath="/images/homeHeaderPictureMobile.webp"/>
+      <PreloadBackground imagePath="/images/homeHeaderPictureLarge.webp" width="(min-width: 900px)"/>
+      <PreloadBackground imagePath="/images/homeHeaderPictureMobile.webp" width="(max-width: 899px)"/>
       <header className={styles.headerLayout}>
         <NavBar />
         <div className={styles.headerContainer}>
