@@ -1,6 +1,7 @@
 import NavBar from "@/components/NavBar";
 import SEO from "@/components/SEO";
 import styles from "@/styles/AboutKlub.module.css";
+import { useRef, useState } from "react";
 
 const pageSeo = {
   title: "About • KB Klub",
@@ -8,6 +9,56 @@ const pageSeo = {
 }
 
 const AboutUs = () => {
+
+  const [activeIndex, setActiveIndex] = useState(0);
+  const testimonialRef = useRef(null);
+
+  const testimonials = [
+    {
+      quote: "I can confidently say I am a better man and a unique addition to the society because of the KB Klub.",
+      author: "Saliu Sodiq, BDS"
+    },
+    {
+      quote: "Joining the KB Klub has been a massive blessing to me because I've been exposed to an unimaginable extent of brotherly love.",
+      author: "Adebanjo Toluwalase, MBBS"
+    },
+    {
+      quote: "Over the years, I have learnt the true meaning of discipline, brotherhood, sacrifice, generosity, love and hard work.",
+      author: "Alli Toluwani, MLS"
+    },
+    {
+      quote: "The principles, lessons, network, innovation, social privileges and philanthropy have given me much more values than is required of a regular medical student.",
+      author: "Aluko Busayo, MBBS"
+    },
+    {
+      quote: "Without the KB Klub, I wouldn't be the gentleman I am today.",
+      author: "Salau Opeyemi, MBBS"
+    },
+  ]
+
+  const scrollToIndex = (index) => {
+    if (testimonialRef.current) {
+      const cardWidth = testimonialRef.current.children[0].offsetWidth;
+      const gap = cardWidth + 70;
+      testimonialRef.current.scrollTo({
+        left: index * (cardWidth + gap),
+        behavior: 'smooth'
+      });
+      setActiveIndex(index);
+    }
+  };
+
+  const getVisibleSlides = () => {
+    if (testimonialRef.current) {
+      const containerWidth = testimonialRef.current.offsetWidth;
+      const cardWidth = testimonialRef.current.children[0].offsetWidth;
+      return Math.floor(containerWidth / cardWidth);
+    }
+    return 3;
+  };
+
+  const totalSlides = Math.ceil(testimonials.length / getVisibleSlides());
+
   return (
     <>
       <SEO pageDetails={pageSeo}/>
@@ -66,50 +117,24 @@ const AboutUs = () => {
       <section className={styles.alumniLayout}>
         <div className={styles.alumniContainer}>
           <h2>Words from our Alumni</h2>
-          <div className={styles.testimonialContainer}>
-            <div className={styles.testimonialCard}>
-              <p>
-                I can confidently say I am a better man and a unique addition to the
-                society because of the KB Klub.
-              </p>
-              <p>Saliu Sodiq, BDS</p>
-            </div>
-            <div className={styles.testimonialCard}>
-              <p>
-                Joining the KB Klub has been a massive blessing to me because I&apos;ve
-                been exposed to an unimaginable extent of brotherly love.
-              </p>
-              <p>Adebanjo Toluwalase, MBBS</p>
-            </div>
-            <div className={styles.testimonialCard}>
-              <p>
-                Over the years, I have learnt the true meaning of discipline, brotherhood,
-                sacrifice, generosity, love and hard work.
-              </p>
-              <p>Alli Toluwani, MLS</p>
-            </div>
-            <div className={styles.testimonialCard}>
-              <p>
-                The principles, lessons, network, innovation, social privileges and
-                philanthropy have given me much more values than is required of a regular
-                medical student.
-              </p>
-              <p>Aluko Busayo, MBBS</p>
-            </div>
-            <div className={styles.testimonialCard}>
-              <p>
-                Without the KB Klub, I wouldn&apos;t be the gentleman I am today.
-              </p>
-              <p>Salau Opeyemi, MBBS</p>
-            </div>
+          <div className={styles.testimonialContainer} ref={testimonialRef}>
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className={styles.testimonialCard}>
+                <p>{testimonial.quote}</p>
+                <p>{testimonial.author}</p>
+              </div>
+            ))}
           </div>
           <div className={styles.testimonialControlContainer}>
-            <button aria-label="Click to see next set of testimonials" className={styles.testimonialControlButton}>
-            </button>
-            <button aria-label="Click to see next set of testimonials" className={styles.testimonialControlButton}>
-            </button>
-            <button aria-label="Click to see next set of testimonials" className={styles.testimonialControlButton}>
-            </button>
+            {[...Array(totalSlides)].map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollToIndex(index)}
+                className={`${styles.testimonialControlButton} ${activeIndex === index ? styles.active : ''
+                  }`}
+                aria-label={`Click to see testimonial set ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </section>

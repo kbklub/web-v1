@@ -136,7 +136,6 @@
   grid-template-columns: repeat(auto-fill, minmax(min(150px, 70%), 1fr));
   grid-gap: .5rem;
   width: 85%;
-  /* text-align: start; */
   margin: 0 auto;
   padding: 16px 24px;
   background-color: hsla(240, 50%, 98%, 1);
@@ -149,4 +148,58 @@
 
 .searchedMembers {
   margin-bottom: 2em;
+}
+
+@media (min-width: 900px) {
+  .kbitesLayout {
+    background-image: url("../assets/images/kbiteBackgroundGraphicLarge.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+  }
+  .kbitesContainer {
+    max-width: 1200px;
+  }
+  .kbitesHeader {
+    margin-bottom: 80px;
+  }
+  .kbitesHeader>h1 {
+    font-size: 4rem;
+    max-width: 700px;
+    margin: 0 auto 32px;
+  }
+  .searchContainer {
+    font-size: 1.1rem;
+  }
+  .searchContainer>input::placeholder {
+    font-size: 1.1rem;
+  }
+  .searchedMembers {
+    margin-top: -40px;
+  }
+  .generalLayout {
+    padding: 80px 0;
+    border-radius: 32px;
+    box-shadow: 0 4px 80px 0 hsla(0, 0%, 0%, 0.1);
+  }
+  .executiveLayout {
+    max-width: 850px;
+  }
+  .executiveLayout>h2,
+  .membersLayout>h2
+  {
+    font-size: 2.5rem;
+    margin-bottom: 48px;
+  }
+
+  .membersContainer {
+    padding: 32px 48px;
+    max-width: 850px;
+    border-radius: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(min(200px, 70%), 1fr));
+    gap: 2rem 1rem;
+  }
+  .membersContainer>p {
+    font-size: 1.2rem;
+  }
 }

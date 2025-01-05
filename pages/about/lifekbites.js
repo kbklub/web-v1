@@ -2,7 +2,7 @@ import NavBar from "@/components/NavBar";
 import SEO from "@/components/SEO";
 import { FaSearch } from "react-icons/fa";
 import styles from "@/styles/AboutLifeKbites.module.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { lifeKbites } from "@/data/kbites";
 import { chunkArray, searchAlumni } from "@/utils/sortEvents";
 
@@ -13,10 +13,115 @@ const pageSeo = {
 
 const separatedData = chunkArray(lifeKbites, 44);
 
+const ScrollButtons = ({ targetRef }) => {
+  const [scrollState, setScrollState] = useState({
+    isStart: true,
+    isEnd: false,
+    isScrollable: false,
+  });
+
+  const updateScrollState = () => {
+    const container = targetRef.current;
+    if (!container) return;
+
+    const isAtStart = container.scrollLeft <= 10;
+    const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 10;
+    const isScrollable = container.scrollWidth > container.clientWidth;
+
+    setScrollState({
+      isStart: isAtStart,
+      isEnd: isAtEnd,
+      isScrollable
+    });
+  };
+
+  useEffect(() => {
+    const container = targetRef.current;
+    if (!container) return;
+
+    updateScrollState();
+
+    container.addEventListener('scroll', updateScrollState);
+    window.addEventListener('resize', updateScrollState);
+
+    const observer = new MutationObserver(() => {
+      updateScrollState();
+    });
+
+    observer.observe(container, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => {
+      container.removeEventListener('scroll', updateScrollState);
+      window.removeEventListener('resize', updateScrollState);
+      observer.disconnect();
+    };
+  }, [targetRef]);
+
+  const handleScroll = (direction) => {
+    const container = targetRef.current;
+    const scrollAmount = direction === 'next' ? 300 : -300;
+
+    container.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+
+    setTimeout(updateScrollState, 300);
+  };
+
+  if (!scrollState.isScrollable) return null;
+
+  return (
+    <>
+      <button 
+        onClick={() => handleScroll('prev')}
+        className={`${styles.scrollButton} ${styles.scrollButtonPrev} ${scrollState.isStart ? styles.hidden : ''}`}
+        aria-label="View previous names"
+      >
+        <svg 
+          width="24" 
+          height="24" 
+          viewBox="0 0 24 24" 
+          fill="none"
+          stroke="currentColor" 
+          strokeWidth="2"
+          strokeLinecap="round" 
+          strokeLinejoin="round"
+        >
+          <path d="M15 18l-6-6 6-6"/>
+        </svg>
+      </button>
+      <button 
+        onClick={() => handleScroll('next')}
+        className={`${styles.scrollButton} ${styles.scrollButtonNext} ${scrollState.isEnd ? styles.hidden : ''}`}
+        aria-label="View more names"
+      >
+        <svg 
+          width="24" 
+          height="24" 
+          viewBox="0 0 24 24" 
+          fill="none"
+          stroke="currentColor" 
+          strokeWidth="2"
+          strokeLinecap="round" 
+          strokeLinejoin="round"
+        >
+          <path d="M9 18l6-6-6-6"/>
+        </svg>
+      </button>
+    </>
+  );
+};
+
 const LifeKbites = () => {
 
   const [searchName, setSearchName] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const scrollContainerRef = useRef(null);
+  const searchContainerRef = useRef(null);
 
   const handleSearch = e => {
     let input = e.target.value
@@ -64,13 +169,13 @@ const LifeKbites = () => {
             </form>
           </section>
           {searchName.trim() ? (
-            <div className={styles.lifeKbitesLayout} style={{ paddingBottom: "2em" }}>
+            <div className={`${styles.lifeKbitesLayout} ${styles.searchedMembers}`}>
               {!searchResults.length ?
                 (<h2>No results found for &quot;{searchName}&quot;</h2>) :
                 (<h2>Showing all results for &quot;{searchName}&quot;</h2>)
               }
               {searchResults.length ? (
-                <div className={styles.kbiteGrid}>
+                <div className={styles.kbiteGrid} ref={searchContainerRef}>
                   {chunkArray(searchResults, 44).map((arr, index) => (
                     <div className={styles.kbiteGridColumn} key={index}>
                       {arr.map((name, index) => (
@@ -78,6 +183,7 @@ const LifeKbites = () => {
                       ))}
                     </div>
                   ))}
+                  <ScrollButtons targetRef={searchContainerRef}/>
                 </div>) : ""
               }
             </div>) : ""
@@ -86,7 +192,7 @@ const LifeKbites = () => {
             <div className={styles.lifeKbitesLayout}>
               <h2>The Life Kbites</h2>
               {separatedData.length ? (
-                <div className={styles.kbiteGrid}>
+                <div className={styles.kbiteGrid} ref={scrollContainerRef}>
                   {separatedData.map((arr, index) => (
                     <div className={styles.kbiteGridColumn} key={index}>
                       {arr.map((name, index) => (
@@ -94,6 +200,7 @@ const LifeKbites = () => {
                       ))}
                     </div>
                   ))}
+                  <ScrollButtons targetRef={scrollContainerRef}/>
                 </div>) : ""
               }
             </div>

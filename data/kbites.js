@@ -52,7 +52,6 @@ export const kbExecutives = [
 ]
 
 export const kbites = [
-  "Adebayo Tobiloba",
   "Awadje Daniel",
   "Bello Idris",
   "Odekunle Alim",
@@ -335,4 +334,4 @@ export const lifeKbites = [
 ].sort();
 
 export let allKbites = kbExecutives.map(exec => exec.name);
-allKbites = [...allKbites, ...kbites];
+allKbites = [...allKbites, ...kbites].sort();
