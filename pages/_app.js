@@ -2,6 +2,7 @@ import BottomLayout from "@/layout/BottomLayout";
 import "@/styles/globals.css";
 import { Yeseva_One, Lato } from "next/font/google";
 import Head from "next/head";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const yeseva_one = Yeseva_One({
   subsets: ["latin"],
@@ -28,7 +29,7 @@ export default function App({ Component, pageProps }) {
       `}</style>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="author" content='Sodiq "Ade" Sanusi'/>
+        <meta name="author" content='Sodiq "Ade" Sanusi' />
         <link rel="icon" type="image/png" href="/icons/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
@@ -37,6 +38,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       <Component {...pageProps} />
       <BottomLayout />
+      <GoogleAnalytics gaId="G-ER788RGMW3"/>
     </>
   );
 }
