@@ -27,7 +27,7 @@ const SupportUs = () => {
             <h1>Join Us in Making a Difference</h1>
             <div className={styles.headerDetails}>
               <p>
-                Our impactful philanthropy, social excellence, and academic excellence
+                Our impactful philanthropy, social empowerment, and academic excellence
                 projects thrive with the generous support and partnership from individuals,
                 companies, and organizations. Whether you&apos;re an individual, organization,
                 or company looking to support our mission or partner with us for impactful

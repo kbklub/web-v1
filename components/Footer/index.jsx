@@ -42,7 +42,7 @@ const Footer = () => {
           </div>
         </div>
         <div className={styles.footerSocials}>
-          <a href="mailto:kbclubcmul@gmail.com">kbclubcmul@gmail.com</a>
+          <a href="mailto:kbklubcmul@gmail.com">kbklubcmul@gmail.com</a>
           <div className={styles.footerMediaLinks}>
             <a href="https://twitter.com/KBKLUB" aria-label="Click to visit the Kb Klub's Twitter page">
               <FaTwitter />
