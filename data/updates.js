@@ -3,6 +3,7 @@ import goodVibes from "./images/updates/goodVibesLoading.jpg";
 import sonameInterview from "./images/updates/kunleSonameInterview.jpg";
 import lifeKbites24 from "./images/updates/inductionLifeKbites24.jpg";
 import ayodejiPearseEssayFinalists from "./images/updates/ayodejiPearseEssayFinalist24.jpg";
+import mediphil2024 from "./images/updates/mediphil2024.jpg";
 
 
 // updateSchema = {
@@ -13,6 +14,12 @@ import ayodejiPearseEssayFinalists from "./images/updates/ayodejiPearseEssayFina
 // }
 
 const updatesData = [
+  {
+    title: "MediPhil 2024 (KAIZEN)",
+    description: "The 2024 edition of the MEDIPHIL magazine themed Kaizen: Ethos of Heroes features interviews with distinguished Life KBites as the faces of the magazine; Life Kbite Professor Akinsanya Osibogun and Life Kbite Professor Azeez Butali featured as the MEDI and PHIL faces respectively. Other features include Professor Akin Abayomi, Rtd. Major General Abimbola Amusu, Life Kbite Dr Habeebu Muhammad and reports on the Klub's activities during the year.",
+    link: "https://www.scribd.com/document/848693461/MEDIPHIL-2024-KAIZEN",
+    image: mediphil2024,
+  },
   {
     title: "KB KLUB X MANI — Good Vibes Loading",
     description: "The Good Vibes Loading event, organized by the Mentally Aware Nigeria Initiative (MANI) in partnership with the KB KLUB, focused on fostering relaxation, self-expression, and mindfulness in a vibrant and inclusive atmosphere. This happened through creative activities like Sip & Paint, Mandala Art Painting, games, and meaningful conversations.",
@@ -39,4 +46,4 @@ const updatesData = [
   },
 ]
 
-export default updatesData;
+export default updatesData.slice(0, 4);

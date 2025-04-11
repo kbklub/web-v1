@@ -1,6 +1,7 @@
 //* Import needed image first
 import { sortObjectArraysByDate } from "@/utils/sortEvents";
 import joinSubstack from "./images/editorial/blogSubstack.jpg";
+import mediphil2024 from "./images/editorial/mediphil2024.jpg";
 import mediphil2023 from "./images/editorial/mediphil2023.jpg";
 import mediphil2022 from "./images/editorial/mediphil2022.jpg";
 import mediphil2021 from "./images/editorial/mediphil2021.png";
@@ -61,15 +62,22 @@ let editorialPieces = {
   ],
   mediphil: [
     {
+      name: "MediPhil 2024 (KAIZEN)",
+      description: "The 2024 edition of the MEDIPHIL magazine themed Kaizen: Ethos of Heroes features interviews with distinguished Life KBites as the faces of the magazine; Life Kbite Professor Akinsanya Osibogun and Life Kbite Professor Azeez Butali featured as the MEDI and PHIL faces respectively. Other features include Professor Akin Abayomi, Rtd. Major General Abimbola Amusu, Life Kbite Dr Habeebu Muhammad and reports on the Klub's activities during the year.",
+      link: "https://www.scribd.com/document/848693461/MEDIPHIL-2024-KAIZEN",
+      image: mediphil2024,
+      date: "11-04-2025",
+    },
+    {
       name: "MediPhil 2023 (AVANCE)",
-      description: "The 2023 edition of KB KLUB's Annual Magazine publication was themed Avance: Breaking Barriers. It featured Hon. Kunle Soname, CEO Bet9ja & Value Jet and Dr. Oyebanji Filani as the faces of the PHILanthropy and MEDIcine sides respectitvely.",
+      description: "The 2023 edition of KB KLUB's Annual Magazine publication was themed Avance: Breaking Barriers. It featured Hon. Kunle Soname, CEO Bet9ja & Value Jet and Dr. Oyebanji Filani as the faces of the PHILanthropy and MEDIcine sides respectively.",
       link: "https://drive.google.com/file/d/1QjrqYP3Zq4sl49uUdvHQpci8h2e_4GzK/view?usp=sharing",
       image: mediphil2023,
       date: "17-07-2023",
     },
     {
       name: "MediPhil 2022 (Enchórios)",
-      description: "The 2022 edition of KB KLUB's Annual Magazine publication was themed Enchórios. It featured Professor Abiodun Akinwutan, Dean, School of Health Professionals and Dr. Ifeanyi O. Oshiga, Principal Dentist, Beechcroft Dental Clinic as the faces of the PHILanthropy and MEDIcine sides respectitvely.",
+      description: "The 2022 edition of KB KLUB's Annual Magazine publication was themed Enchórios. It featured Professor Abiodun Akinwutan, Dean, School of Health Professionals and Dr. Ifeanyi O. Oshiga, Principal Dentist, Beechcroft Dental Clinic as the faces of the PHILanthropy and MEDIcine sides respectively.",
       link: "https://www.scribd.com/document/655331281/MEDIPHIL-2022-ENCHORIOS",
       image: mediphil2022,
       date: "31-12-2022",
