@@ -15,7 +15,7 @@ import mediphil2024 from "./images/updates/mediphil2024.jpg";
 const updatesData = [
   {
     title: "YOUR POWER TO GIFT LIFE 2.0",
-    description: "3,000 Pints, 10,000 Lives, One YOU. This is YOUR POWER TO GIFT LIFE 2.0, the biggest student-led blood donation movement in Nigeria. In 2023, you helped us do what many thought was impossible. This year, we’re going even bigger, and we need you more than ever. You don’t need superpowers to be a hero. Just 30 minutes. Just one decision. Registration is now open for the biggest blood drive Lagos has ever seen. Be part of something truly life-changing.",
+    description: "3,000 Pints, 20,000 Lives, One YOU. This is YOUR POWER TO GIFT LIFE 2.0, the biggest student-led blood donation movement in Nigeria. In 2023, you helped us do what many thought was impossible. This year, we’re going even bigger, and we need you more than ever. You don’t need superpowers to be a hero. Just 30 minutes. Just one decision. Registration is now open for the biggest blood drive Lagos has ever seen. Be part of something truly life-changing.",
     link: "https://www.instagram.com/p/DLVDuGJNhSo/",
     image: yptglimg,
   },
