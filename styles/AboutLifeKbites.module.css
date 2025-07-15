@@ -1,0 +1,214 @@
+.kbitesLayout {
+  padding: 80px 0;
+  background-color: var(--color-white);
+  background-image: url("/images/kbiteBackgroundGraphicMobile.webp");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 80%;
+  background-blend-mode: hard-light;
+}
+
+.kbitesContainer {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.kbitesHeader {
+  margin-bottom: 48px;
+}
+
+.kbitesHeader>h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.kbitesHeaderDetails {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+  background-color: hsla(240, 45%, 98%, 1);
+  border: 1px solid hsla(240, 51%, 18%, 0.16);
+  border-radius: 32px;
+  justify-content: space-between;
+  padding-left: min(5%, 24px);
+  max-width: 510px;
+  margin: 0 auto;
+}
+
+.searchContainer>input {
+  border: none;
+  outline: none;
+  width: 70%;
+  padding-left: 8px;
+  background-color: transparent;
+}
+
+.searchContainer>input::placeholder {
+  color: hsla(240, 51%, 18%, 0.48);
+  font-size: .9rem;
+}
+
+.searchContainer>input[type="search"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.searchContainer>svg {
+  color: hsla(240, 51%, 18%, 0.48);
+  transform: translateY(1px);
+}
+
+.searchContainer>button {
+  padding: 16px 0;
+  width: 35%;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 32px;
+}
+
+.searchContainer>button:hover,
+.searchContainer>button:focus {
+  transform: scale(.99);
+}
+
+.searchedMembers {
+  padding-bottom: 2em;
+}
+
+.generalLayout {
+  background-color: var(--color-white);
+  padding: 48px 0;
+  border: 1px solid hsla(240, 51%, 18%, 0.1);
+  box-shadow: 0px 4px 200px hsla(0, 0%, 0%, 0.1);
+  border-radius: 16px;
+}
+.lifeKbitesLayout {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.lifeKbitesLayout > h2 {
+  margin-bottom: 24px;
+}
+
+.kbiteGrid {
+  display: flex;
+  column-gap: 24px;
+  align-items: flex-start;
+  overflow-x: auto;
+}
+.kbiteGridColumn {
+  max-width: max-content;
+  text-align: start;
+  padding: 16px;
+  background-color: hsla(240, 50%, 98%, 1);
+  border-radius: 4px;
+  font-size: .9rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+.kbiteGridColumn > p {
+  width: max-content;
+}
+
+.scrollButton {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+.scrollButtonNext {
+  right: 5%;
+}
+.scrollButtonPrev {
+  left: 5%;
+}
+.scrollButton:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+.hidden {
+  display: none !important;
+}
+
+@media (min-width: 900px) {
+  .kbitesLayout {
+    background-image: url("/images/kbiteBackgroundGraphicLarge.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+  }
+  .kbitesContainer {
+    max-width: 1200px;
+  }
+  .kbitesHeader {
+    margin-bottom: 80px;
+  }
+  .kbitesHeader>h1 {
+    font-size: 4rem;
+    margin-bottom: 16px;
+  }
+  .kbitesHeaderDetails {
+    font-size: 1.1rem;
+    max-width: 900px;
+    margin: 0 auto 32px;
+  }
+  .searchContainer {
+    font-size: 1.1rem;
+  }
+  .searchContainer>input::placeholder {
+    font-size: 1.1rem;
+  }
+  .generalLayout {
+    padding: 80px 0;
+    box-shadow: 0 4px 80px 0 hsla(0, 0%, 0%, 0.1);
+    border-radius: 32px;
+  }
+  .lifeKbitesLayout>h2 {
+    margin-bottom: 48px;
+    font-size: 2.5rem;
+  }
+  .kbiteGrid {
+    column-gap: 48px;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .kbiteGrid::-webkit-scrollbar {
+    display: none;
+  }
+  .kbiteGridColumn {
+    padding: 24px 32px;
+    padding-right: 100px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+  
+  .searchedMembers {
+    margin-top: -20px;
+  }
+  .scrollButton {
+    display: flex;
+  }
+}

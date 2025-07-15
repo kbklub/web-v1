@@ -1,0 +1,373 @@
+.headerLayout {
+  background-color: var(--color-secondary-background);
+  background-image: url("/images/eventsHeaderBackgroundImage.webp");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+
+.headerContainer {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 110px 0;
+  text-align: center;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+.headerContainer > h1 {
+  font-size: 2.5rem;
+  margin-bottom: .1em;
+}
+.headerContainer > p {
+  color: hsla(0, 0%, 98%, 1);
+  margin-bottom: 1.5rem;
+}
+
+.headerBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: hsla(240, 51%, 98%, 1);
+  border: 2px solid hsla(240, 51%, 18%, 0.16);
+  border-radius: 32px;
+}
+
+.headerBtnContainer button {
+  width: 50%;
+  padding: 16px 0;
+  border: none;
+  background-color: transparent;
+  color: hsla(240, 51%, 18%, 0.48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+}
+.headerBtnContainer > button.active {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.eventsLayout {
+  background-color: var(--color-white);
+}
+
+.eventsContainer {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: hsla(240, 60%, 99%, 1);
+  box-shadow: 0 4px 40px hsla(0, 0%, 0%, 0.1);
+  border-radius: 24px;
+  padding: 32px 24px;
+  transform: translateY(max(-25%, -55px));
+}
+.eventsContainerHeader {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.eventsContainerTitle {
+  text-transform: capitalize;
+}
+.eventsFilterBtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+  background-color: hsla(240, 51%, 98%, 1);
+  width: 70%;
+  max-width: max-content;
+  padding: 8px 16px;
+  border: 2px solid hsla(240, 51%, 18%, 0.16);
+  color: hsla(240, 51%, 18%, 0.48);
+  border-radius: 32px;
+  font-size: .8rem;
+}
+.eventsFilterBtn > p {
+  font-weight: 600;
+}
+.filterContainer {
+  position: absolute;
+  top: 150%;
+  right: 0;
+  background-color: hsla(240, 45%, 98%, 1);
+  border: 2px solid hsla(240, 51%, 18%, 0.16);
+  border-radius: 8px;
+  padding: 32px 0;
+  width: 200%;
+  max-width: 230px;
+}
+.filterContainer > ul {
+  padding: 0;
+  list-style: none;
+  width: 90%;
+  max-width: 220px;
+  margin: 0 auto;
+}
+.filterOption {
+  margin-bottom: 16px;
+  color: hsla(240, 51%, 18%, 0.48);
+}
+.filterOption:last-of-type {
+  margin-bottom: 0;
+}
+.filterOption > button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  color: hsla(240, 51%, 18%, 0.48);
+  font-weight: 400;
+  font-size: .8rem;
+}
+
+.noEventTag {
+  padding: 24px 0 64px;
+  color: hsla(0, 0%, 48%, 1);
+  text-align: center;
+}
+
+
+.eventCard {
+  background-color: var(--color-white);
+  color: var(--color-text-primary);
+  padding: 32px 0;
+  margin-bottom: 16px;
+  box-shadow: 0px 4px 48px hsla(0, 0%, 0%, 0.1);
+  border: 1px solid hsla(0, 0%, 92%, 1);
+  border-radius: 8px;
+}
+.eventCard:last-of-type {
+  margin-bottom: 0;
+}
+.eventCardContainer {
+  width: 90%;
+  margin: 0 auto;
+}
+.eventCardImage {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 12px;
+}
+.eventCardImage img {
+  border-radius: 4px;
+}
+
+.eventCardDetails {
+  line-height: 1.4;
+}
+.eventCardDetails > h3 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 1rem;
+}
+.eventCardDetails > p {
+  font-size: .9rem;
+  margin-bottom: 12px;
+}
+
+.eventCardBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.eventCardBtnContainer > a {
+  text-decoration: none;
+  padding: 12px 0;
+  border: 1px solid var(--color-secondary);
+  width: 50%;
+  max-width: 150px;
+  background-color: transparent;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+  font-size: .9rem;
+}
+.eventCardBtnContainer > a:hover, .eventCardBtnContainer > a:focus {
+  text-decoration: underline;
+}
+.eventCardBtnContainer > a svg {
+  transform: translateY(1px);
+}
+
+.paginationContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  padding: 16px 0;
+  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.paginationContainer p {
+  font-size: .9rem;
+  color: hsla(0, 0%, 30%, 0.8);
+}
+
+.paginationControls {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paginationButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--color-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.paginationButton:not(:disabled):hover {
+  text-decoration: underline;
+}
+
+.pageNumbersContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  width: 40%;
+  max-width: 200px;
+  overflow-x: hidden;
+}
+
+.pageNumber {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-secondary);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.pageNumber:hover {
+  opacity: .65;
+}
+
+.activePage {
+  text-decoration: none;
+  opacity: .5;
+  cursor: not-allowed;
+  font-weight: bold;
+}
+
+@media (min-width: 900px) {
+  .headerContainer {
+    max-width: 1200px;
+    padding: 150px 0 230px;
+  }
+  .headerContainer>h1 {
+    margin-bottom: 8px;
+    font-size: 4rem;
+  }
+  .headerContainer>p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 32px;
+  }
+
+  .eventsContainer {
+    max-width: 1000px;
+    padding: 80px;
+    transform: translateY(max(-60%, -170px));
+  }
+  .eventsContainerHeader {
+    margin-bottom: 32px;
+  }
+  .eventsContainerTitle {
+    font-size: 2.5rem;
+  }
+  .noEventTag {
+    padding: 48px 0 40px;
+    font-size: 1.2rem;
+  }
+  .eventCard {
+    margin-bottom: 32px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 4px 4px 48px 0 hsla(0, 0%, 0%, 0.1);
+  }
+  .eventCardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .eventCardImage {
+    width: 27%;
+    height: 220px;
+    margin-bottom: 0;
+  }
+  .eventCardImage>img {
+    border-radius: 8px;
+  }
+  .eventCardDetails {
+    width: 70%;
+  }
+  .eventCardDetails>h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .eventCardDetails>p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+  .eventCardBtnContainer>a {
+    font-size: 1rem;
+  }
+
+  .paginationContainer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 0;
+    padding: 32px 0 0;
+    align-items: normal;
+    max-width: none;
+  }
+  .paginationContainer>p {
+    font-size: 1rem;
+    font-weight: 700;
+    width: max-content;
+  }
+  .paginationControls {
+    width: 70%;
+    max-width: 270px;
+  }
+  .eventsFilterBtn {
+    padding: 12px 28px;
+    font-size: .9rem;
+  }
+  .filterContainer {
+    top: 120%;
+    max-width: 280px;
+  }
+  .filterOption>button {
+    font-size: .9rem;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,274 @@
+.navLayout {
+  position: relative;
+  background-color: var(--color-white);
+  width: 100%;
+  padding: 16px 0;
+  border-bottom: 1px solid hsla(0, 0%, 80%, 0.2);
+  box-shadow: 0 4px 9.5px hsla(0, 0%, 0%, 0.1);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 88%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.imageLink {
+  width: 30%;
+  max-width: 45px;
+}
+.imageLink > h1 {
+  display: none;
+}
+
+.hamburgerBtn {
+  padding: 0;
+  background-color: transparent;
+  width: 40%;
+  max-width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.hamburgerBtn svg {
+  width: 32px;
+  height: 32px;
+}
+.hamburgerBtn:hover, .hamburgerBtn:focus {
+  opacity: 80%;
+  transform: scale(.98);
+}
+
+.mobileNavLayout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  background-color: var(--color-white);
+  padding: 32px 0px;
+  pointer-events: auto;
+}
+
+.mobileNavOverflow {
+  width: 88%;
+  position: fixed;
+  max-width: 750px;
+  margin: 0 auto;
+  overflow-y: auto;
+  padding-bottom: 40px;
+  top: max(15%, 85px);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 16px;
+}
+
+.mobileNavContainer {
+  padding: 0;
+  list-style: none;
+  margin-bottom: 2em;
+}
+.mobileNavContainer > li {
+  border-bottom: 1px solid hsla(0, 0%, 92%, 0.32);
+  padding: 16px 0;
+  font-weight: 500;
+}.mobileNavContainer > li:last-of-type {
+  border-bottom: none;
+}
+
+.mobileNavContainer a {
+  display: block;
+  text-decoration: none;
+}
+.mobileNavContainer a:hover, .mobileNavContainera:focus {
+  text-decoration: underline;
+}
+
+.mobileNavContainer button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+.mobileNavContainer button > svg {
+  width: 25px;
+  height: 25px;
+  transition: transform .2s ease-out;
+}
+
+.mobileNavContainer li > div {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid hsla(0, 0%, 92%, 0.32);
+}
+
+.navSubList {
+  list-style: none;
+  padding-left: 16px;
+}
+.navSubList > li {
+  border-bottom: 1px solid hsla(0, 0%, 92%, 0.32);
+  padding: 8px 0;
+  color: hsla(0, 0%, 12%, 0.72);
+} .navSubList > li:last-of-type {
+  border-bottom: none;
+}
+
+.partnerBtn {
+  display: block;
+  width: 90%;
+  max-width: 225px;
+  margin: 0 auto;
+  text-decoration: none;
+}
+.partnerBtn > button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 0;
+  border: none;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  column-gap: 8px;
+}
+.partnerBtn > button > svg {
+  transform: translate(1px);
+}
+.partnerBtn:hover, .partnerBtn:focus {
+  opacity: 80%;
+  transform: scale(.98);
+}
+
+.dropButton > svg {
+  transform: rotate(180deg);
+}
+.dropLargeButton > svg {
+  transform: rotate(180deg);
+}
+
+.hiddenDropDown {
+  display: none;
+}
+.largeNavListContainer {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .hamburgerBtn {
+    display: none;
+  }
+  .navLayout {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .navContainer {
+    max-width: 1200px;
+  }
+  .imageLink {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    max-width: max-content;
+    text-decoration: none;
+  }
+  .navHomeIcon {
+    max-width: 48px;
+  }
+  .imageLink > h1 {
+    display: initial;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+  .largeNavListContainer {
+    display: block;
+    color: var(--color-white);
+    width: 60%;
+    max-width: 640px;
+    margin-left: auto;
+  }
+  .largeNavList {
+    padding: 0%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .largeNavList a {
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .largeNavList a:hover, .largeNavList a:focus {
+    color: var(--color-primary);
+  }
+  .largeNavList > li:last-of-type a {
+    padding: 12px 16px;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+  }
+  .largeNavList > li:last-of-type a:hover,
+  .largeNavList > li:last-of-type a:focus {
+    opacity: .8;
+  }
+  .hiddenLargeDropDown {
+    display: none;
+  }
+  .largeNavList > li:first-of-type,
+  .largeNavList > li:nth-of-type(4) {
+    position: relative;
+  }
+  .largeNavList button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    color: inherit;
+  }
+  .largeNavList button:hover, .largeNavList button:focus {
+    color: var(--color-primary);
+  }
+  .largeNavList li > div {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200%;
+  }
+  .largeNavSubList {
+    width: max-content;
+    padding: 1.5rem 1rem;
+    background-color: hsla(0, 0%, 98%, 1);
+    color: hsl(0, 0%, 44%);
+    list-style: none;
+  }
+  .largeNavSubList a:hover,
+  .largeNavSubList a:focus {
+    color: hsl(240, 64%, 4%);
+  }
+
+  .whiteNav.navLayout {
+    background-color: var(--color-white);
+  }
+  .whiteNav .imageLink>h1 {
+    color: var(--color-text-primary);
+  }
+  .whiteNav .largeNavListContainer {
+    color: hsla(0, 0%, 64%, 1);
+  }
+  .whiteNav .largeNavList a:hover,
+  .whiteNav .largeNavList a:focus {
+    color: var(--color-secondary);
+  }
+  .whiteNav .largeNavList button:hover,
+  .whiteNav .largeNavList button:focus {
+    color: var(--color-secondary);
+  }
+}

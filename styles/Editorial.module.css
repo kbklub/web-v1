@@ -1,0 +1,258 @@
+.headerLayout {
+  background-color: var(--color-secondary-background);
+  background-image: url("/images/eventsHeaderBackgroundImage.webp");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+
+.headerContainer {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 80px 0 110px;
+  text-align: center;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.headerContainer>h1 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.headerDetails {
+  margin-bottom: 1.5rem;
+  line-height: 1.36;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.headerBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 98%;
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: hsla(240, 51%, 98%, 1);
+  border: 2px solid hsla(240, 51%, 18%, 0.16);
+  border-radius: 32px;
+}
+
+.headerBtnContainer button {
+  width: 50%;
+  padding: 16px 0;
+  border: none;
+  background-color: transparent;
+  color: hsla(240, 51%, 18%, 0.48);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+}
+
+.headerBtnContainer>button.active {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.eventsLayout {
+  background-color: var(--color-white);
+}
+
+.eventsContainer {
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
+  background-color: hsla(240, 60%, 99%, 1);
+  box-shadow: 0 4px 40px hsla(0, 0%, 0%, 0.1);
+  border-radius: 24px;
+  padding: 32px 24px;
+  transform: translateY(max(-25%, -55px));
+}
+
+.eventsContainer>h2 {
+  margin-bottom: 24px;
+  text-transform: capitalize;
+}
+
+.noEventTag {
+  padding: 24px 0 64px;
+  color: hsla(0, 0%, 48%, 1);
+  text-align: center;
+}
+
+.eventsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 50%), 1fr));
+  gap: 1rem;
+}
+
+.eventCard {
+  background-color: var(--color-white);
+  color: var(--color-text-primary);
+  padding: 32px 0;
+  box-shadow: 0px 4px 48px hsla(0, 0%, 0%, 0.1);
+  border: 1px solid hsla(0, 0%, 92%, 1);
+  border-radius: 8px;
+}
+
+.eventCardContainer {
+  width: 90%;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+.eventCardImage {
+  width: 100%;
+  height: 280px;
+  margin-bottom: 12px;
+}
+
+.eventCardImage img {
+  border-radius: 4px;
+  object-position: top;
+}
+
+.eventCardContainer>h3 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 1rem;
+}
+
+.eventCardContainer>p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: .9rem;
+  margin-bottom: 12px;
+}
+
+.eventCardBtnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eventCardBtnContainer>a {
+  text-decoration: none;
+  padding: 12px 0;
+  border: 1px solid var(--color-secondary);
+  width: 50%;
+  max-width: 150px;
+  background-color: transparent;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+  font-size: .9rem;
+}
+
+.eventCardBtnContainer>a:hover,
+.eventCardBtnContainer>a:focus {
+  text-decoration: underline;
+}
+
+.eventCardBtnContainer>a svg {
+  transform: translateY(1px);
+}
+
+@media (min-width: 900px) {
+  .headerContainer {
+    padding: 150px 0 230px;
+    max-width: 1200px;
+  }
+
+  .headerContainer>h1 {
+    font-size: 4rem;
+    margin-bottom: 16px;
+  }
+
+  .headerDetails {
+    margin-bottom: 32px;
+  }
+
+  .headerDetails>p {
+    font-size: 1.1rem;
+  }
+
+  .headerBtnContainer {
+    max-width: 600px;
+  }
+
+  .headerBtnContainer button {
+    padding: 20px 0;
+  }
+
+  .eventsContainer {
+    max-width: 1000px;
+    padding: 80px;
+    transform: translateY(max(-60%, -170px));
+  }
+
+  .eventsContainer>h2 {
+    font-size: 2.5rem;
+  }
+
+  .noEventTag {
+    padding: 48px 0 40px;
+    font-size: 1.2rem;
+  }
+
+  .eventsGrid {
+    gap: 48px 40px;
+  }
+
+  .eventCard {
+    margin-bottom: 0;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: flex;
+    align-items: stretch;
+  }
+
+  .eventCardContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .eventCardImage {
+    margin-bottom: 16px;
+    height: 240px;
+  }
+
+  .eventCardImage img {
+    border-radius: 14px;
+  }
+
+  .eventCardContainer>h3 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+  }
+
+  .eventCardContainer>p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .eventCardBtnContainer {
+    margin-top: auto;
+  }
+
+  .eventCardBtnContainer>a {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+}
