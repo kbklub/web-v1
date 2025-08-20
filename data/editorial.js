@@ -1,6 +1,8 @@
 //* Import needed image first
 import { sortObjectArraysByDate } from "@/utils/sortEvents";
 import joinSubstack from "./images/editorial/blogSubstack.jpg";
+import blogpostfathers from "./images/editorial/blogpostfathers.jpg";
+import blogpostunplugging from "./images/editorial/blogpostunplugging.jpg";
 import mediphil2024 from "./images/editorial/mediphil2024.jpg";
 import mediphil2023 from "./images/editorial/mediphil2023.jpg";
 import mediphil2022 from "./images/editorial/mediphil2022.jpg";
@@ -11,6 +13,9 @@ import kbinetQ22023 from "./images/editorial/kbinetQ22023.jpg";
 import kbinetQ32023 from "./images/editorial/kbinetQ32023.jpg";
 import kbinetQ42022 from "./images/editorial/kbinetQ42022.jpg";
 import kbinetQ12024 from "./images/editorial/kbinetQ42024.png";
+import kbinetQ12025 from "./images/editorial/kbinetQ12025.jpg";
+import kbinetQ22025 from "./images/editorial/kbinetQ22025.jpg";
+
 
 // blogSchema = {
 //   name: "Name of the blog piece",
@@ -23,6 +28,20 @@ import kbinetQ12024 from "./images/editorial/kbinetQ42024.png";
 let editorialPieces = {
   blog: [
     {
+      name: "Celebrate these Heroes",
+      description: "For the Men Who Shaped Us; Happy Father’s Day!",
+      link: "https://kbklub.substack.com/p/94dc37bd-83c7-4ef9-8076-55fb1abb6fdf?postPreview=paid&updated=2025-06-28T11%3A25%3A03.554Z&audience=everyone&free_preview=false&freemail=true",
+      image: blogpostfathers,
+      date: "29-06-2025",
+    },
+    {
+      name: "Unplugging",
+      description: "The Art of Unplugging: Finding Balance in a Digital World",
+      link: "https://kbklub.substack.com/p/9ad1377a-4c13-4bf4-b794-524f7f8d2dfe?postPreview=paid&updated=2025-07-26T06%3A05%3A21.683Z&audience=everyone&free_preview=false&freemail=true",
+      image: blogpostunplugging,
+      date: "26-07-2025",
+    },
+    {
       name: "Access our blog on Substack",
       description: "Be the first to know about our activities through our blog on Substack!",
       link: "https://kbklub.substack.com/",
@@ -31,6 +50,20 @@ let editorialPieces = {
     },
   ],
   newsletters: [
+    {
+      name: "KBINET 2025 #2",
+      description: "Dive into the vibrant pages of the KB Klub Diary, showcasing impactful moments like the Children's Day Celebration, World Pulmonary Hypertension Day, meaningful collaborations, and much more.",
+      link: "https://www.scribd.com/document/891966792/KBinet-Q2-2025-Diary-of-the-KB-Klub ",
+      image: kbinetQ22025,
+      date: "20-07-2025",
+    },
+    {
+      name: "KBINET 2025 #1",
+      description: "The Q1 2025 KB Klub Diary, spotlights MediPhil 2024 themed 'Kaizen: Ethos of Heroes', KB Fellowship, STACK Sessions, Valentine's day celebration and many more.",
+      link: "https://www.scribd.com/document/865035155/KBINET-Q1-2025",
+      image: kbinetQ12025,
+      date: "20-04-2025",
+    },
     {
       name: "KBINET 2024 #1",
       description: "KB Klub's Newsletter for the first quarter of 2024, it featured the KB Multipurpose Kourt Launch, Valentine's Day outreach, and the collaboration with PANI.",
