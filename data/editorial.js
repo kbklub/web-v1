@@ -14,7 +14,7 @@ import kbinetQ32023 from "./images/editorial/kbinetQ32023.jpg";
 import kbinetQ42022 from "./images/editorial/kbinetQ42022.jpg";
 import kbinetQ12024 from "./images/editorial/kbinetQ42024.png";
 import kbinetQ12025 from "./images/editorial/kbinetQ12025.jpg";
-import kbinetQ22025 from "./images/editorial/kbinetQ22025.jpg";
+import kbinetQ22025 from "./images/editorial/KbinetQ22025.jpg";
 
 
 // blogSchema = {
