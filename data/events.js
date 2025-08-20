@@ -31,15 +31,7 @@ import nanvisSymposium from "./images/events/nanvisWalk23.jpg";
 
 let events = {
   upcoming: [
-     {
-      name: "Your Power to Gift Life 2.0",
-      description: "In 2023, you helped us do what many thought was impossible. This year, we’re going even bigger, and we need you more than ever. You don’t need superpowers to be a hero. Just 30 minutes. Just one decision. Registration is now open for the biggest blood drive Lagos has ever seen. Be part of something truly life-changing.",
-      link: "https://www.instagram.com/reel/DLVDuGJNhSo/",
-      arm: "copa",
-      image: yptgl2Image,
-      date: "15-08-2025",
-      registrationLink: "https://yptgl.kbklub.org/register",
-    },
+     
   ],
   past: [
     {

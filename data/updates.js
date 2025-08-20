@@ -1,9 +1,8 @@
 //* Images should be imported here
 import profakinabayomi from "./images/updates/profakinabayomi.jpeg";
-import yptglimg from "./images/updates/yptglimg.jpeg";
-import yptglvolunteers from "./images/updates/yptglvolunteers.jpeg";
+import yptglthankyou from "./images/updates/yptglthankyou.jpg";
 import mediphil2024 from "./images/updates/mediphil2024.jpg";
-
+import expo from "./images/updates/expo.jpg";
 
 // updateSchema = {
 //   name: "",
@@ -14,22 +13,22 @@ import mediphil2024 from "./images/updates/mediphil2024.jpg";
 
 const updatesData = [
   {
-    title: "YOUR POWER TO GIFT LIFE 2.0",
-    description: "3,000 Pints, 10,000 Lives, One YOU. This is YOUR POWER TO GIFT LIFE 2.0, the biggest student-led blood donation movement in Nigeria. In 2023, you helped us do what many thought was impossible. This year, we’re going even bigger, and we need you more than ever. You don’t need superpowers to be a hero. Just 30 minutes. Just one decision. Registration is now open for the biggest blood drive Lagos has ever seen. Be part of something truly life-changing.",
-    link: "https://www.instagram.com/p/DLVDuGJNhSo/",
-    image: yptglimg,
+    title: "YPTGL 2.0: Thank you, Our Heroes!",
+    description: "To every donor who rolled up their sleeve, every volunteer who gave their time, and every partner who stood by us, you made Your Power to Give Lagos 2.0 a remarkable success. Together we didn't just host Lagos' largest blood drive, we saved countless lives.",
+    link: "https://www.instagram.com/p/DNdJd4uMiGe/",
+    image: yptglthankyou,
+  },
+  {
+    title: "STACK HEALTH-TECH EXPO 2025",
+    description: "Are you building a health tech solution that can make a real difference? STACK Health-Tech Expo 2025 is your chance to take it beyond the idea stage and into the spotlight. We’re looking for early-stage innovators with real solutions to real health problems. Come showcase your product, meet decision makers, connect with investors, and get the visibility your idea deserves. This is more than just an expo it’s a platform to grow, learn, and make real impact.",
+    link: "https://www.instagram.com/p/DMQa1YttccL/",
+    image: expo,
   },
   {
     title: "Professor Akin Abayomi's Exclusive Interview",
     description: "The highly anticipated exclusive interview with the Honourable Commissioner of Health, Lagos State, Professor Akin Abayomi (OON), is officially OUT TODAY! Tune in to KB Klub youtube channel for unparalleled insight.",
     link: "https://www.instagram.com/p/DL98ZLGNWoZ/",
     image: profakinabayomi,
-  },
-  {
-    title: "Be a Hero: Join the Your Power to Gift Life 2.0 Volunteer Team!",
-    description: "Are you ready to make a lasting impact? Join us for the KB KLUB’s 56th Annual Philanthropic Event—Your Power to Gift Life 2.0 Blood Drive and help save lives! As a volunteer, you’ll be at the heart of this meaningful event, ensuring it’s impactful and unforgettable. Why Volunteer? - Save Lives: Be part of a life-changing mission through blood donation. - Build Community: Connect with passionate individuals in a vibrant environment.",
-    link: "https://www.instagram.com/p/DMGPD-YMs_W/",
-    image: yptglvolunteers,
   },
   {
     title: "MediPhil 2024 (KAIZEN)",
