@@ -1,9 +1,9 @@
 //* Import needed images first
-import keebiteImage from "./images/kbites/keebite.jpg";
+import keebiteImage from "./images/kbites/keebite.jpeg";
 import curatorImage from "./images/kbites/curator.jpg";
 import editorImage from "./images/kbites/editor.jpg";
 import kashbiteImage from "./images/kbites/kashbite.jpg";
-import kbriteImage from "./images/kbites/kbrite.jpg";
+import kbriteImage from "./images/kbites/kbrite.jpeg";
 import protocolImage from "./images/kbites/protocol.jpg";
 import viceroyImage from "./images/kbites/viceroy.jpg";
 
@@ -15,59 +15,70 @@ import viceroyImage from "./images/kbites/viceroy.jpg";
 
 export const kbExecutives = [
   {
-    name: "Olomiyete Ayobami",
+    name: "Saliu Ayobami",
     title: "Keebite (President)",
     image: keebiteImage,
   },
   {
-    name: "Saliu Ayobami",
+    name: "Denapo Moses",
     title: "KB Viceroy (Vice President)",
     image: viceroyImage,
   },
   {
-    name: "Oloyede Sheriffdeen",
+    name: "Imana Oluwaseun",
     title: "KBrite (General Secretary)",
     image: kbriteImage,
   },
   {
-    name: "Unachukwu Henry",
+    name: "Alo Adeoluwa",
     title: "Kashbite (Financial Secretary)",
     image: kashbiteImage,
   },
   {
-    name: "Safiriyu Kamal",
+    name: "Oshojah Victor",
     title: "KB Protocol (Social Secretary & PRO)",
     image: protocolImage,
   },
   {
-    name: "Yussuf Al-Ameen",
+    name: "Nnodim Precious",
     title: "KB Editor (Editor-in-chief)",
     image: editorImage,
   },
   {
-    name: "Denapo Moses",
+    name: "Solola Amos",
     title: "KB Curator",
     image: curatorImage,
   },
 ]
 
 export const kbites = [
-  "Awadje Daniel",
-  "Bello Idris",
-  "Odekunle Alim",
-  "Okpala Paschal",
-  "Okusanya Olusola",
-  "Olanrewaju Oladayo",
-  "Salami Akorede",
-  "Madehin Mustapha",
-  "Dere Jibril",
+  "Abe Tiwayande",
   "Abdulsalam Habeeb",
+  "Ajulo Thomas",
+  "Alo Adeoluwa",
+  "Braimah Abdulmalik",
+  "Denapo Moses",
   "Ejodamen Joshua",
+  "Femi-Adeniyi Oladapo",
   "Folly Oluwaremilekun",
-  "Imana Oluwaseun",
+  "Imana Ouwaseun",
+  "Jibril Dere",
+  "Mustapha Madehin",
+  "Nnodim Precious",
+  "Odekunle Alim",
+  "Oladiran David",
   "Oladipupo Paul",
+  "Olaleye Iyanuoluwa",
+  "Olloh Henry",
+  "Olomiyete Ayobami",
+  "Oloyede Sheriffdeen",
+  "Oshojah Victor",
+  "Safiriyu Kamal",
+  "Saliu Ayobami",
+  "Solola Amos",
   "Thanni Abdulmajeed",
-  "Onyegbula Covenant",
+  "Unachukwu Henry",
+  "Yussuf Al-Ameen",
 ].sort();
 
 export const lifeKbites = [
@@ -157,6 +168,7 @@ export const lifeKbites = [
   "BABATUNDE B.A.",
   "BALOGUN BAYO",
   "BALOGUN OLUWA",
+  "BELLO IDRIS",
   "BODE JOHNSON",
   "BUNMI DADA",
   "BUTALI AZEEZ",
@@ -262,10 +274,12 @@ export const lifeKbites = [
   "OKETADE ENIOLA",
   "OKOJIE FELIX",
   "OKO-OSI AFEEZ",
+  "OKPALA PASCHAL",
   "OKUDERO",
   "OKUN TAIWO",
   "OKUNBADEJO DEJI",
   "OKUNUGA O.",
+  "OKUSANYA OLUSOLA",
   "OKWESA VICTOR",
   "OLADAPO A.",
   "OLADIJU O.",
@@ -274,6 +288,7 @@ export const lifeKbites = [
   "OLAMIJULO AYO",
   "OLANIYI AYOBAMI",
   "OLANIYI OLUWATOBI",
+  "OLANREWAJU DAYO",
   "OLATUNJI OREOLUWA",
   "OLAWUNMI",
   "OLEDINMA ALFRED",
@@ -293,6 +308,7 @@ export const lifeKbites = [
   "ONASORO OLARENWAJU",
   "ONI OLAKUNLE",
   "ONWUJEKIRE DAN",
+  "ONYEGBULA COVENANT",
   "ONYEWENYI CHIJOKE",
   "ONYENYEONWU TOBECHUKWU",
   "OPE-EWE O.",
@@ -314,6 +330,7 @@ export const lifeKbites = [
   "SALAKO",
   "SALAKO DOKUN",
   "SALAKO M.O",
+  "SALAMI AKOREDE",
   "SALAWU A.S",
   "SALAU OPEYEMI",
   "SALIU SODIQ",
