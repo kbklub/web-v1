@@ -1,11 +1,11 @@
 //* Import needed images first
 import keebiteImage from "./images/kbites/keebite.jpeg";
-import curatorImage from "./images/kbites/curator.jpg";
+import curatorImage from "./images/kbites/curator.jpeg";
 import editorImage from "./images/kbites/editor.jpg";
 import kashbiteImage from "./images/kbites/kashbite.jpg";
 import kbriteImage from "./images/kbites/kbrite.jpeg";
 import protocolImage from "./images/kbites/protocol.jpg";
-import viceroyImage from "./images/kbites/viceroy.jpg";
+import viceroyImage from "./images/kbites/viceroy.jpeg";
 
 // exectiveSchema = {
 //   name: "",
