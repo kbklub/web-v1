@@ -5,7 +5,7 @@ import editorImage from "./images/kbites/editor.jpg";
 import kashbiteImage from "./images/kbites/kashbite.jpg";
 import kbriteImage from "./images/kbites/kbrite.jpeg";
 import protocolImage from "./images/kbites/protocol.jpg";
-import viceroyImage from "./images/kbites/viceroy.jpeg";
+import viceroyImage from "./images/kbites/viceroy.jpg";
 
 // exectiveSchema = {
 //   name: "",
@@ -20,7 +20,7 @@ export const kbExecutives = [
     image: keebiteImage,
   },
   {
-    name: "Denapo Moses",
+    name: "Yussuf Al-Ameen",
     title: "KB Viceroy (Vice President)",
     image: viceroyImage,
   },
@@ -49,7 +49,7 @@ export const kbExecutives = [
     title: "KB Curator",
     image: curatorImage,
   },
-]
+];
 
 export const kbites = [
   "Abe Tiwayande",
@@ -57,7 +57,6 @@ export const kbites = [
   "Ajulo Thomas",
   "Alo Adeoluwa",
   "Braimah Abdulmalik",
-  "Denapo Moses",
   "Ejodamen Joshua",
   "Femi-Adeniyi Oladapo",
   "Folly Oluwaremilekun",
@@ -68,7 +67,6 @@ export const kbites = [
   "Odekunle Alim",
   "Oladiran David",
   "Oladipupo Paul",
-  "Olaleye Iyanuoluwa",
   "Olloh Henry",
   "Olomiyete Ayobami",
   "Oloyede Sheriffdeen",
