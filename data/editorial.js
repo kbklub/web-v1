@@ -1,7 +1,10 @@
 //* Import needed image first
+// naming format for blog image: blogmonthyear e.g blogmarch26
+// naming format for kbinet image: kbinetquateryear e.g kbinetQ12026
 import { sortObjectArraysByDate } from "@/utils/sortEvents";
 import joinSubstack from "./images/editorial/blogSubstack.jpg";
 import blogpostfathers from "./images/editorial/blogpostfathers.jpg";
+import blogmarch26 from "./images/editorial/blogmarch26.jpg";
 import blogpostunplugging from "./images/editorial/blogpostunplugging.jpg";
 import mediphil2024 from "./images/editorial/mediphil2024.jpg";
 import mediphil2023 from "./images/editorial/mediphil2023.jpg";
@@ -15,7 +18,7 @@ import kbinetQ42022 from "./images/editorial/kbinetQ42022.jpg";
 import kbinetQ12024 from "./images/editorial/kbinetQ42024.png";
 import kbinetQ12025 from "./images/editorial/KbinetQ12025.jpg";
 import kbinetQ22025 from "./images/editorial/KbinetQ22025.jpg";
-
+import kbinetQ12026 from "./images/editorial/KBINETQ12026.jpg";
 
 // blogSchema = {
 //   name: "Name of the blog piece",
@@ -27,6 +30,13 @@ import kbinetQ22025 from "./images/editorial/KbinetQ22025.jpg";
 
 let editorialPieces = {
   blog: [
+    {
+      name: "Respect, Consent and Healthy Relationships",
+      description: "On paying attention to the person, not just the permission",
+      link: "https://kbklub.substack.com/p/march-29-respect-consent-and-healthy",
+      image: blogmarch26,
+      date: "29-03-2026",
+    },
     {
       name: "Celebrate these Heroes",
       description: "For the Men Who Shaped Us; Happy Father’s Day!",
@@ -43,7 +53,8 @@ let editorialPieces = {
     },
     {
       name: "Access our blog on Substack",
-      description: "Be the first to know about our activities through our blog on Substack!",
+      description:
+        "Be the first to know about our activities through our blog on Substack!",
       link: "https://kbklub.substack.com/",
       image: joinSubstack,
       date: "18-11-2024",
@@ -51,22 +62,33 @@ let editorialPieces = {
   ],
   newsletters: [
     {
+      name: "KBINET 2026 #1",
+      description:
+        "KB Klub’s Q1 2026 Newsletter features a blood donation advocacy walk with LSBTS, participation in the Marcelle Ruth Cancer Walk, a Valentine’s Day outreach to schools for the hearing and visually impaired, and a preview of the MediPhil ’25 magazine.",
+      link: "https://www.scribd.com/document/1020508766/KBINET-Q1-2026-Diary-Of-The-KB-KLUB",
+      image: kbinetQ12026,
+      date: "01-04-2026",
+    },
+    {
       name: "KBINET 2025 #2",
-      description: "Dive into the vibrant pages of the KB Klub Diary, showcasing impactful moments like the Children's Day Celebration, World Pulmonary Hypertension Day, meaningful collaborations, and much more.",
+      description:
+        "Dive into the vibrant pages of the KB Klub Diary, showcasing impactful moments like the Children's Day Celebration, World Pulmonary Hypertension Day, meaningful collaborations, and much more.",
       link: "https://www.scribd.com/document/891966792/KBinet-Q2-2025-Diary-of-the-KB-Klub ",
       image: kbinetQ22025,
       date: "20-07-2025",
     },
     {
       name: "KBINET 2025 #1",
-      description: "The Q1 2025 KB Klub Diary, spotlights MediPhil 2024 themed 'Kaizen: Ethos of Heroes', KB Fellowship, STACK Sessions, Valentine's day celebration and many more.",
+      description:
+        "The Q1 2025 KB Klub Diary, spotlights MediPhil 2024 themed 'Kaizen: Ethos of Heroes', KB Fellowship, STACK Sessions, Valentine's day celebration and many more.",
       link: "https://www.scribd.com/document/865035155/KBINET-Q1-2025",
       image: kbinetQ12025,
       date: "20-04-2025",
     },
     {
       name: "KBINET 2024 #1",
-      description: "KB Klub's Newsletter for the first quarter of 2024, it featured the KB Multipurpose Kourt Launch, Valentine's Day outreach, and the collaboration with PANI.",
+      description:
+        "KB Klub's Newsletter for the first quarter of 2024, it featured the KB Multipurpose Kourt Launch, Valentine's Day outreach, and the collaboration with PANI.",
       link: "https://www.scribd.com/document/724810500/KBINET-Q1-2024",
       image: kbinetQ12024,
       date: "20-04-2024",
@@ -87,7 +109,8 @@ let editorialPieces = {
     },
     {
       name: "KBINET SPECIAL EDITION (DECEMBER 2022)",
-      description: "A special edition of the official newsletter of the KB Klub.",
+      description:
+        "A special edition of the official newsletter of the KB Klub.",
       link: "https://www.scribd.com/document/674187605/Kbinet-Special-Edition-December-2022",
       image: kbinetQ42022,
       date: "31-12-2023",
@@ -96,48 +119,54 @@ let editorialPieces = {
   mediphil: [
     {
       name: "MediPhil 2024 (KAIZEN)",
-      description: "The 2024 edition of the MEDIPHIL magazine themed Kaizen: Ethos of Heroes features interviews with distinguished Life KBites as the faces of the magazine; Life Kbite Professor Akinsanya Osibogun and Life Kbite Professor Azeez Butali featured as the MEDI and PHIL faces respectively. Other features include Professor Akin Abayomi, Rtd. Major General Abimbola Amusu, Life Kbite Dr Habeebu Muhammad and reports on the Klub's activities during the year.",
+      description:
+        "The 2024 edition of the MEDIPHIL magazine themed Kaizen: Ethos of Heroes features interviews with distinguished Life KBites as the faces of the magazine; Life Kbite Professor Akinsanya Osibogun and Life Kbite Professor Azeez Butali featured as the MEDI and PHIL faces respectively. Other features include Professor Akin Abayomi, Rtd. Major General Abimbola Amusu, Life Kbite Dr Habeebu Muhammad and reports on the Klub's activities during the year.",
       link: "https://www.scribd.com/document/848693461/MEDIPHIL-2024-KAIZEN",
       image: mediphil2024,
       date: "11-04-2025",
     },
     {
       name: "MediPhil 2023 (AVANCE)",
-      description: "The 2023 edition of KB KLUB's Annual Magazine publication was themed Avance: Breaking Barriers. It featured Hon. Kunle Soname, CEO Bet9ja & Value Jet and Dr. Oyebanji Filani as the faces of the PHILanthropy and MEDIcine sides respectively.",
+      description:
+        "The 2023 edition of KB KLUB's Annual Magazine publication was themed Avance: Breaking Barriers. It featured Hon. Kunle Soname, CEO Bet9ja & Value Jet and Dr. Oyebanji Filani as the faces of the PHILanthropy and MEDIcine sides respectively.",
       link: "https://drive.google.com/file/d/1QjrqYP3Zq4sl49uUdvHQpci8h2e_4GzK/view?usp=sharing",
       image: mediphil2023,
       date: "17-07-2023",
     },
     {
       name: "MediPhil 2022 (Enchórios)",
-      description: "The 2022 edition of KB KLUB's Annual Magazine publication was themed Enchórios. It featured Professor Abiodun Akinwutan, Dean, School of Health Professionals and Dr. Ifeanyi O. Oshiga, Principal Dentist, Beechcroft Dental Clinic as the faces of the PHILanthropy and MEDIcine sides respectively.",
+      description:
+        "The 2022 edition of KB KLUB's Annual Magazine publication was themed Enchórios. It featured Professor Abiodun Akinwutan, Dean, School of Health Professionals and Dr. Ifeanyi O. Oshiga, Principal Dentist, Beechcroft Dental Clinic as the faces of the PHILanthropy and MEDIcine sides respectively.",
       link: "https://www.scribd.com/document/655331281/MEDIPHIL-2022-ENCHORIOS",
       image: mediphil2022,
       date: "31-12-2022",
     },
     {
       name: "MediPhil 2021",
-      description: "The 2021 edition of the official magazine of the KB KLUB. Featuring Dr. Kunle F. Ajayi, MD Clearview Hospital as the face of the magazine.",
+      description:
+        "The 2021 edition of the official magazine of the KB KLUB. Featuring Dr. Kunle F. Ajayi, MD Clearview Hospital as the face of the magazine.",
       link: "https://www.scribd.com/document/672588844/MediPhil-2021",
       image: mediphil2021,
       date: "30-12-2021",
     },
     {
       name: "El Invicto - MediPhil 2018",
-      description: "The 2018 edition of the official magazine of the KB KLUB. MediPhil 2018 adopted the theme El-Invicto, meaning 'The Invincibility Status', to reflect the klub's resilience over its 49-year journey, despite facing numerous challenges. El-Invicto showcases Life KBite, Dr. Kunle Hassan, CMD of Eye Foundation Hospital, and Patron Mrs. Winifred Akpani, MD/CEO of Northwest Petroleum, as its faces.",
+      description:
+        "The 2018 edition of the official magazine of the KB KLUB. MediPhil 2018 adopted the theme El-Invicto, meaning 'The Invincibility Status', to reflect the klub's resilience over its 49-year journey, despite facing numerous challenges. El-Invicto showcases Life KBite, Dr. Kunle Hassan, CMD of Eye Foundation Hospital, and Patron Mrs. Winifred Akpani, MD/CEO of Northwest Petroleum, as its faces.",
       link: "https://www.scribd.com/document/720444322/El-Invicto-Mediphil-2018",
       image: mediphil2018,
       date: "28-12-2018",
     },
     {
       name: "Portmanteau - MediPhil 2015",
-      description: "Mediphil 2015 was themed Mot-Valise on the philanthropy side and Portmanteau on the medical side. It features Grand Patron Life KBite Professor Oladapo Ashiru and Life KBite Dr. Akintunji as its faces.",
+      description:
+        "Mediphil 2015 was themed Mot-Valise on the philanthropy side and Portmanteau on the medical side. It features Grand Patron Life KBite Professor Oladapo Ashiru and Life KBite Dr. Akintunji as its faces.",
       link: "https://www.scribd.com/document/720443303/Mediphil-2015",
       image: mediphil2015,
       date: "28-12-2015",
     },
   ],
-}
+};
 
 editorialPieces = sortObjectArraysByDate(editorialPieces);
 
