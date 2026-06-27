@@ -6,6 +6,7 @@ import joinSubstack from "./images/editorial/blogSubstack.jpg";
 import blogpostfathers from "./images/editorial/blogpostfathers.jpg";
 import blogmarch26 from "./images/editorial/blogmarch26.jpg";
 import blogpostunplugging from "./images/editorial/blogpostunplugging.jpg";
+import mediphil2025 from "./images/editorial/mediphil2025.jpg";
 import mediphil2024 from "./images/editorial/mediphil2024.jpg";
 import mediphil2023 from "./images/editorial/mediphil2023.jpg";
 import mediphil2022 from "./images/editorial/mediphil2022.jpg";
@@ -117,6 +118,14 @@ let editorialPieces = {
     },
   ],
   mediphil: [
+    {
+      name: "MediPhil 2025 (Au Delà)",
+      description:
+        "The 2025 edition of MediPhil magazine, themed Au Delà: Beyond Medicine, features interviews with two distinguished personalities as the faces of the magazine: Dr. Olayemi Dawodu (MEDI face) and Life KBite Dr. Olalekan Okunuga (PHIL face). In addition to these in-depth interviews, the magazine also presents features on Dr. Kemi Ogunyemi and Pharm. David Omigie. Readers will find engaging articles exploring the origin and evolution of Your Power to Gift Life, as well as reports documenting the Klub's philanthropic, academic, and social activities throughout the year.",
+      link: "https://www.scribd.com/document/1046624106/AU-DELA-MediPhil-2025",
+      image: mediphil2025,
+      date: "29-05-2026",
+    },
     {
       name: "MediPhil 2024 (KAIZEN)",
       description:
