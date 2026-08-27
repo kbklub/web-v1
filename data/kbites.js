@@ -61,12 +61,10 @@ export const kbites = [
   "Femi-Adeniyi Oladapo",
   "Folly Oluwaremilekun",
   "Imana Ouwaseun",
-  "Jibril Dere",
-  "Mustapha Madehin",
+  "Dere Jibril",
   "Nnodim Precious",
   "Odekunle Alim",
   "Oladiran David",
-  "Oladipupo Paul",
   "Olloh Henry",
   "Olomiyete Ayobami",
   "Oloyede Sheriffdeen",
@@ -245,6 +243,7 @@ export const lifeKbites = [
   "MOROUNDIYA DAVID",
   "MUNIRUDEEN YUSUF",
   "MUSTAPHA AYODELE",
+  "MUSTAPHA MADEHIN",
   "NASSY RABESH",
   "NAT SALAKO",
   "NLERUM A.",
@@ -356,5 +355,5 @@ export const lifeKbites = [
   "YUSUF MUNIRUDEEN",
 ].sort();
 
-export let allKbites = kbExecutives.map(exec => exec.name);
+export let allKbites = kbExecutives.map((exec) => exec.name);
 allKbites = [...allKbites, ...kbites].sort();
