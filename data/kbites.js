@@ -35,7 +35,7 @@ export const kbExecutives = [
     image: kashbiteImage,
   },
   {
-    name: "Oshojah Victor",
+    name: "Safiriyu Kamal",
     title: "KB Protocol (Social Secretary & PRO)",
     image: protocolImage,
   },
