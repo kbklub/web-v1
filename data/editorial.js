@@ -20,6 +20,7 @@ import kbinetQ12024 from "./images/editorial/kbinetQ42024.png";
 import kbinetQ12025 from "./images/editorial/KbinetQ12025.jpg";
 import kbinetQ22025 from "./images/editorial/KbinetQ22025.jpg";
 import kbinetQ12026 from "./images/editorial/KBINETQ12026.jpg";
+import kbinetQ22026 from "./images/editorial/kbinetQ22026.jpg";
 
 // blogSchema = {
 //   name: "Name of the blog piece",
@@ -62,6 +63,14 @@ let editorialPieces = {
     },
   ],
   newsletters: [
+    {
+      name: "KBINET 2026 #2",
+      description:
+        "The Editorial Board of the KB Klub presents the Q2 2026 newsletter featuring details of impactful events such as the Au Delà Magazine Launch, KB Kollect, Children’s Day Celebration, Walk4PH, and many more.",
+      link: "https://www.scribd.com/document/1057113979/THE-KBINET-Q2-2026",
+      image: kbinetQ22026,
+      date: "01-07-2026",
+    },
     {
       name: "KBINET 2026 #1",
       description:
