@@ -2,22 +2,31 @@ import NavBar from "@/components/NavBar";
 import SEO from "@/components/SEO";
 import Image from "next/image";
 import styles from "@/styles/Events.module.css";
-import { FaCheck, FaChevronDown, FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import {
+  FaCheck,
+  FaChevronDown,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa6";
 import { useEffect, useState, useRef } from "react";
 import events from "@/data/events";
-import { sortAndFilterEvents, sortObjectArraysByDate } from "@/utils/sortEvents";
+import {
+  sortAndFilterEvents,
+  sortObjectArraysByDate,
+} from "@/utils/sortEvents";
 import PreloadBackground from "@/components/PreloadBackground";
 
 const pageSeo = {
   title: "Events • KB Klub",
-  description: "Learn about the transformative events hosted by KB Klub. Explore the STACK Reform Conference, Even Heroes Need Saving, Your Power to Gift Life, and many more initiatives dedicated to advancing our core values and improving society."
-}
+  description:
+    "Learn about the transformative events hosted by KB Klub. Explore the STACK Reform Conference, Even Heroes Need Saving, Your Power to Gift Life, and many more initiatives dedicated to advancing our core values and improving society.",
+};
 
 const ITEMS_PER_PAGE = 5;
 
 const Pagination = ({ currentPage, totalEvents, onPageChange }) => {
   const totalPages = Math.ceil(totalEvents / ITEMS_PER_PAGE);
-  const startItem = ((currentPage - 1) * ITEMS_PER_PAGE) + 1;
+  const startItem = (currentPage - 1) * ITEMS_PER_PAGE + 1;
   const endItem = Math.min(currentPage * ITEMS_PER_PAGE, totalEvents);
 
   const getPageNumbers = () => {
@@ -30,7 +39,9 @@ const Pagination = ({ currentPage, totalEvents, onPageChange }) => {
 
   return (
     <div className={styles.paginationContainer}>
-      <p>Showing {startItem}-{endItem} out of {totalEvents} events</p>
+      <p>
+        Showing {startItem}-{endItem} out of {totalEvents} events
+      </p>
       <div className={styles.paginationControls}>
         <button
           onClick={() => onPageChange(currentPage - 1)}
@@ -41,12 +52,12 @@ const Pagination = ({ currentPage, totalEvents, onPageChange }) => {
         </button>
 
         <div className={styles.pageNumbersContainer}>
-          {getPageNumbers().map(number => (
+          {getPageNumbers().map((number) => (
             <button
               key={number}
               onClick={() => onPageChange(number)}
               disabled={currentPage === number}
-              className={`${styles.pageNumber} ${currentPage === number ? styles.activePage : ''}`}
+              className={`${styles.pageNumber} ${currentPage === number ? styles.activePage : ""}`}
             >
               {number}
             </button>
@@ -65,9 +76,10 @@ const Pagination = ({ currentPage, totalEvents, onPageChange }) => {
   );
 };
 
-
 const Events = () => {
-  const [refinedEvents, setRefinedEvents] = useState(sortObjectArraysByDate(events));
+  const [refinedEvents, setRefinedEvents] = useState(
+    sortObjectArraysByDate(events),
+  );
   const [eventsType, setEventsType] = useState("upcoming");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [filterOption, setFilterOption] = useState("all");
@@ -91,11 +103,11 @@ const Events = () => {
     };
 
     if (isFilterOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      document.addEventListener("mousedown", handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isFilterOpen]);
 
@@ -105,14 +117,14 @@ const Events = () => {
       return;
     } else {
       let key = {
-        "academic": "coaa",
-        "philanthropic": "copa",
-        "social": "cosa",
-      }
+        academic: "coaa",
+        philanthropic: "copa",
+        social: "cosa",
+      };
       setRefinedEvents(sortAndFilterEvents(events, key[filterOption]));
     }
     setCurrentPage(1);
-  }, [filterOption])
+  }, [filterOption]);
 
   const getCurrentEvents = () => {
     const indexOfLastEvent = currentPage * ITEMS_PER_PAGE;
@@ -125,7 +137,7 @@ const Events = () => {
 
   const handlePageChange = (pageNumber) => {
     if (eventPageRef.current) {
-      eventPageRef.current.scrollIntoView({ behavior: 'smooth' }); 
+      eventPageRef.current.scrollIntoView({ behavior: "smooth" });
     }
     setCurrentPage(pageNumber);
   };
@@ -133,15 +145,15 @@ const Events = () => {
   return (
     <>
       <SEO pageDetails={pageSeo} />
-      <PreloadBackground imagePath="/images/eventsHeaderBackgroundImage.webp"/>
+      <PreloadBackground imagePath="/images/eventsHeaderBackgroundImage.webp" />
       <header className={styles.headerLayout}>
         <NavBar />
         <div className={styles.headerContainer}>
           <h1>Events</h1>
           <p>
-            Check out our past events and get a glimpse of what&apos;s coming up next.
-            Our events focus on philanthropy, social empowerment, leadership development,
-            and academic excellence.
+            Check out our past events and get a glimpse of what&apos;s coming up
+            next. Our events focus on philanthropy, social empowerment,
+            leadership development, and academic excellence.
           </p>
           <div className={styles.headerBtnContainer}>
             <button
@@ -172,56 +184,75 @@ const Events = () => {
                 className={styles.eventsFilterBtn}
                 onClick={() => setIsFilterOpen(!isFilterOpen)}
               >
-                <p><span style={{ textTransform: "capitalize" }}>{filterOption}</span> Events</p>
+                <p>
+                  <span style={{ textTransform: "capitalize" }}>
+                    {filterOption}
+                  </span>{" "}
+                  Events
+                </p>
                 <FaChevronDown />
               </button>
-            ) : ""}
+            ) : (
+              ""
+            )}
             {isFilterOpen && eventsType == "past" ? (
               <div ref={filterModalRef} className={styles.filterContainer}>
                 <ul>
                   <li className={styles.filterOption}>
-                    <button onClick={() => {
-                      setFilterOption("all");
-                      setIsFilterOpen(false);
-                    }}>
+                    <button
+                      onClick={() => {
+                        setFilterOption("all");
+                        setIsFilterOpen(false);
+                      }}
+                    >
                       All Events
                       {filterOption == "all" ? <FaCheck /> : ""}
                     </button>
                   </li>
                   <li className={styles.filterOption}>
-                    <button onClick={() => {
-                      setFilterOption("academic");
-                      setIsFilterOpen(false);
-                    }}>
+                    <button
+                      onClick={() => {
+                        setFilterOption("academic");
+                        setIsFilterOpen(false);
+                      }}
+                    >
                       Academic Events
                       {filterOption == "academic" ? <FaCheck /> : ""}
                     </button>
                   </li>
                   <li className={styles.filterOption}>
-                    <button onClick={() => {
-                      setFilterOption("philanthropic");
-                      setIsFilterOpen(false);
-                    }}>
+                    <button
+                      onClick={() => {
+                        setFilterOption("philanthropic");
+                        setIsFilterOpen(false);
+                      }}
+                    >
                       Philanthropic Events
                       {filterOption == "philanthropic" ? <FaCheck /> : ""}
                     </button>
                   </li>
                   <li className={styles.filterOption}>
-                    <button onClick={() => {
-                      setFilterOption("social");
-                      setIsFilterOpen(false);
-                    }}>
+                    <button
+                      onClick={() => {
+                        setFilterOption("social");
+                        setIsFilterOpen(false);
+                      }}
+                    >
                       Social Events
                       {filterOption == "social" ? <FaCheck /> : ""}
                     </button>
                   </li>
                 </ul>
               </div>
-            ) : ""}
+            ) : (
+              ""
+            )}
           </div>
           {!refinedEvents[eventsType].length ? (
             <p className={styles.noEventTag}>
-              No <span style={{ textTransform: "capitalize" }}>{eventsType}</span> Events for Now. Check back soon for updates!
+              No{" "}
+              <span style={{ textTransform: "capitalize" }}>{eventsType}</span>{" "}
+              Events for Now. Check back soon for updates!
             </p>
           ) : (
             <>
@@ -229,13 +260,19 @@ const Events = () => {
                 <div className={styles.eventCard} key={index}>
                   <div className={styles.eventCardContainer}>
                     <div className={styles.eventCardImage}>
-                      <Image src={ev.image} alt={`Event poster for ${ev.name}`} />
+                      <Image
+                        src={ev.image}
+                        alt={`Event poster for ${ev.name}`}
+                      />
                     </div>
                     <div className={styles.eventCardDetails}>
                       <h3>{ev.name}</h3>
                       <p>{ev.description}</p>
                       <div className={styles.eventCardBtnContainer}>
-                        <a href={ev.link} aria-label={`Read more about ${ev.name}`}>
+                        <a
+                          href={ev.link}
+                          aria-label={`Read more about ${ev.name}`}
+                        >
                           Read More
                         </a>
                       </div>
@@ -257,6 +294,6 @@ const Events = () => {
       </main>
     </>
   );
-}
+};
 
 export default Events;
