@@ -50,7 +50,7 @@ import stack26Image from "./images/events/stackReform26Image.jpeg";
 let events = {
   upcoming: [
     {
-      name: "STACK REFORM 2026:  LaunchPad - Igniting the Future of Healthcare",
+      name: "STACK REFORM 2026: LaunchPad - Igniting the Future of Healthcare",
       description:
         "Join over 2,000 students, clinicians, tech founders, and policymakers at Nigeria's largest student-led healthcare innovation conference. Discover groundbreaking health-tech solutions, non-clinical pathways, and systems shaping the future of healthcare today.",
       link: "https://stack.kbklub.org",
@@ -127,7 +127,7 @@ let events = {
     {
       name: "Launch of the Renovated College of Medicine Basketball Court",
       description:
-        "On 23rd July 2026, StarTrader officially marked the completion of the renovated College of Medicine Basketball Court with a ribbon-cutting ceremony facilitated by the KB Klub. The event celebrated a shared commitment to supporting student-athletes and creating vibrant campus spaces.",
+        "On 23rd July 2026, StarTrader officially marked the completion of the renovated College of Medicine Basketball Court with a ribbon-cutting ceremony, a project facilitated by the KB Klub. The event celebrated a shared commitment to supporting student-athletes and creating vibrant campus spaces.",
       link: "https://www.instagram.com/p/DaDCmNbjPMv/",
       arm: "cosa",
       image: basketballCourtRenovationImage,
