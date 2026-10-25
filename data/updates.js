@@ -1,5 +1,4 @@
 //* Images should be imported here
-import mediphil2025 from "./images/updates/mediphil2025.jpg";
 import philanthropicDayNumbersImage from "./images/updates/philanthropicDayNumbersImage.jpg";
 import philanthropicDayThankYouImage from "./images/updates/philanthropicDayThankYouImage.jpg";
 import kbKupThankYouImage from "./images/updates/kbKupThankYouImage.jpg";
@@ -45,13 +44,13 @@ const updatesData = [
     image: kbKupFinalsImage,
     date: "19-07-2026",
   },
-  {
-    title: "MediPhil 2025 (Au Delà)",
-    description:
-      "The 2025 edition of MediPhil magazine, themed Au Delà: Beyond Medicine, features interviews with two distinguished personalities as the faces of the magazine: Dr. Olayemi Dawodu (MEDI face) and Life KBite Dr. Olalekan Okunuga (PHIL face). In addition to these in-depth interviews, the magazine also presents features on Dr. Kemi Ogunyemi and Pharm. David Omigie. Readers will find engaging articles exploring the origin and evolution of Your Power to Gift Life, as well as reports documenting the Klub's philanthropic, academic, and social activities throughout the year.",
-    link: "https://www.scribd.com/document/1046624106/AU-DELA-MediPhil-2025",
-    image: mediphil2025,
-    date: "29-05-2026",
-  },
+  // {
+  //   title: "MediPhil 2025 (Au Delà)",
+  //   description:
+  //     "The 2025 edition of MediPhil magazine, themed Au Delà: Beyond Medicine, features interviews with two distinguished personalities as the faces of the magazine: Dr. Olayemi Dawodu (MEDI face) and Life KBite Dr. Olalekan Okunuga (PHIL face). In addition to these in-depth interviews, the magazine also presents features on Dr. Kemi Ogunyemi and Pharm. David Omigie. Readers will find engaging articles exploring the origin and evolution of Your Power to Gift Life, as well as reports documenting the Klub's philanthropic, academic, and social activities throughout the year.",
+  //   link: "https://www.scribd.com/document/1046624106/AU-DELA-MediPhil-2025",
+  //   image: mediphil2025,
+  //   date: "29-05-2026",
+  // },
 ];
-export default updatesData.slice(0, 5);
+export default updatesData.slice(0, 4);
