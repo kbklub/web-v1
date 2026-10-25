@@ -85,7 +85,7 @@ const AboutUs = () => {
                   social empowerment.</b> The Klub was established on the foundations of
                 Philanthropy, which we do always, happily and wholeheartedly. Academic
                 excellence given that we are medical students who aim to create sustainable
-                impact across borders. Social empowerment, because over the 54 years of
+                impact across borders. Social empowerment, because over the 57 years of
                 our existence, we have striven towards one goal - to contribute and be a
                 part of a wholesome society we would be proud to call ours.
               </p>
